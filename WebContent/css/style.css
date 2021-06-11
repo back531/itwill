@@ -4,6 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -456,7 +457,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 2800px; } }
 
 .container-fluid {
   width: 100%;
@@ -8183,8 +8184,8 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 1 !important; 
-    font-family: auto;
-    font-weight: bold;}
+	font-family: 'Jeju Gothic', serif;
+    }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
       color: #b7472a; }
     @media (max-width: 991.98px) {
@@ -8374,7 +8375,7 @@ h1, h2, h3, h4, h5,
       -ms-transform: rotate(-4deg);
       transform: rotate(-4deg); }
     .hero-wrap .slider-text h1 {
-      font-size: 80px;
+      font-size: 70px;
       color: #fff;
       line-height: 1.1;
       font-weight: 700;
@@ -8571,19 +8572,19 @@ h1, h2, h3, h4, h5,
         color: #fff !important; }
 
 .ftco-intro {
-  background: #b7472a; }
+  background: #6b615f; }
   .ftco-intro .intro {
     z-index: 0;
     position: relative; }
 
 .intro {
   width: 100%;
-  background: #b7472a;
+  background: #6b615f;
   padding: 30px; }
   .intro.color-1 {
-    background: #ab4227; }
+    background: #635957; }
   .intro.color-2 {
-    background: #a23f25; }
+    background: #5f5654; }
   .intro .icon {
     margin-right: 20px; }
     .intro .icon span {
