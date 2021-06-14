@@ -4,75 +4,68 @@
 	<div class="hero-wrap"
 		style="background-image: url('images/image01.png');"
 		data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
+		<!-- <div class="overlay"></div>  -->
 		<div class="container">
-			<div
-				class="row no-gutters slider-text align-items-center justify-content-center">
-				<div class="col-md-8 ftco-animate d-flex align-items-end">
+			<div class="row no-gutters slider-text align-items-center justify-content-center">
 					<div class="text w-100 text-center">
 						<h1 class="mb-4" style="width: 680">
 							오늘부터 <span>술은</span><br>특별하고 <span> 의미있게 </span>
 						</h1>
 						<p>
 							<a href="#" class="btn btn-white btn-outline-white py-3 px-5">구독하기란?</a>
-							<!-- <a href="#" class="btn btn-white btn-outline-white py-2 px-4">Read more</a> -->
 						</p>
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>
-
-	<section class="ftco-intro">
+	
+		<section class="ftco-intro">
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-md-4 d-flex">
-					<div class="intro d-lg-flex w-100 ftco-animate">
+					<div class="intro d-lg-flex w-100">
 						<div class="icon">
 							<span class="flaticon-support"></span>
 						</div>
 						<div class="text">
 							<h2>온라인 상담</h2>
-							<p>A small river named Duden flows by their place and
-								supplies it with the necessary regelialia.</p>
+							<p>고객센터 (000-000-0000) 또는 문의게시판으로 상담 가능합니다</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex">
-					<div class="intro color-1 d-lg-flex w-100 ftco-animate">
+					<div class="intro color-1 d-lg-flex w-100">
 						<div class="icon">
 							<span class="flaticon-cashback"></span>
 						</div>
 						<div class="text">
 							<h2>환불 시스템</h2>
-							<p>A small river named Duden flows by their place and
-								supplies it with the necessary regelialia.</p>
+							<p>100% 환불보증 제도를 이용하고 있습니다.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex">
-					<div class="intro color-2 d-lg-flex w-100 ftco-animate">
+					<div class="intro color-2 d-lg-flex w-100 ">
 						<div class="icon">
 							<span class="flaticon-free-delivery"></span>
 						</div>
 						<div class="text">
 							<h2>무료배송 &amp; 환불</h2>
-							<p>A small river named Duden flows by their place and
-								supplies it with the necessary regelialia.</p>
+							<p>전상품 1병이상 주문시 무료배송제도를 실시하고 있습니다.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
 	<section class="ftco-section ftco-no-pb">
 		<div class="container">
 			<div class="row">
 				<div
 					class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
 					style="background-image: url(images/about.jpg);"></div>
-				<div class="col-md-6 wrap-about pl-md-5 ftco-animate py-5">
+				<div class="col-md-6 wrap-about pl-md-5 py-5">
 					<div class="heading-section">
 						<span class="subheading">Since 1905</span>
 						<h2 class="mb-4">Desire Meets A New Taste</h2>
@@ -95,18 +88,18 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
+				<div class="col-md-7 heading-section text-center">
 					<span class="subheading">Our Delightful offerings</span>
 					<h2>전체 상품</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-1.jpg);">
 							<div class="desc">
@@ -131,7 +124,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-2.jpg);">
 							<div class="desc">
@@ -154,7 +147,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-3.jpg);">
 							<div class="desc">
@@ -177,7 +170,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-4.jpg);">
 							<div class="desc">
@@ -201,7 +194,7 @@
 				</div>
 
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-5.jpg);">
 							<div class="desc">
@@ -224,7 +217,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-6.jpg);">
 							<div class="desc">
@@ -247,7 +240,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-7.jpg);">
 							<div class="desc">
@@ -270,7 +263,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
-					<div class="product ftco-animate">
+					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
 							style="background-image: url(images/prod-8.jpg);">
 							<div class="desc">
@@ -302,15 +295,16 @@
 			</div>
 		</div>
 	</section>
+	
+	<center>
 	<!-- * 카카오맵 - 지도퍼가기 -->
 	<!-- 1. 지도 노드 -->
 	<div id="daumRoughmapContainer1623659655194"
-		class="root_daum_roughmap root_daum_roughmap_landing"></div>
+		class="root_daum_roughmap root_daum_roughmap_landing align-items-center"></div>
 
-	<!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
+	
+	<!--2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
 	<script charset="UTF-8" class="daum_roughmap_loader_script"
 		src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
@@ -323,4 +317,5 @@
 			"mapHeight" : "360"
 		}).render();
 	</script>
+	</center>
 <%@ include file="inc/bottom.jsp"%>
