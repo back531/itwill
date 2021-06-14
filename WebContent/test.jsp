@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="top.jsp" %>
+<%@ include file="inc/top.jsp" %>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/image01.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -16,4 +16,4 @@
     <section class="ftco-section" style="width: 500px">
 		<h1>test</h1>
     </section>	
-<%@ include file="bottom.jsp" %>
+<%@ include file="inc/bottom.jsp" %>
