@@ -4,7 +4,7 @@
 	<div class="hero-wrap"
 		style="background-image: url('images/image01.png');"
 		data-stellar-background-ratio="0.5">
-		<!-- <div class="overlay"></div>  -->
+		<!-- <div class="overlay"></div> -->
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center">
 					<div class="text w-100 text-center">
@@ -29,7 +29,7 @@
 						</div>
 						<div class="text">
 							<h2>온라인 상담</h2>
-							<p>고객센터 (000-000-0000) 또는 문의게시판으로 상담 가능합니다</p>
+							<p style="font-family: 'Cafe24SsurroundAir'; ">고객센터 또는 문의 게시판으로 상담 가능합니다.</p>
 						</div>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 						</div>
 						<div class="text">
 							<h2>환불 시스템</h2>
-							<p>100% 환불보증 제도를 이용하고 있습니다.</p>
+							<p style="font-family: 'Cafe24SsurroundAir'; ">100% 환불보증 제도를 이용하고 있습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -50,8 +50,8 @@
 							<span class="flaticon-free-delivery"></span>
 						</div>
 						<div class="text">
-							<h2>무료배송 &amp; 환불</h2>
-							<p>전상품 1병이상 주문시 무료배송제도를 실시하고 있습니다.</p>
+							<h2>무료배송</h2>
+							<p style="font-family: 'Cafe24SsurroundAir'; ">전 상품 1병이상 주문시 무료배송 제도를 실시 하고 있습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -60,6 +60,11 @@
 	</section>
 	
 	<section class="ftco-section ftco-no-pb">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-7 heading-section text-center">
+					<h2 style="font-family: 'Cafe24SsurroundAir'; ">이달의 술</h2>
+				</div>
+			</div>
 		<div class="container">
 			<div class="row">
 				<div
@@ -67,7 +72,6 @@
 					style="background-image: url(images/about.jpg);"></div>
 				<div class="col-md-6 wrap-about pl-md-5 py-5">
 					<div class="heading-section">
-						<span class="subheading">Since 1905</span>
 						<h2 class="mb-4">Desire Meets A New Taste</h2>
 
 						<p>A small river named Duden flows by their place and supplies
@@ -78,10 +82,6 @@
 							thousand times and everything that was left from its origin would
 							be the word "and" and the Little Blind Text should turn around
 							and return to its own, safe country.</p>
-						<p class="year">
-							<strong class="number" data-number="115">0</strong> <span>Years
-								of Experience In Business</span>
-						</p>
 					</div>
 
 				</div>
@@ -93,8 +93,7 @@
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section text-center">
-					<span class="subheading">Our Delightful offerings</span>
-					<h2>전체 상품</h2>
+					<h2 style="font-family: 'Cafe24SsurroundAir'; ">전체 상품</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -288,15 +287,21 @@
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="product.html" class="btn btn-primary d-block">View All
-						Products <span class="fa fa-long-arrow-right"></span>
+					<a href="product.html" class="btn btn-primary d-block" style="font-family: 'Cafe24SsurroundAir'; ">전체 상품
+						확인 <span class="fa fa-long-arrow-right"></span>
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	
+
+	
 	<center>
+	<div class="col-md-7 heading-section text-center">
+		<h2 style="font-family: 'Cafe24SsurroundAir'; ">찾아오는 길</h2>
+	</div>
+	
 	<!-- * 카카오맵 - 지도퍼가기 -->
 	<!-- 1. 지도 노드 -->
 	<div id="daumRoughmapContainer1623659655194"
@@ -313,9 +318,10 @@
 		new daum.roughmap.Lander({
 			"timestamp" : "1623659655194",
 			"key" : "268zg",
-			"mapWidth" : "640",
-			"mapHeight" : "360"
+			"mapWidth" : "1000",
+			"mapHeight" : "450"
 		}).render();
 	</script>
 	</center>
+	<br>
 <%@ include file="inc/bottom.jsp"%>
