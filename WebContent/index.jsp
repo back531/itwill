@@ -6,15 +6,19 @@
 		data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
-			<div class="row no-gutters slider-text align-items-center justify-content-center">
+			<div
+				class="row no-gutters slider-text align-items-center justify-content-center">
+				<div class="col-md-8  d-flex align-items-end">
 					<div class="text w-100 text-center">
 						<h1 class="mb-4" style="width: 680">
 							오늘부터 <span>술은</span><br>특별하고 <span> 의미있게 </span>
 						</h1>
 						<p>
 							<a href="#" class="btn btn-white btn-outline-white py-3 px-5">구독하기란?</a>
+							<!-- <a href="#" class="btn btn-white btn-outline-white py-2 px-4">Read more</a> -->
 						</p>
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
