@@ -11,9 +11,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700&display=swap"
 	rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/style.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/animate.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/owl.carousel.min.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/owl.theme.default.min.css">
@@ -75,7 +75,7 @@
 				</a>
 				<div class="dropdown-menu dropdown-menu-right">
 					<div class="dropdown-item d-flex align-items-start" href="#">
-						<div class="img" style="background-image: url(images/prod-1.jpg);"></div>
+						<div class="img" style="background-image: url(<%=request.getContextPath()%>images/prod-1.jpg);"></div>
 						<div class="text pl-3">
 							<h4>Bacardi 151</h4>
 							<p class="mb-0">
@@ -85,7 +85,7 @@
 						</div>
 					</div>
 					<div class="dropdown-item d-flex align-items-start" href="#">
-						<div class="img" style="background-image: url(images/prod-2.jpg);"></div>
+						<div class="img" style="background-image: url(<%=request.getContextPath()%>images/prod-2.jpg);"></div>
 						<div class="text pl-3">
 							<h4>Jim Beam Kentucky Straight</h4>
 							<p class="mb-0">
@@ -95,7 +95,7 @@
 						</div>
 					</div>
 					<div class="dropdown-item d-flex align-items-start" href="#">
-						<div class="img" style="background-image: url(images/prod-3.jpg);"></div>
+						<div class="img" style="background-image: url(<%=request.getContextPath()%>images/prod-3.jpg);"></div>
 						<div class="text pl-3">
 							<h4>Citadelle</h4>
 							<p class="mb-0">
@@ -125,9 +125,10 @@
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
-							<a class="dropdown-item" href="product.html">전통주</a> <a
-								class="dropdown-item" href="product.html">막걸리</a> <a
-								class="dropdown-item" href="product.html">증류주</a>
+							<a class="dropdown-item" href="<%=request.getContextPath() %>/product1.jsp">전체상품</a> <a
+								class="dropdown-item" href="<%=request.getContextPath() %>/product2.jsp">전통주</a> <a
+								class="dropdown-item" href="<%=request.getContextPath() %>/product3.jsp">막걸리</a> <a
+								class="dropdown-item" href="<%=request.getContextPath() %>/product4.jsp">증류주</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
