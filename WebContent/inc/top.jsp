@@ -68,7 +68,7 @@
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar">
       <div class="container" style="width: 1700px">
-         <a class="navbar-brand" href="index.html">K-<span>Sool</span></a>
+         <a class="navbar-brand" href="<%=request.getContextPath() %>/index.jsp">K-<span>Sool</span></a>
          <div class="order-lg-last btn-group">
             <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -138,8 +138,8 @@
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">게시판</a>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
-                     <a class="dropdown-item" href="product.html">문의 게시판</a> <a
-                        class="dropdown-item" href="product.html">후기 게시판</a>
+                     <a class="dropdown-item" href="board/questionBoard.jsp">문의 게시판</a> <a
+                        class="dropdown-item" href="board/reviewBoard.jsp">후기 게시판</a>
                   </div></li>
             </ul>
          </div>
