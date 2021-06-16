@@ -1,174 +1,179 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('../images/image01.png');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate mb-5 text-center">
-             <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>주문 <i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">결제</h2>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="hero-wrap hero-wrap-2"
+	style="background-image: url('../images/image01.png');"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div
+			class="row no-gutters slider-text align-items-end justify-content-center">
+			<div class="col-md-9 ftco-animate mb-5 text-center">
+				<p class="breadcrumbs mb-0">
+					<span class="mr-2"><a href="index.html">Home <i
+							class="fa fa-chevron-right"></i></a></span> <span>주문 <i
+						class="fa fa-chevron-right"></i></span>
+				</p>
+				<h2 class="mb-0 bread">결제</h2>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="ftco-section">
 
 	<div class="container">
+
 		<div class="row justify-content-center">
 			<div class="col-xl-10 ftco-animate">
+				
+				<h1>주문상품</h1>
+				<div class="cart-detail p-3 p-md-4">
+					<div class="table-wrap">
+						<table class="table">
+							<thead class="thead-primary">
+								<tr>
+
+									<th>&nbsp;</th>
+									<th>Product</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>total</th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="alert" role="alert">
+
+									<td>
+										<div class="img"
+											style="background-image: url(../images/prod-1.jpg);"></div>
+									</td>
+									<td>
+										<div class="email">
+											<span>Jim Beam Kentucky Straight</span> <span>Fugiat
+												voluptates quasi nemo, ipsa perferendis</span>
+										</div>
+									</td>
+									<td>$44.99</td>
+									<td class="quantity">
+										<div class="input-group">
+											<input type="text" name="quantity"
+												class="quantity form-control input-number" value="2" min="1"
+												max="100">
+										</div>
+									</td>
+									<td>$89.98</td>
+									
+								</tr>
+
+								<tr class="alert" role="alert">
+
+									<td>
+										<div class="img"
+											style="background-image: url(../images/prod-2.jpg);"></div>
+									</td>
+									<td>
+										<div class="email">
+											<span>Jim Beam Kentucky Straight</span> <span>Fugiat
+												voluptates quasi nemo, ipsa perferendis</span>
+										</div>
+									</td>
+									<td>$30.99</td>
+									<td class="quantity">
+										<div class="input-group">
+											<input type="text" name="quantity"
+												class="quantity form-control input-number" value="1" min="1"
+												max="100">
+										</div>
+									</td>
+									<td>$30.99</td>
+									
+								</tr>
+
+								<tr class="alert" role="alert">
+
+									<td>
+										<div class="img"
+											style="background-image: url(../images/prod-3.jpg);"></div>
+									</td>
+									<td>
+										<div class="email">
+											<span>Jim Beam Kentucky Straight</span> <span>Fugiat
+												voluptates quasi nemo, ipsa perferendis</span>
+										</div>
+									</td>
+									<td>$35.50</td>
+									<td class="quantity">
+										<div class="input-group">
+											<input type="text" name="quantity"
+												class="quantity form-control input-number" value="1" min="1"
+												max="100">
+										</div>
+									</td>
+									<td>$35.50</td>
+									
+								</tr>
+
+
+							</tbody>
+						</table>
+					</div>
+
+
+				</div>
+
+
 				<form action="#" class="billing-form">
 					<div class="row align-items-end">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="firstname">배송지</label>
-								<a href="#" class="btn btn-primary py-3 px-4">변경</a> 
-								<input type="text"
-									class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="lastname">주문자</label> 
-								<a href="#" class="btn btn-primary py-3 px-4">변경</a>
-								<input type="text"
-									class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="w-100"></div>
+						
+						
 
-						<div class="col-md-12">
-							<div class="form-group">
-								<label for="country">State / Country</label>
-								<div class="select-wrap">
-									<div class="icon">
-										<span class="ion-ios-arrow-down"></span>
-									</div>
-									<select name="" id="" class="form-control">
-										<option value="">France</option>
-										<option value="">Italy</option>
-										<option value="">Philippines</option>
-										<option value="">South Korea</option>
-										<option value="">Hongkong</option>
-										<option value="">Japan</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="w-100"></div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="streetaddress">Street Address</label> <input
-									type="text" class="form-control"
-									placeholder="House number and street name">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control"
-									placeholder="Appartment, suite, unit etc: (optional)">
-							</div>
-						</div>
-						<div class="w-100"></div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="towncity">Town / City</label> <input type="text"
-									class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="postcodezip">Postcode / ZIP *</label> <input
-									type="text" class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="w-100"></div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="phone">Phone</label> <input type="text"
-									class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="emailaddress">Email Address</label> <input
-									type="text" class="form-control" placeholder="">
-							</div>
-						</div>
-						<div class="w-100"></div>
-						<div class="col-md-12">
-							<div class="form-group mt-4">
-								<div class="radio">
-									<label class="mr-3"><input type="radio" name="optradio">
-										Create an Account? </label> <label><input type="radio"
-										name="optradio"> Ship to different address</label>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</form>
 				<!-- END -->
 
-
-
 				<div class="row mt-5 pt-3 d-flex">
 					<div class="col-md-6 d-flex">
+							<h3 class="billing-heading mb-4">배<br>송<br>지</h3>
 						<div class="cart-detail cart-total p-3 p-md-4">
-							<h3 class="billing-heading mb-4">Cart Total</h3>
 							<p class="d-flex">
-								<span>Subtotal</span> <span>$20.60</span>
+								<span>홍길동</span>
 							</p>
 							<p class="d-flex">
-								<span>Delivery</span> <span>$0.00</span>
+								<span>010-1111-2222</span>
 							</p>
 							<p class="d-flex">
-								<span>Discount</span> <span>$3.00</span>
+								<span>서울 강남구</span>
 							</p>
-							<hr>
-							<p class="d-flex total-price">
-								<span>Total</span> <span>$17.60</span>
+							<p class="d-flex">
+								<span>배송메모</span>
+								<input type="text"
+									class="form-control" placeholder="">
+							</p>
+							<p class="d-flex">
+								<span></span>
+							<span>
+							<a href="#" class="btn btn-primary py-3 px-4">변경</a>
+							</span>
 							</p>
 						</div>
+								
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 d-flex">
+							<h1 class="billing-heading mb-4">주<br>문<br>자</h1>
 						<div class="cart-detail p-3 p-md-4">
-							<h3 class="billing-heading mb-4">Payment Method</h3>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-										<label><input type="radio" name="optradio"
-											class="mr-2"> Direct Bank Tranfer</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-										<label><input type="radio" name="optradio"
-											class="mr-2"> Check Payment</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="radio">
-										<label><input type="radio" name="optradio"
-											class="mr-2"> Paypal</label>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<div class="checkbox">
-										<label><input type="checkbox" value="" class="mr-2">
-											I have read and accept the terms and conditions</label>
-									</div>
-								</div>
-							</div>
-							<p>
-								<a href="#" class="btn btn-primary py-3 px-4">Place an order</a>
+							<p class="d-flex">
+								<span>홍길동</span>
 							</p>
+							<p class="d-flex">
+								<span>010-1111-2222</span>
+							</p>
+							<p class="d-flex">
+								<span>1111@naver.com</span>
+							</p>
+							
 						</div>
 					</div>
 				</div>
