@@ -14,25 +14,30 @@
     </section>
 
 <section class="ftco-section">
+
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-xl-10 ftco-animate">
 				<form action="#" class="billing-form">
-					<h3 class="mb-4 billing-heading">배송지</h3>
 					<div class="row align-items-end">
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="firstname">주소 별칭</label> <input type="text"
+								<label for="firstname">배송지</label>
+								<a href="#" class="btn btn-primary py-3 px-4">변경</a> 
+								<input type="text"
 									class="form-control" placeholder="">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="lastname">받는 분</label> <input type="text"
+								<label for="lastname">주문자</label> 
+								<a href="#" class="btn btn-primary py-3 px-4">변경</a>
+								<input type="text"
 									class="form-control" placeholder="">
 							</div>
 						</div>
 						<div class="w-100"></div>
+
 						<div class="col-md-12">
 							<div class="form-group">
 								<label for="country">State / Country</label>
