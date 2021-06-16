@@ -11,7 +11,7 @@
 			class="row no-gutters slider-text align-items-end justify-content-center">
 			<div class="col-md-9 ftco-animate mb-5 text-center">
 				<p class="breadcrumbs mb-0">
-					<span class="mr-2"><a href="index.html">Home <i
+					<span class="mr-2"><a href="index.jsp">Home <i
 							class="fa fa-chevron-right"></i></a></span> <span>문의 게시판 <i
 						class="fa fa-chevron-right"></i></span>
 				</p>
@@ -20,37 +20,45 @@
 		</div>
 	</div>
 </section>
-<section>
-<table class="table table-hover">
+<section style="margin-left: 150px;
+			    margin-right: 150px;
+			    margin-top: 50px;
+			    margin-bottom: 50px;">
+<table class="table table-hover center-block">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">순번</th>
+      <th scope="col">제목</th>
+      <th scope="col">아이디</th>
+      <th scope="col">작성날짜</th>
+      <th scope="col">조회수</th>
     </tr>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>19세 미만도 구매할 수 있나요?</td>
+      <td>어린이</td>
+      <td>2021-06-16</td>
+      <td>15</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>배송은 얼마나 걸리나요?</td>
+      <td>술꾼</td>
+      <td>2021-06-15</td>
+      <td>1</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>배송과정에서 파손이 있습니다.</td>
+      <td>사기꾼</td>
+      <td>2021-06-14</td>
+      <td>22</td>
     </tr>
   </tbody>
 </table>
 
 	<nav aria-label="...">
-		<ul class="pagination">
+		<ul class="pagination" style="justify-content: center">
 			<li class="page-item disabled"><span class="page-link">Previous</span>
 			</li>
 			<li class="page-item"><a class="page-link" href="#">1</a></li>
