@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<link rel="stylesheet" href="../css/style.css">
 <%@ include file="../inc/top.jsp"%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png');"
@@ -21,14 +22,12 @@
 </section>
 <section>
 <table class="table table-hover">
-  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Handle</th>
     </tr>
-  </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
