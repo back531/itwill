@@ -3,7 +3,7 @@
 <%@ include file="../inc/top.jsp" %>
 <!-- 전체상품 출력 -->
 	<div class="hero-wrap"
-		style="background-image: url('images/image01.png');"
+		style="background-image: url('<%=request.getContextPath()%>/images/image01.png');"
 		data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div>  -->
 		<div class="container">
@@ -19,12 +19,12 @@
 			</div>
 		</div>
 	</div>
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('<%=request.getContextPath()%>/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">      
-            <h2 class="mb-0 bread">전        체         상          품 </h2>
+            <h2 class="mb-0 bread">전&nbsp;&nbsp;체&nbsp;&nbsp;상&nbsp;&nbsp;품 </h2>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-1.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-1.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -57,7 +57,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-2.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-2.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -76,7 +76,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-3.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-3.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -95,7 +95,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-4.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-4.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -114,7 +114,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-5.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-5.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -133,7 +133,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-6.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-6.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -152,7 +152,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-7.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-7.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -171,7 +171,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-8.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-8.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -190,7 +190,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-9.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-9.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -209,7 +209,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-10.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-10.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -230,7 +230,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-11.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-11.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -249,7 +249,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-12.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-12.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -268,7 +268,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-13.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-13.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -287,7 +287,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-14.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-14.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -306,7 +306,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-15.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-15.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -325,7 +325,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-16.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-16.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -344,7 +344,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-17.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-17.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -363,7 +363,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-18.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-18.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -382,7 +382,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-19.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-19.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -401,7 +401,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-20.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-20.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -420,7 +420,7 @@
 							
 							<div class="col-md-4 d-flex">
 								<div class="product ftco-animate">
-									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(/images/product-21.jpg);">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-21.jpg);">
 										<div class="desc">
 											<p class="meta-prod d-flex">
 												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
@@ -436,6 +436,236 @@
 									</div>
 								</div>
 							</div>
+							
+							<!-- 여기부터 증류주 -->
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-22.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>감홍로</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-23.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>두레앙</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-24.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>명랑 스컬</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-25.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>문경바람</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-26.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>배상면주가 보리아락21</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-27.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>배혜정 담금나라 담금주 일반증류주</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-28.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>부안참뽕</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-29.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>사과와인 추사</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-30.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>안동소주 일품 골드</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-31.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>안동소주</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-32.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>진도 홍주</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 d-flex">
+								<div class="product ftco-animate">
+									<div class="img d-flex align-items-center justify-content-center" style="background-image: url(<%=request.getContextPath()%>/images/product-33.jpg);">
+										<div class="desc">
+											<p class="meta-prod d-flex">
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-shopping-bag"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-heart"></span></a>
+												<a href="#" class="d-flex align-items-center justify-content-center"><span class="flaticon-visibility"></span></a>
+											</p>
+										</div>
+									</div>
+									<div class="text text-center">
+										<span class="category">증류주</span>
+										<h2>추사백</h2>
+										<span class="price">17500₩</span>
+									</div>
+								</div>
+							</div>
+							
 
 						</div>
 						<div class="row mt-5">
@@ -471,5 +701,7 @@
 				</div>
 			</div>
 		</section>
+		
+		<br>
 		
 <%@ include file="../inc/bottom.jsp" %>
