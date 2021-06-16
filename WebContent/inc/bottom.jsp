@@ -75,7 +75,16 @@
          </div>
       </div>
     </footer>
-    
+    <script type="text/javascript">
+		$(function () {
+			$('.flaticon-visibility').click(function(){
+				location.href="product-single.jsp";
+			});
+		});
+	</script>
+   
+
+   </script>
     <!-- loader -->
    <div id="ftco-loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
