@@ -1,35 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	int currentPage=1; 
+	
+%>
 <%@ include file="../inc/top.jsp" %>
 <!-- 전체상품 출력 -->
-	<div class="hero-wrap"
-		style="background-image: url('<%=request.getContextPath()%>/images/image01.png');"
-		data-stellar-background-ratio="0.5">
-		<!-- <div class="overlay"></div>  -->
-		<div class="container">
-			<div class="row no-gutters slider-text align-items-center justify-content-center">
-					<div class="text w-100 text-center">
-						<h1 class="mb-4" style="width: 680">
-							오늘부터 <span>술은</span><br>특별하고 <span> 의미있게 </span>
-						</h1>
-						<p>
-							<a href="#" class="btn btn-white btn-outline-white py-3 px-5">구독하기란?</a>
-						</p>
-					</div>
-			</div>
-		</div>
-	</div>
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('<%=request.getContextPath()%>/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('<%=request.getContextPath()%>/images/image01.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
-<<<<<<< HEAD
-          <div class="col-md-9 ftco-animate mb-5 text-center">   
-            <h2 class="mb-0 bread">전        체         상          품 </h2>
-=======
-          <div class="col-md-9 ftco-animate mb-5 text-center">      
-            <h2 class="mb-0 bread">전&nbsp;&nbsp;체&nbsp;&nbsp;상&nbsp;&nbsp;품 </h2>
->>>>>>> branch 'master' of https://github.com/back531/itwill.git
+          <div class="col-md-9 ftco-animate mb-5 text-center">
+             <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>상품<i class="fa fa-chevron-right"></i></span></p>
+            <h2 class="mb-0 bread">전&nbsp;체&nbsp;상&nbsp;품</h2>
           </div>
         </div>
       </div>
