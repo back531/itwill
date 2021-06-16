@@ -23,10 +23,10 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/prod-1.jpg" class="image-popup prod-img-bg"><img src="images/prod-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+    				<a href="<%=request.getContextPath()%>/images/product-10.jpg" class="image-popup prod-img-bg"><img src="images/product-10.jpg" class="img-fluid" alt="Colorlib Template" style="width: 500px; "></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-    				<h3>Bacardi 151 Degree</h3>
+    				<h3>소백산 막걸리</h3>
     				<div class="rating d-flex">
 							<p class="text-left mr-4">
 								<a href="#" class="mr-2">5.0</a>
@@ -37,15 +37,14 @@
 								<a href="#"><span class="fa fa-star"></span></a>
 							</p>
 							<p class="text-left mr-4">
-								<a href="#" class="mr-2" style="color: #000;">100 <span style="color: #bbb;">Rating</span></a>
+								<a href="#" class="mr-2" style="color: #000;">100 <span style="color: #bbb;">좋아요</span></a>
 							</p>
 							<p class="text-left">
-								<a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
+								<a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">판매수</span></a>
 							</p>
 						</div>
-    				<p class="price"><span>$120.00</span></p>
-    				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-    				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.
+    				<p class="price"><span>27500₩</span></p>
+    				
 						</p>
 						<div class="row mt-4">
 							<div class="input-group col-md-6 d-flex mb-3">
@@ -63,10 +62,10 @@
 	          	</div>
 	          	<div class="w-100"></div>
 	          	<div class="col-md-12">
-	          		<p style="color: #000;">80 piece available</p>
+	          		<p style="color: #000;">남은 수량 80개</p>
 	          	</div>
           	</div>
-          	<p><a href="cart.html" class="btn btn-primary py-3 px-5 mr-2">Add to Cart</a><a href="cart.html" class="btn btn-primary py-3 px-5">Buy now</a></p>
+          	<p><a href="cart.html" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="cart.html" class="btn btn-primary py-3 px-5">구매</a></p>
     			</div>
     		</div>
 
@@ -76,11 +75,8 @@
     		<div class="row mt-5">
           <div class="col-md-12 nav-link-wrap">
             <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Description</a>
-
-              <a class="nav-link ftco-animate mr-lg-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Manufacturer</a>
-
-              <a class="nav-link ftco-animate" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Reviews</a>
+              
+              <a class="nav-link ftco-animate active mr-lg-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">상세설명</a>
 
             </div>
           </div>
@@ -90,148 +86,17 @@
 
               <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
               	<div class="p-4">
-	              	<h3 class="mb-4">Bacardi 151 Degree</h3>
-	              	<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+	              	<h3 class="mb-4">소백산막걸리</h3>
+	              	<p>입국 방식의 누룩과 고두밥을 이용하여 빚은 삼양주 약주를 단식 증류기를 이용해 감압증류 방식으로 증류한 뒤 냉각 여과(칠필터링)을 거쳐 1년 동안 숙성한 후 <br>증류주와 10년 이상 오크통에 숙성한 원주를 블렌딩함
+	              		정제수, 소맥분(외국산), 입국, 쌀(국내산), 효모, 아스파탐, 아세설팜칼륨으로 제작</p>
               	</div>
               </div>
 
-              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
-              	<div class="p-4">
-	              	<h3 class="mb-4">Manufactured By Liquor Store</h3>
-	              	<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-              	</div>
-              </div>
-              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-day-3-tab">
-              	<div class="row p-4">
-						   		<div class="col-md-7">
-						   			<h3 class="mb-4">23 Reviews</h3>
-						   			<div class="review">
-								   		<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-								   		<div class="desc">
-								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
-								   				<span class="text-right">25 April 2020</span>
-								   			</h4>
-								   			<p class="star">
-								   				<span>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-							   					</span>
-							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-								   		</div>
-								   	</div>
-								   	<div class="review">
-								   		<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-								   		<div class="desc">
-								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
-								   				<span class="text-right">25 April 2020</span>
-								   			</h4>
-								   			<p class="star">
-								   				<span>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-							   					</span>
-							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-								   		</div>
-								   	</div>
-								   	<div class="review">
-								   		<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-								   		<div class="desc">
-								   			<h4>
-								   				<span class="text-left">Jacob Webb</span>
-								   				<span class="text-right">25 April 2020</span>
-								   			</h4>
-								   			<p class="star">
-								   				<span>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-								   					<i class="fa fa-star"></i>
-							   					</span>
-							   					<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-								   			</p>
-								   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-								   		</div>
-								   	</div>
-						   		</div>
-						   		<div class="col-md-4">
-						   			<div class="rating-wrap">
-							   			<h3 class="mb-4">Give a Review</h3>
-							   			<p class="star">
-							   				<span>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					(98%)
-						   					</span>
-						   					<span>20 Reviews</span>
-							   			</p>
-							   			<p class="star">
-							   				<span>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					(85%)
-						   					</span>
-						   					<span>10 Reviews</span>
-							   			</p>
-							   			<p class="star">
-							   				<span>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					(98%)
-						   					</span>
-						   					<span>5 Reviews</span>
-							   			</p>
-							   			<p class="star">
-							   				<span>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					(98%)
-						   					</span>
-						   					<span>0 Reviews</span>
-							   			</p>
-							   			<p class="star">
-							   				<span>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					<i class="fa fa-star"></i>
-							   					(98%)
-						   					</span>
-						   					<span>0 Reviews</span>
-							   			</p>
-							   		</div>
-						   		</div>
-						   	</div>
+              
               </div>
             </div>
           </div>
         </div>
-    	</div>
     </section>
     
     
