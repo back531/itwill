@@ -73,19 +73,16 @@
 			<div class="row">
 				<div
 					class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
-					style="background-image: url(images/about.jpg);"></div>
+					style="background-image: url(<%=request.getContextPath()%>/images/product-27.jpg);"></div>
 				<div class="col-md-6 wrap-about pl-md-5 py-5">
 					<div class="heading-section">
-						<h2 class="mb-4">Desire Meets A New Taste</h2>
+						<h2 class="mb-4">배혜정도가 담금나라 3.6L</h2>
 
-						<p>A small river named Duden flows by their place and supplies
-							it with the necessary regelialia. It is a paradisematic country,
-							in which roasted parts of sentences fly into your mouth.</p>
-						<p>On her way she met a copy. The copy warned the Little Blind
-							Text, that where it came from it would have been rewritten a
-							thousand times and everything that was left from its origin would
-							be the word "and" and the Little Blind Text should turn around
-							and return to its own, safe country.</p>
+						<p>담금나라는 자작나무 숯으로 정제한 무색무취의 깔끔한 증류주입니다. 쌀소주원액과 주정을 자작나무 숯 처리를 통하여 향미를 떨어뜨리는 
+						알코올 냄새를 제거해 줌으로서, 재료 본연의 맛과 향을 그대로 즐길 수 있도록 제발된 제품입니다.</p>
+						<p>배혜정도가는 1998년 창사 이후 우리나라 문화인 막걸리의 고급화 및 세계화를 위해 노력하며 막걸리의 고부가가치화를 
+						선도해오고 있습니다. 그리하여 자체적으로 개발한 액상 누룩에 대한 제조방법특허를 보유하고 있고, 기존 제품들과 차별화되는 
+						생쌀발효법으로 술을 빚으며, 원료의 품질도 타협하지 않아 프리미엄 탁주의 대명사로 자리매김하였습니다.</p>
 					</div>
 
 				</div>
@@ -104,7 +101,7 @@
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-1.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-4.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -118,10 +115,10 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="sale">Sale</span> <span class="category">Brandy</span>
-							<h2>Bacardi 151</h2>
+							<span class="sale">세일중</span> <span class="category">막걸리</span>
+							<h2>다랭이팜 막걸리</h2>
 							<p class="mb-0">
-								<span class="price price-sale">$69.00</span> <span class="price">$49.00</span>
+								<span class="price price-sale">21500₩</span> <span class="price">18500₩</span>
 							</p>
 						</div>
 					</div>
@@ -129,7 +126,7 @@
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-2.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-7.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -143,16 +140,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="seller">Best Seller</span> <span class="category">Gin</span>
-							<h2>Jim Beam Kentucky Straight</h2>
-							<span class="price">$69.00</span>
+							<span class="seller">베스트셀러</span> <span class="category">막걸리</span>
+							<h2>복분자 막걸리</h2>
+							<span class="price">15500₩</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-3.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-14.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -166,16 +163,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="new">New Arrival</span> <span class="category">Rum</span>
-							<h2>Citadelle</h2>
-							<span class="price">$69.00</span>
+							<span class="new">신상품</span> <span class="category">전통주</span>
+							<h2>양반안동소주</h2>
+							<span class="price">14500₩</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-4.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-16.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -189,9 +186,9 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="category">Rum</span>
-							<h2>The Glenlivet</h2>
-							<span class="price">$69.00</span>
+							<span class="category">전통주</span>
+							<h2>전주 모주</h2>
+							<span class="price">12500₩</span>
 						</div>
 					</div>
 				</div>
@@ -199,7 +196,7 @@
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-5.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-24.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -213,16 +210,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="category">Whiskey</span>
-							<h2>Black Label</h2>
-							<span class="price">$69.00</span>
+							<span class="category">증류주</span>
+							<h2>명랑 스컬</h2>
+							<span class="price">17500₩</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-6.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-30.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -236,16 +233,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="category">Tequila</span>
-							<h2>Macallan</h2>
-							<span class="price">$69.00</span>
+							<span class="category">증류주</span>
+							<h2>안동소주 일품 골드</h2>
+							<span class="price">17500₩</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-7.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-18.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -259,16 +256,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="category">Vodka</span>
-							<h2>Old Monk</h2>
-							<span class="price">$69.00</span>
+							<span class="category">전통주</span>
+							<h2>첨 내린 담금주</h2>
+							<span class="price">25500₩</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 d-flex">
 					<div class="product ">
 						<div class="img d-flex align-items-center justify-content-center"
-							style="background-image: url(images/prod-8.jpg);">
+							style="background-image: url(<%=request.getContextPath()%>/images/product-26.jpg);">
 							<div class="desc">
 								<p class="meta-prod d-flex">
 									<a href="#"
@@ -282,16 +279,16 @@
 							</div>
 						</div>
 						<div class="text text-center">
-							<span class="category">Whiskey</span>
-							<h2>Jameson Irish Whiskey</h2>
-							<span class="price">$69.00</span>
+							<span class="category">증류주</span>
+							<h2>배상면주가 보리아락21</h2>
+							<span class="price">17500₩</span>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-4">
-					<a href="product.html" class="btn btn-primary d-block" style="font-family: 'Cafe24SsurroundAir'; ">전체 상품
+					<a href="<%=request.getContextPath() %>/product1.jsp" class="btn btn-primary d-block" style="font-family: 'Cafe24SsurroundAir'; ">전체 상품
 						확인 <span class="fa fa-long-arrow-right"></span>
 					</a>
 				</div>
