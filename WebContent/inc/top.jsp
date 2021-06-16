@@ -19,6 +19,14 @@
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/magnific-popup.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/flaticon.css">
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.flaticon-visibility').click(function(){
+			location.href="product-single.jsp";
+		});
+	});
+</script>
 
 </head>
 <body>

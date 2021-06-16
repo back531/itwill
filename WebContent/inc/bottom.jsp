@@ -75,13 +75,7 @@
          </div>
       </div>
     </footer>
-    <script type="text/javascript">
-		$(function () {
-			$('.flaticon-visibility').click(function(){
-				location.href="product-single.jsp";
-			});
-		});
-	</script>
+    
    
 
    </script>
