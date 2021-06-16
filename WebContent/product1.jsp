@@ -680,9 +680,9 @@
               <div class="categories">
                 <h3>Product Types</h3>
                 <ul class="p-0">
-                	<li><a href="#">전통주 <span class="fa fa-chevron-right"></span></a></li>
-	                <li><a href="#">막걸리 <span class="fa fa-chevron-right"></span></a></li>
-	                <li><a href="#">증류주 <span class="fa fa-chevron-right"></span></a></li>
+                	<li><a href="<%=request.getContextPath() %>/product2.jsp">전통주 <span class="fa fa-chevron-right"></span></a></li>
+	                <li><a href="<%=request.getContextPath() %>/product3.jsp">막걸리 <span class="fa fa-chevron-right"></span></a></li>
+	                <li><a href="<%=request.getContextPath() %>/product4.jsp">증류주 <span class="fa fa-chevron-right"></span></a></li>
                 </ul>
               </div>
             </div>

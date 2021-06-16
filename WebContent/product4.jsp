@@ -8,7 +8,7 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
              <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>상품<i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">전&nbsp;체&nbsp;상&nbsp;품</h2>
+            <h2 class="mb-0 bread">증&nbsp;류&nbsp;주</h2>
           </div>
         </div>
       </div>
@@ -275,9 +275,9 @@
               <div class="categories">
                 <h3>Product Types</h3>
                 <ul class="p-0">
-                	<li><a href="#">전통주 <span class="fa fa-chevron-right"></span></a></li>
-	                <li><a href="#">막걸리 <span class="fa fa-chevron-right"></span></a></li>
-	                <li><a href="#">증류주 <span class="fa fa-chevron-right"></span></a></li>
+                	<li><a href="<%=request.getContextPath() %>/product2.jsp">전통주 <span class="fa fa-chevron-right"></span></a></li>
+	                <li><a href="<%=request.getContextPath() %>/product3.jsp">막걸리 <span class="fa fa-chevron-right"></span></a></li>
+	                <li><a href="<%=request.getContextPath() %>/product4.jsp">증류주 <span class="fa fa-chevron-right"></span></a></li>
                 </ul>
               </div>
             </div>
