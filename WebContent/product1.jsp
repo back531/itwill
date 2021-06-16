@@ -23,7 +23,7 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate mb-5 text-center">      
+          <div class="col-md-9 ftco-animate mb-5 text-center">   
             <h2 class="mb-0 bread">전        체         상          품 </h2>
           </div>
         </div>
