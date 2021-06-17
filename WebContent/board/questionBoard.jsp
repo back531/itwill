@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<link rel="stylesheet" href="../css/style.css">
 <%@ include file="../inc/top.jsp"%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png');"
@@ -24,6 +23,7 @@
 			    margin-right: 150px;
 			    margin-top: 50px;
 			    margin-bottom: 50px;">
+<button type="button" class="btn btn-outline-primary text-justify">문의글 작성</button>
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>
@@ -59,15 +59,16 @@
 
 	<nav aria-label="...">
 		<ul class="pagination" style="justify-content: center">
-			<li class="page-item disabled"><span class="page-link">Previous</span>
+			<li class="page-item disabled"><span class="page-link">이전으로</span>
 			</li>
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
-			<li class="page-item active"><span class="page-link"> 2 <span
+			<li class="page-item active"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><span class="page-link"> 2 <span
 					class="sr-only">(current)</span>
 			</span></li>
 			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			<li class="page-item"><a class="page-link" href="#">다음으로</a></li>
 		</ul>
+		
 	</nav>
 </section>
 <%@ include file="../inc/bottom.jsp"%>
