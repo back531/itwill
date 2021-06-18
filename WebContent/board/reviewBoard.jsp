@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 <section class="hero-wrap hero-wrap-2"
-	style="background-image: url('../images/image01.png');"
+	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -22,7 +22,8 @@
 <section style="margin-left: 150px; 
 			    margin-right: 150px;
 			    margin-top: 50px;
-			    margin-bottom: 50px;">
+			    margin-bottom: 50px;
+			    font-family: 'Jeju Gothic', serif;">
 <button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='reviewBoard_write.jsp'">리뷰글 작성</button>
 <table class="table table-hover center-block">
     <tr>

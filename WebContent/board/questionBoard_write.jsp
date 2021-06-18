@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 <section class="hero-wrap hero-wrap-2"
-	style="background-image: url('../images/image01.png');"
+	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
@@ -22,7 +22,8 @@
 <section style="margin-left: 150px;
 			    margin-right: 150px;
 			    margin-top: 50px;
-			    margin-bottom: 50px;">
+			    margin-bottom: 50px;
+			    font-family: 'Jeju Gothic', serif;">
 <div class="container">
 	<form action="#" method="POST">
 	
@@ -34,9 +35,6 @@
 		<div class="form-group">
 			<label for="content">문의 내용</label>
 			<textarea id="summernote" class="form-control summernote" rows="5" id="content" name="content"></textarea>
-		</div>
-		<div>			
-				<input type="file" name="fileName">
 		</div>
 		<div class="text-center">
 			<button type="submit" class="btn btn-primary">문의 등록</button>
