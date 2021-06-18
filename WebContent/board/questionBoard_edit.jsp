@@ -35,6 +35,9 @@
 			<label for="content">문의 내용</label>
 			<textarea id="summernote" class="form-control summernote" rows="5" id="content" name="content"></textarea>
 		</div>
+		<div>			
+				<input type="file" name="fileName">
+		</div>
 		<div class="text-center">
 			<button type="submit" class="btn btn-primary">문의 등록</button>
 			<button type="reset" class="btn btn-primary">등록 취소</button>
