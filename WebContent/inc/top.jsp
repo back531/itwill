@@ -133,7 +133,7 @@
 
          <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-               <li class="nav-item"><a href="blog.html" class="nav-link">공지사항</a></li>
+               <li class="nav-item"><a href="<%=request.getContextPath() %>/board/Notice.jsp" class="nav-link">공지사항</a></li>
                <li class="nav-item"><a href="about.html" class="nav-link">구독하기</a></li>
                <li class="nav-item dropdown"><a
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
@@ -148,8 +148,8 @@
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">게시판</a>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
-                     <a class="dropdown-item" href="board/questionBoard.jsp">문의 게시판</a> <a
-                        class="dropdown-item" href="board/reviewBoard.jsp">후기 게시판</a>
+                     <a class="dropdown-item" href="<%=request.getContextPath() %>/board/questionBoard.jsp">문의 게시판</a> <a
+                        class="dropdown-item" href="<%=request.getContextPath() %>/board/reviewBoard.jsp">후기 게시판</a>
                   </div></li>
             </ul>
          </div>

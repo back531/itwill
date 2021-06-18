@@ -19,11 +19,11 @@
 		</div>
 	</div>
 </section>
-<section style="margin-left: 150px;
+<section style="margin-left: 150px; 
 			    margin-right: 150px;
 			    margin-top: 50px;
 			    margin-bottom: 50px;">
-<button type="button" class="btn btn-outline-primary text-justify">리뷰글 작성</button>
+<button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='reviewBoard_write.jsp'">리뷰글 작성</button>
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>

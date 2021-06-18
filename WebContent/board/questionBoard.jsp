@@ -23,7 +23,7 @@
 			    margin-right: 150px;
 			    margin-top: 50px;
 			    margin-bottom: 50px;">
-<button type="button" class="btn btn-outline-primary text-justify">문의글 작성</button>
+<button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='questionBoard_write.jsp'">문의글 작성</button>
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>
