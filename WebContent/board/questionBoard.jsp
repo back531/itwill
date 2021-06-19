@@ -1,6 +1,43 @@
+<%@page import="com.ksool.common.Utility"%>
+<%@page import="com.ksool.common.PagingVO"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.ksool.board.model.Q_BoardVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ksool.board.model.Q_BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	String condition=request.getParameter("searchCondition");
+	String keyword=request.getParameter("searchKeyword");
+	
+	Q_BoardDAO dao = new Q_BoardDAO();
+	List<Q_BoardVO> list=null;
+	try{
+		list=dao.selectAll(condition, keyword);
+	}catch(SQLException e){
+		e.printStackTrace();
+	}
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	//페이징 처리
+	int currentPage=1;  //현재 페이지
+	
+	if(request.getParameter("currentPage") !=null ){
+		currentPage=Integer.parseInt(request.getParameter("currentPage"));
+	}
+	
+	int totalRecord = 0;  //전체 레코드 개수, 예) 17
+	if(list !=null && !list.isEmpty()){
+		totalRecord=list.size();
+	}
+	int pageSize=5;  //한 페이지에 보여줄 레코드 수, 5
+	int blockSize=10;  //한 블럭에 보여줄 페이지 수, 10
+	
+	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
+%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
@@ -33,28 +70,46 @@
       <th scope="col">작성날짜</th>
       <th scope="col">조회수</th>
     </tr>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>19세 미만도 구매할 수 있나요?</td>
-      <td>어린이</td>
-      <td>2021-06-16</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>배송은 얼마나 걸리나요?</td>
-      <td>술꾼</td>
-      <td>2021-06-15</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>배송과정에서 파손이 있습니다.</td>
-      <td>사기꾼</td>
-      <td>2021-06-14</td>
-      <td>22</td>
-    </tr>
+		<%if(list==null || list.isEmpty()){ %>
+			<tr>
+				<td colspan="5" class="align_center">데이터가 없습니다.</td>
+			</tr>
+		<%}else{ %> 
+		  	<!--게시판 내용 반복문 시작  -->		
+		  	<%
+		  	int num=pageVo.getNum();
+		  	int curPos=pageVo.getCurPos();
+		  	
+		  	for(int i=0;i<pageVo.getPageSize() ;i++){
+		  		if(num<1) break;
+		  		Q_BoardVO vo=list.get(curPos++); //0, 5, 10, 15
+		  		num--;
+		  	%>
+				<tr class="align_center">
+					<td><%=vo.getNo() %></td>
+					<td class="align_left">
+						<%if(vo.getDelFlag().equalsIgnoreCase("Y")){ %>
+							<span style="color:gray">삭제된 글입니다.</span>
+						<%}else{ %>
+							<!-- 답변글인 경우 단계별로 이미지 보여주기 -->
+							<%=Utility.displayRe(vo.getStep()) %>	
+								
+							<!-- 제목이 긴 경우 일부만 보여주기 -->					
+							<a href="countUpdate.jsp?no=<%=vo.getNo() %>">
+								<%=Utility.cutTitle(vo.getTitle(), 30) %>
+							</a>
+							
+							<!-- 24시간 이내의 글인 경우 new 이미지 보여주기 -->
+							<%=Utility.displayNew(vo.getRegdate()) %>
+						<%}//if %>	
+					</td>
+					<td><%=vo.getName() %></td>
+					<td><%=sdf.format(vo.getRegdate()) %></td>
+					<td><%=vo.getReadcount() %></td>		
+				</tr> 
+			<%}//for %>
+		  	<!--반복처리 끝  -->
+	  	<%}//if %>
   </tbody>
 </table>
 
