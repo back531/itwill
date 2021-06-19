@@ -1,5 +1,5 @@
-<%@page import="com.order.model.CartVO"%>
-<%@page import="com.order.model.CartService"%>
+<%@page import="com.ksool.order.model.CartVO"%>
+<%@page import="com.ksool.order.model.CartService"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

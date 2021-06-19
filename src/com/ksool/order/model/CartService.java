@@ -1,4 +1,4 @@
-package com.order.model;
+package com.ksool.order.model;
 
 import java.sql.SQLException;
 import java.util.List;

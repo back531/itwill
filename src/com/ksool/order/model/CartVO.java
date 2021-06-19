@@ -1,4 +1,4 @@
-package com.order.model;
+package com.ksool.order.model;
 
 public class CartVO {
 	private int C_NO;
