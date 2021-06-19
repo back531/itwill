@@ -135,7 +135,9 @@
 				<div class="dropdown-menu dropdown-menu-right">
 					<div class="dropdown-item d-flex align-items-start" href="#">
 						<div class="img"
-							style="background-image: url(<%=request.getContextPath()%>images/prod-1.jpg);"></div>
+							style="background-image: url(<%=request.getContextPath()%>images/prod-1.jpg);">
+							
+							</div>
 						<div class="text pl-3">
 							<h4>Bacardi 151</h4>
 							<p class="mb-0">
@@ -167,7 +169,7 @@
 						</div>
 					</div>
 					<a class="dropdown-item text-center btn-link d-block w-100"
-						href="cart.html"> View All <span
+						href="<%=request.getContextPath()%>/order/cart.jsp"> View All <span
 						class="ion-ios-arrow-round-forward"></span>
 					</a>
 				</div>
@@ -184,7 +186,7 @@
 					<li class="nav-item"><a
 						href="<%=request.getContextPath()%>/board/Notice.jsp"
 						class="nav-link">공지사항</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">구독하기</a></li>
+					<li class="nav-item"><a href="<%=request.getContextPath()%>/order/subscribeInfo.jsp" class="nav-link">구독하기</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품</a>

@@ -14,7 +14,7 @@
 						오늘부터 <span>술은</span><br>특별하고 <span> 의미있게 </span>
 					</h1>
 					<p>
-						<a href="#" class="btn btn-white btn-outline-white py-3 px-5">구독하기란?</a>
+						<a href="<%=request.getContextPath()%>/order/subscribeInfo.jsp" class="btn btn-white btn-outline-white py-3 px-5">구독하기란?</a>
 						<!-- <a href="#" class="btn btn-white btn-outline-white py-2 px-4">Read more</a> -->
 					</p>
 				</div>
