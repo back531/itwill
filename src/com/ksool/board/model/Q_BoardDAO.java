@@ -18,7 +18,7 @@ public class Q_BoardDAO {
 		pool=ConnectionPoolMgr1.getInstance();
 	}
 
-	public int insertReBoard(Q_BoardVO vo) throws SQLException {
+	public int insert_Q_Board(Q_BoardVO vo) throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 
@@ -27,7 +27,7 @@ public class Q_BoardDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="insert into reBoard(no, name, title, "
+			String sql="insert into q_board(no, name, title, "
 					+ "content, groupNo, fileName, fileSize, originalFileName)"
 					+ " values(q_board_seq.nextval, ?,?,?, "
 					+ " q_board_seq.nextval,?,?,?)";
@@ -96,19 +96,14 @@ public class Q_BoardDAO {
 				int sortNo=rs.getInt("sortno");
 				String delFlag=rs.getString("delflag");
 
-				String filename=rs.getString("filename");
-				String originFilename=rs.getString("originalFilename");
+				String fileName=rs.getString("filename");
+				String originalFileName=rs.getString("originalFilename");
 				long fileSize=rs.getInt("fileSize");
 				
-				Q_BoardVO vo = new Q_BoardVO(no, name, title, 
-						regdate, readcount, content, groupNo, step, 
-						sortNo, delFlag, filename, fileSize, 
-						originFilename);
+				Q_BoardVO vo = new Q_BoardVO(no, name, title, regdate, readcount, content, groupNo, step, sortNo, delFlag, fileName, fileSize, originalFileName);
 						
 				list.add(vo);
 			}
-			System.out.println("글 목록 조회 결과 list.size="+list.size()
-			+ ", 매개변수 condition="+condition+", keyword="+keyword);
 
 			return list;
 		}finally {
@@ -162,7 +157,7 @@ public class Q_BoardDAO {
 		}
 	}
 
-	public int updateReBoard(Q_BoardVO vo) throws SQLException {
+	public int update_Q_Board(Q_BoardVO vo) throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 
@@ -221,7 +216,7 @@ public class Q_BoardDAO {
 		}
 	}
 
-	public void deleteReBoard(Q_BoardVO vo) throws SQLException {
+	public void delete_Q_Board(Q_BoardVO vo) throws SQLException {
 		Connection conn = null;
 		CallableStatement ps = null;
 
@@ -262,9 +257,9 @@ public class Q_BoardDAO {
 			cnt=ps.executeUpdate();
 			
 			//[2] insert
-			sql="insert into reBoard(no, name,title, content, "
+			sql="insert into q_board(no, name,title, content, "
 					+ "groupno, step, sortno)"
-					+ "values(reBoard_seq.nextval, ?,?,?,?,?,?)";
+					+ "values(q_board_seq.nextval, ?,?,?,?,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getTitle());

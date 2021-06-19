@@ -26,8 +26,8 @@ public class ConnectionPoolMgr1 {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			System.out.println("드라이버 로딩 성공!");
 			url="jdbc:oracle:thin:@DESKTOP-81FTIH6:1521:xe";	
-			user="herb"; 	
-			pwd="herb123";
+			user="semi"; 	
+			pwd="semi123";
 			
 			//커넥션 객체를 미리 생성해 놓기 - 10개
 			for(int i=0;i<10;i++){	

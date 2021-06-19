@@ -62,6 +62,11 @@
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
 <button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='questionBoard_write.jsp'">문의글 작성</button>
+<%	if(keyword!=null && !keyword.isEmpty() ){ %>
+		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
+<%	}else{
+		keyword="";
+	}%>
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>
@@ -72,7 +77,7 @@
     </tr>
 		<%if(list==null || list.isEmpty()){ %>
 			<tr>
-				<td colspan="5" class="align_center">데이터가 없습니다.</td>
+				<td colspan="5" class="text-center">데이터가 없습니다.</td>
 			</tr>
 		<%}else{ %> 
 		  	<!--게시판 내용 반복문 시작  -->		
@@ -113,18 +118,62 @@
   </tbody>
 </table>
 
+<div class="divPage">
+	<!-- 페이지 번호 추가 -->		
+	<!-- 이전 블럭으로 이동 -->
 	<nav aria-label="...">
-		<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
-			<li class="page-item disabled"><span class="page-link">이전으로</span>
-			</li>
-			<li class="page-item active"><a class="page-link" href="#">1</a></li>
-			<li class="page-item"><span class="page-link"> 2 <span
-					class="sr-only">(current)</span>
-			</span></li>
-			<li class="page-item"><a class="page-link" href="#">3</a></li>
-			<li class="page-item"><a class="page-link" href="#">다음으로</a></li>
-		</ul>
-		
+	<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
+	<%if(pageVo.getFirstPage()>1){ %>
+		<li class="page-item"><a href="questionBoard.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+	<%}//if %>
+						
+	<!-- [1][2][3][4][5][6][7][8][9][10] -->
+	<%
+		for(int i=pageVo.getFirstPage();i<=pageVo.getLastPage();i++){
+			if(i>pageVo.getTotalPage()) break;
+			
+			if(i == currentPage){%>
+			
+				<li class="page-item active"><a class="page-link" href="questionBoard.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
+			
+			<%}else{ %>
+				<li class="page-item"><a class="page-link" href="questionBoard.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
+			
+			<%}//if %>	
+	<%}//for %>
+	
+	<!-- 다음 블럭으로 이동 -->
+	<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
+		<li class="page-item"><a class="page-link" href="questionBoard.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
+	<%}//if %>
+	</ul>
 	</nav>
+	<!--  페이지 번호 끝 -->
+</div>
+
+<div class="divSearch text-center">
+   	<form name="frmSearch" method="post" action='questionBoard.jsp'>
+        <select name="searchCondition">
+            <option value="title" 
+            	<% if("title".equals(condition)){%>
+            		selected="selected"
+            	<%} %>
+            >제목</option>
+            <option value="content"
+            	<% if("content".equals(condition)){%>
+            		selected="selected"
+            	<%} %>
+            >내용</option>
+            <option value="name" 
+            	<% if("name".equals(condition)){%>
+            		selected="selected"
+            	<%} %>
+            >작성자</option>
+        </select>   
+        <input type="text" name="searchKeyword" title="검색어 입력"
+        	value="<%=keyword%>">   
+		<input type="submit" value="검색">
+    </form>
+</div>
 </section>
 <%@ include file="../inc/bottom.jsp"%>

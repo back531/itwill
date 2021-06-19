@@ -25,7 +25,7 @@
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
 <div class="container">
-	<form action="#" method="POST">
+	<form name="frmWrite" method="post" action="write_ok.jsp" >
 	
 		<div class="form-group">
 			<label for="title">제목</label>
