@@ -28,6 +28,11 @@
 	<form name="frmWrite" method="post" action="questionBoard_write_ok.jsp" >
 	
 		<div class="form-group">
+			<label for="name">이름</label>
+			<input type="text" class="form-control">
+		</div>
+		
+		<div class="form-group">
 			<label for="title">제목</label>
 			<input type="text" class="form-control" placeholder="제목을 입력하세요." id="title" name="title">
 		</div>

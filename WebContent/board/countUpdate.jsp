@@ -17,7 +17,7 @@
 	if(no==null || no.isEmpty()){ %>
 		<script type="text/javascript">
 			alert('잘못된 url입니다.');
-			location.href="list.jsp";
+			location.href="questionBoard.jsp";
 		</script>
 		
 	<%	return;

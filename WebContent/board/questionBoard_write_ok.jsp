@@ -16,7 +16,6 @@
 		request.setCharacterEncoding("utf-8");
 		String title=request.getParameter("title");
 		String name=request.getParameter("name");
-		String pwd=request.getParameter("pwd");
 		String content=request.getParameter("content");
 		
 		//ip 읽어오기
