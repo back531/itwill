@@ -24,11 +24,15 @@
 			    margin-top: 50px;
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
-	<form name="frmWrite" method="post" action="questionBoard_write_ok.jsp" enctype="multipart/form-data">
+	<form name="frmWrite" method="post" action="questionBoard_write_ok.jsp">
 <div class="container">
 		<div class="form-group">
 			<label for="title">제목</label>
 			<input type="text" class="form-control" placeholder="제목을 입력하세요." id="title" name="title">
+		</div>
+		<div class="form-group">
+			<label for="name">이름</label>
+			<input type="text" class="form-control" placeholder="이름" id="name" name="name">
 		</div>
 	
 		<div class="form-group">
@@ -46,23 +50,6 @@ $('#summernote').summernote({
 	placeholder: "문의 내용을 상세히 입력해주세요",
 	tabsize: 2,
 	height: 400
-});
-//onImageLinkInsert callback
-$('#summernote').summernote({
-  callbacks: {
-    onImageLinkInsert: function(url) {
-      // url is the image url from the dialog
-      $img = $('<img>').attr({ src: url })
-      $summernote.summernote('insertNode', $img[0]);
-    }
-  }
-});
-
-// summernote.image.link.insert
-$('#summernote').on('summernote.image.link.insert', function(we, url) {
-  // url is the image url from the dialog
-  $img = $('<img>').attr({ src: url })
-  $summernote.summernote('insertNode', $img[0]);
 });
 </script>
 </section>

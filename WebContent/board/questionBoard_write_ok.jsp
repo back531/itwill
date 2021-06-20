@@ -43,7 +43,7 @@
 			if(cnt>0){ %>
 				<script type="text/javascript">
 					alert('글쓰기처리 되었습니다.');
-					location.href="list.jsp";
+					location.href="questionBoard.jsp";
 				</script>				
 			<%}else{%>
 				<script type="text/javascript">

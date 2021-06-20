@@ -70,8 +70,13 @@
 	
 		<div class="form-group">
 			<label for="content">문의 내용</label>
-			<p><%=content %></p>
 		</div>
+			<div style="border: 1px solid #e9ecef; opacity: 1; overflow: auto; border-radius: 5px;">
+				<p><%=content %></p>
+			</div>
+		<br>
+		
+		
 		<div class="text-center">
 			<button type="button" class="btn btn-primary" onclick="location.href='questionBoard.jsp'">목록으로</button>
 			<button type="submit" class="btn btn-primary">답글달기</button>
