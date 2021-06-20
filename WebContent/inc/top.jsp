@@ -77,7 +77,41 @@
 	href="<%=request.getContextPath()%>/css/magnific-popup.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/flaticon.css">
+<script type="text/javascript">
 
+	$(document).ready(function() {
+		var floatPosition = parseInt($("#floatMenu").css('top'));
+
+		$(window).scroll(function() {
+			var scrollTop = $(window).scrollTop();
+			var newPosition = scrollTop + floatPosition + "px";
+			
+			$("#floatMenu").stop().animate({
+				"top" : newPosition
+			}, 500); 
+
+		}).scroll();
+
+	});
+	
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#MOVE_TOP_BTN').fadeIn();
+            } else {
+                $('#MOVE_TOP_BTN').fadeOut();
+            }
+        });
+        
+        $("#MOVE_TOP_BTN").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 500);
+            return false;
+        });
+    });
+    
+</script> 
 </head>
 <body>
 
