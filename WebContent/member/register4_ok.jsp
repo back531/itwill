@@ -39,7 +39,7 @@ request.setCharacterEncoding("utf-8");
          //3
          if(cnt>0){
             msg="회원가입되었습니다";
-            url="/index.jsp";
+            url="../index.jsp";
          }
       }catch(SQLException e){
          e.printStackTrace();

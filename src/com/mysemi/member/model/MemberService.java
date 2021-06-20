@@ -3,11 +3,7 @@ package com.mysemi.member.model;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-//DB작업 이외의 로직을 넣는 클래스
-/*
- jsp -> dao -> DB
- jsp -> service -> dao -> DB
- */
+
 public class MemberService {
 	private MemberDAO memberDao;
 	

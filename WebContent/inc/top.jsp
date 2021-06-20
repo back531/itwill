@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%
+	String t_userid=(String)session.getAttribute("userid");
+	boolean t_login=false;
+	if(t_userid!=null && !t_userid.isEmpty()){ //세션에 값이 있으면
+		t_login=true;  //로그인 된 경우
+	}
+%>   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,7 +118,13 @@
 					</div>
 					<div class="reg">
 						<p class="mb-0">
-							<a href="#" class="mr-2">회원가입</a> <a href="#">로그인</a>
+				<%if(!t_login){ %>					
+						<a href="<%=request.getContextPath()%>/login/login4.jsp">로그인</a>
+						<a href="<%=request.getContextPath()%>/member/register4.jsp">회원가입</a>  
+					<%}else{ %>
+						<a href="<%=request.getContextPath()%>/login/logout.jsp">로그아웃</a>
+						<a href="<"#">마이 페이지</a>
+					<%} %>
 						</p>
 					</div>
 				</div>

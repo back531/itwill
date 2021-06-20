@@ -1,18 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
 
-<head>
-  <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login </title>
-  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/login.css">
-  
+  	
 </head>
  <style>
  @font-face{
@@ -37,7 +35,9 @@
 		}//for
 	}
 %>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <Script type="text/javascript">
 	$(function(){
 		$('#lg_submit').click(function(){
@@ -79,16 +79,18 @@
                     <label for="pwd" class="sr-only">Password</label>
                     <input type="password" name="pwd" id="pwd" class="form-control" placeholder="***********">
                   </div>
+      
                   <input name="login" id="lg_submit" class="btn btn-block login-btn mb-4" type="submit" value="Login">
                   		<input type="checkbox" name="chkSave" id="chkSave"
 					<%if(ck_value!=null && !ck_value.isEmpty()){ %>
 						checked="checked"
 					<%} %>
 				>
+			
 				<label for="chkSave">아이디 저장하기</label>
                 </form>
                 <a href="#!" class="forgot-password-link">Forgot password?</a>
-                <p class="login-card-footer-text">계정이 없으신가요? <a href="#!" class="text-reset">회원가입 하기</a></p>
+                <p class="login-card-footer-text">계정이 없으신가요? <a href="../member/register4.jsp" class="text-reset">회원가입 하기</a></p>
                 <nav class="login-card-footer-nav">
                 
                   <a href="#!">이용 약관 확인하기</a>
@@ -99,10 +101,7 @@
       </div>
     </div>
   </main>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
+ 
 

@@ -43,7 +43,7 @@
 			}
 			
 			msg = memberVo.getName() + "님, 로그인되었습니다.";
-			url="/index.jsp";
+			url="../index.jsp";
 		}else if(result==MemberService.PWD_DISAGREE){
 			msg="비밀번호가 일치하지 않습니다.";
 		}else if(result==MemberService.ID_NONE){
