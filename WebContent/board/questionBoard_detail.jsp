@@ -32,30 +32,11 @@
 	if(content !=null && !content.isEmpty()){
 		//replace \r\n => <br>
 		content=content.replace("\r\n", "<br>");
-		content = content.replace("<p>", "");
-		content = content.replace("</p>", "");
 	}else{
 		//null => ""
 		content="";		
 	}
 %>
-<script>
-//onImageUpload callback
-$('#summernote').summernote({
-  callbacks: {
-    onImageUpload: function(files) {
-      // upload image to server and create imgNode...
-      $summernote.summernote('insertNode', imgNode);
-    }
-  }
-});
-
-// summernote.image.upload
-$('#summernote').on('summernote.image.upload', function(we, files) {
-  // upload image to server and create imgNode...
-  $summernote.summernote('insertNode', imgNode);
-});
-</script>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
@@ -89,7 +70,7 @@ $('#summernote').on('summernote.image.upload', function(we, files) {
 	
 		<div class="form-group">
 			<label for="content">문의 내용</label>
-			<textarea readonly="readonly" class="form-control summernote" rows="5" id="content" name="content"><%=content %></textarea>
+			<p><%=content %></p>
 		</div>
 		<div class="text-center">
 			<button type="button" class="btn btn-primary" onclick="location.href='questionBoard.jsp'">목록으로</button>
