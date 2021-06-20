@@ -15,7 +15,7 @@
 			location.href="list.jsp";
 		</script>
 		
-	<%	return;
+	<%	return ;
 	}
 	
 	//2
@@ -70,7 +70,7 @@
 	
 		<div class="form-group">
 			<label for="content">문의 내용</label>
-			<textarea readonly="readonly" class="form-control" rows="5" id="content" name="content"><%=content %></textarea>
+			<p><%=content %></p>
 		</div>
 		<div class="text-center">
 			<button type="button" class="btn btn-primary" onclick="location.href='questionBoard.jsp'">목록으로</button>

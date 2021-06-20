@@ -1,13 +1,6 @@
 <%@page import="com.ksool.board.model.Q_BoardVO"%>
-<%@page import="com.ksool.board.model.Q_BoardDAO"%>
-<%@page import="com.ksool.common.Utility"%>
-<%@page import="java.io.File"%>
-<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
-<%@page import="com.oreilly.servlet.MultipartRequest"%>
-<%@page import="java.io.IOException"%>
-
 <%@page import="java.sql.SQLException"%>
-
+<%@page import="com.ksool.board.model.Q_BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,7 +15,6 @@
 		//1.
 		request.setCharacterEncoding("utf-8");
 		String title=request.getParameter("title");
-		String name=request.getParameter("name");
 		String content=request.getParameter("content");
 		
 		//ip 읽어오기
@@ -34,7 +26,6 @@
 		Q_BoardDAO dao = new Q_BoardDAO();
 		Q_BoardVO vo = new Q_BoardVO();
 		vo.setContent(content);
-		vo.setName(name);
 		vo.setTitle(title);
 		try{
 			int cnt=dao.insert_Q_Board(vo);
@@ -43,7 +34,7 @@
 			if(cnt>0){ %>
 				<script type="text/javascript">
 					alert('글쓰기처리 되었습니다.');
-					location.href="list.jsp";
+					location.href="questionBoard.jsp";
 				</script>				
 			<%}else{%>
 				<script type="text/javascript">
