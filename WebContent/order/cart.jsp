@@ -38,9 +38,7 @@
 
 <section class="ftco-section">
 	<div class="container">
-		<!-- <div class="row"> -->
-		<!-- <div class="table-wrap"> -->
-
+		<div class="cart-detail p-3 p-md-4">
 		<table class="table">
 			<thead class="thead-primary">
 				<tr>
@@ -106,10 +104,11 @@
 					</p>
 				</div>
 				<p class="text-center">
-					<a href="checkout.html" class="btn btn-primary py-3 px-4">결제</a>
+					<a href="order.jsp" class="btn btn-primary py-3 px-4">결제</a>
 				</p>
 			</div>
 		</div>
+	</div>
 	</div>
 </section>
 <script>

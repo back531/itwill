@@ -2,7 +2,7 @@ package com.ksool.order.model;
 
 public class CartVO {
 	private int C_NO;
-	private String M_ID2;
+	private String userid;
 	private String C_PNAME;
 	private int C_QTY; 
 	private int C_PRICE;
@@ -13,10 +13,10 @@ public class CartVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CartVO(int c_NO, String m_ID2, String c_PNAME, int c_QTY, int c_PRICE, String pID) {
+	public CartVO(int c_NO, String userid, String c_PNAME, int c_QTY, int c_PRICE, String pID) {
 		super();
 		C_NO = c_NO;
-		M_ID2 = m_ID2;
+		this.userid = userid;
 		C_PNAME = c_PNAME;
 		C_QTY = c_QTY;
 		C_PRICE = c_PRICE;
@@ -31,12 +31,12 @@ public class CartVO {
 		C_NO = c_NO;
 	}
 
-	public String getM_ID2() {
-		return M_ID2;
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setM_ID2(String m_ID2) {
-		M_ID2 = m_ID2;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getC_PNAME() {
@@ -73,8 +73,8 @@ public class CartVO {
 
 	@Override
 	public String toString() {
-		return "CartVO [C_NO=" + C_NO + ", M_ID2=" + M_ID2 + ", C_PNAME=" + C_PNAME + ", C_QTY=" + C_QTY + ", C_PRICE="
-				+ C_PRICE + ", PID=" + PID + "]";
+		return "CartVO [C_NO=" + C_NO + ", userid=" + userid + ", C_PNAME=" + C_PNAME + ", C_QTY=" + C_QTY
+				+ ", C_PRICE=" + C_PRICE + ", PID=" + PID + "]";
 	}
 
 	
