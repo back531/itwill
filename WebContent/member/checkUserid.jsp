@@ -1,8 +1,8 @@
-<%@page import="com.mystudy.member.model.MemberService"%>
+<%@page import="com.mysemi.member.model.MemberService"%>
 <%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="memberService" class="com.mystudy.member.model.MemberService" 
+<jsp:useBean id="memberService" class="com.mysemi.member.model.MemberService" 
    scope="session"></jsp:useBean>
 <%
    //[1] register.jsp에서 새창 열기로 이동 - get
@@ -35,7 +35,6 @@
 <script type="text/javascript">
    $(function(){
       $('#btUse').click(function(){
-         //opener.document.frm1.userid.value= document.frmDup.userid.value;
          $(opener.document).find('#userid').val('<%=userid%>');
          $(opener.document).find('#chkId').val('Y');
          
