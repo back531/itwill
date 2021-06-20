@@ -27,17 +27,13 @@ public class Q_BoardDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="insert into q_board(no, name, title, "
-					+ "content, groupNo, fileName, fileSize, originalFileName)"
-					+ " values(q_board_seq.nextval, ?,?,?, "
-					+ " q_board_seq.nextval,?,?,?)";
+			String sql="insert into q_board(no, name, title, content, groupNo)"
+					+ " values(q_board_seq.nextval,?,?,?,q_board_seq.nextval)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getTitle());
 			ps.setString(3, vo.getContent());
-			ps.setString(4, vo.getFileName());
-			ps.setLong(5, vo.getFileSize());
-			ps.setString(6, vo.getOriginalFileName());
+
 
 			//4 exec
 			int cnt=ps.executeUpdate();
@@ -96,11 +92,8 @@ public class Q_BoardDAO {
 				int sortNo=rs.getInt("sortno");
 				String delFlag=rs.getString("delflag");
 
-				String fileName=rs.getString("filename");
-				String originalFileName=rs.getString("originalFilename");
-				long fileSize=rs.getInt("fileSize");
 				
-				Q_BoardVO vo = new Q_BoardVO(no, name, title, regdate, readcount, content, groupNo, step, sortNo, delFlag, fileName, fileSize, originalFileName);
+				Q_BoardVO vo = new Q_BoardVO(no, name, title, regdate, readcount, content, groupNo, step, sortNo, delFlag);
 						
 				list.add(vo);
 			}
@@ -144,9 +137,6 @@ public class Q_BoardDAO {
 				vo.setSortNo(rs.getInt("sortno"));
 				vo.setDelFlag(rs.getString("delflag"));	
 				
-				vo.setFileName(rs.getString("filename"));
-				vo.setOriginalFileName(rs.getString("originalFilename"));
-				vo.setFileSize(rs.getInt("fileSize"));
 			}
 			
 			System.out.println("글상세조회 결과, vo="+vo+", 매개변수 no="+no);
@@ -166,23 +156,14 @@ public class Q_BoardDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="update q_board set name=?, title=?, content=?";
-			if(vo.getFileName()!=null && !vo.getFileName().isEmpty()) {
-				sql+=", filename=?, filesize=?, originalFilename=?";		
-			}
-			sql+=" where no=?";
+			String sql="update q_board set name=?, title=?, content=? where no=?";
+
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getName());
 			ps.setString(2, vo.getTitle());
 			ps.setString(3, vo.getContent());
-			if(vo.getFileName()!=null && !vo.getFileName().isEmpty()) {
-				ps.setString(4, vo.getFileName());
-				ps.setLong(5, vo.getFileSize());
-				ps.setString(6, vo.getOriginalFileName());
-				ps.setInt(7, vo.getNo());				
-			}else {	
-				ps.setInt(4, vo.getNo());
-			}
+			ps.setInt(4, vo.getNo());
+
 			
 			//4 exec
 			int cnt=ps.executeUpdate();
