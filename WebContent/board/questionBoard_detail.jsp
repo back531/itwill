@@ -88,12 +88,12 @@
 			<%
 				if(vo.getName().equals(session.getAttribute("userid"))){ %>
 					<button type="button" class="btn btn-primary" onclick="location.href='questionBoard.jsp'">목록으로</button>
-					<button type="submit" class="btn btn-primary">답글달기</button>
+					<button type="button" class="btn btn-primary" onclick="location.href='questionBoard_reply.jsp?no=<%=no%>'">답글달기</button>
 					<button type="button" class="btn btn-primary" onclick="location.href='questionBoard_edit.jsp?no=<%=no%>'">수정하기</button>
 					<button type="reset" class="btn btn-primary" data-toggle="modal" data-target="#myModal">삭제하기</button>
 				<%}else{%>
 					<button type="button" class="btn btn-primary" onclick="location.href='questionBoard.jsp'">목록으로</button>
-					<button type="submit" class="btn btn-primary">답글달기</button>
+					<button type="button" class="btn btn-primary" onclick="location.href='questionBoard_reply.jsp?no=<%=no%>'">답글달기</button>
 			<% }%>
 
 		</div>
