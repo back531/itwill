@@ -9974,4 +9974,20 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+    
+#floatMenu {
+	position: absolute;
+	top: 10px;
+}
+
+a#MOVE_TOP_BTN {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    right: 4%;
+    bottom: 50px;
+    display: none;
+    z-index: 999;
+}
+
 
