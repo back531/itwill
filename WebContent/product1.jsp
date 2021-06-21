@@ -43,13 +43,13 @@
 			<td><%=rs.getString("PID")%></td>
 			<td><%=rs.getString("CT_NO")%></td>
 			<td><%=rs.getString("P_NAME")%></td>
-			<td><%=rs.getString("P_PRICE")%></td>
+			<td><%=rs.getInt("P_PRICE")%></td>
 			<td><%=rs.getString("P_CT") %></td>
-			<td><%=rs.getInt("P_CONTENT") %></td>
+			<td><%=rs.getString("P_CONTENT") %></td>
 			<td><%=rs.getInt("P_STOCK") %></td>
-			<td><%=rs.getInt("P_COLOR") %></td>
-			<td><%=rs.getInt("P_REGDATE") %></td>
-			<td><%=rs.getInt("P_STATE") %></td>
+			<td><%=rs.getString("P_COLOR") %></td>
+			<td><%=rs.getTimestamp("P_REGDATE") %></td>
+			<td><%=rs.getString("P_STATE") %></td>
 		</tr>
 	<%
 		}
