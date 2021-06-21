@@ -35,9 +35,7 @@
 		}//for
 	}
 %>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 <Script type="text/javascript">
 	$(function(){
 		$('#lg_submit').click(function(){
@@ -60,9 +58,6 @@
         <div class="row no-gutters">
           <div class="col-md-5">
             <img src="../images/coc.jpg" alt="login" class="login-card-img" width="400px"  height="350px">
-            <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
-              Free <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white">Bootstrap dashboard templates</a> from Bootstrapdash
-            </p>
           </div>
           <div class="col-md-7">
             <div class="card-body">
@@ -102,6 +97,9 @@
     </div>
   </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </html>
  
 
