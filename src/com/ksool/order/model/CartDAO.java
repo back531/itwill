@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ksool.db.ConnectionPoolMgr2;
+import com.sun.net.httpserver.Authenticator.Result;
 
 
 public class CartDAO {
@@ -17,21 +18,20 @@ public class CartDAO {
 		pool=new ConnectionPoolMgr2();
 	}
 	
-	public int updateCart(CartVO vo) throws SQLException {
+	public int updateCart(int qty, int no) throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 		
 		try {
 			conn=pool.getConnection();
 			
-			String sql="update cart set c_qty=?, c_price=? where c_no=?";
+			String sql="update cart set c_qty=? where c_no=?";
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, vo.getC_QTY());
-			ps.setInt(2, vo.getC_PRICE());
-			ps.setInt(3, vo.getC_NO());
+			ps.setInt(1, qty);
+			ps.setInt(2, no);
 			
 			int cnt=ps.executeUpdate();
-			System.out.println("수정 결과 cnt="+cnt+", vo="+vo);
+			System.out.println("수정 결과 cnt="+cnt+", qty="+qty+", no="+no);
 			return cnt;
 		}finally {
 			pool.dbClose(ps, conn);
@@ -94,4 +94,5 @@ public class CartDAO {
 			pool.dbClose(ps, conn);
 		}
 	}
+	
 }

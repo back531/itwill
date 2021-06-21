@@ -1,6 +1,21 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.ksool.order.model.CartVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ksool.order.model.CartService"%>
+<%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<%
+CartService cartService=new CartService();
+List<CartVO> list=null;
+try{
+	list=cartService.selectAll();
+}catch(SQLException e){
+	e.printStackTrace();
+}
+int sum=0;
+%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png');"
 	data-stellar-background-ratio="0.5">
@@ -24,154 +39,85 @@
 
 	<div class="container">
 
-		<div class="row justify-content-center">
-			<div class="col-xl-10 ftco-animate">
+		<div class="cart-detail p-3 p-md-4">
+			<h1>주문상품</h1>
 
-				<div class="cart-detail p-3 p-md-4">
-					<h1>주문상품</h1>
+			<table class="table">
+				<thead class="thead-primary">
+					<tr>
 
-					<table class="table">
-						<thead class="thead-primary">
-							<tr>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>total</th>
+					</tr>
+				</thead>
 
-								<th>&nbsp;</th>
-								<th>Product</th>
-								<th>Price</th>
-								<th>Quantity</th>
-								<th>total</th>
+				<tbody>
+					<%
+							if (list == null || list.isEmpty()) {
+							%>
+					<tr>
+						<td colspan="5">장바구니가 비어있습니다.</td>
+					</tr>
+					<%
+							} else {
+							%>
+					<%
+							for (int i = 0; i < list.size(); i++) {
+								CartVO vo = list.get(i);
+							%>
+					<tr>
+						<td><%=vo.getC_PNAME()%></td>
+						<td><%=vo.getC_PRICE()%></td>
+						<td><%=vo.getC_QTY()%></td>
+						<td><%=vo.getC_PRICE() * vo.getC_QTY()%></td>
+					</tr>
+					<%
+					sum+=vo.getC_PRICE()*vo.getC_QTY();
+							} //for
+							%>
+					<%
+							} //if
+							%>
 
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="alert" role="alert">
+				</tbody>
 
-								<td>
-									<div class="img"
-										style="background-image: url(../images/prod-1.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span> <span>Fugiat
-											voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$44.99</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity"
-											class="quantity form-control input-number" value="2" min="1"
-											max="100">
-									</div>
-								</td>
-								<td>$89.98</td>
+			</table>
 
-							</tr>
+			<!-- END -->
 
-							<tr class="alert" role="alert">
-
-								<td>
-									<div class="img"
-										style="background-image: url(../images/prod-2.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span> <span>Fugiat
-											voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$30.99</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity"
-											class="quantity form-control input-number" value="1" min="1"
-											max="100">
-									</div>
-								</td>
-								<td>$30.99</td>
-
-							</tr>
-
-							<tr class="alert" role="alert">
-
-								<td>
-									<div class="img"
-										style="background-image: url(../images/prod-3.jpg);"></div>
-								</td>
-								<td>
-									<div class="email">
-										<span>Jim Beam Kentucky Straight</span> <span>Fugiat
-											voluptates quasi nemo, ipsa perferendis</span>
-									</div>
-								</td>
-								<td>$35.50</td>
-								<td class="quantity">
-									<div class="input-group">
-										<input type="text" name="quantity"
-											class="quantity form-control input-number" value="1" min="1"
-											max="100">
-									</div>
-								</td>
-								<td>$35.50</td>
-
-							</tr>
-
-
-						</tbody>
-					</table>
-
-
-
-
-
-					<!-- END -->
-
-					<div class="row mt-5 pt-3 d-flex">
-						<div class="col-md-6 d-flex">
-							<div class="cart-detail cart-total p-3 p-md-4">
-								<h3 class="billing-heading mb-4">배송지</h3>
-								<p class="d-flex">
-									<span>홍길동</span>
-								</p>
-								<p class="d-flex">
-									<span>010-1111-2222</span>
-								</p>
-								<p class="d-flex">
-									<span>서울 강남구</span>
-								</p>
-								<p class="d-flex">
-									<span>배송메모</span> <input type="text" class="form-control"
-										placeholder="">
-								</p>
-								<p class="d-flex">
-									<span></span> <span> <a href="#"
-										class="btn btn-primary py-3 px-4">변경</a>
-									</span>
-								</p>
-							</div>
-
+			<form action="order_ok.jsp">
+				<div class="row justify-content-center">
+					<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+						<div class="cart-total mb-3">
+							<h3>배송지</h3>
+							<p class="d-flex">
+								<span>수령인</span><input type="text" name="name">
+							</p>
+							<p class="d-flex">
+								<span>주소</span><input type="text" name="ad1">
+							</p>
+							<p class="d-flex">
+								<span>상세주소</span><input type="text" name="ad2">
+							</p>
+							<p class="d-flex">
+								<span>연락처</span><input type="text" name="phone">
+							</p>
+							<p class="d-flex">
+								<span>요청사항</span><input type="text" name="require">
+							</p>
 						</div>
-						<div class="col-md-6 d-flex">
-							<div class="cart-detail p-3 p-md-4">
-								<h1 class="billing-heading mb-4">주문자</h1>
-								<p class="d-flex">
-									<span>홍길동</span>
-								</p>
-								<p class="d-flex">
-									<span>010-1111-2222</span>
-								</p>
-								<p class="d-flex">
-									<span>1111@naver.com</span>
-								</p>
+							<button type="submit" class="btn btn-primary">총 <%=sum %>원 결제</button>
 
-							</div>
-						</div>
 					</div>
 				</div>
-				<!-- .col-md-8 -->
-			</div>
+			</form>
+
 		</div>
+		<!-- .col-md-8 -->
+
 	</div>
 </section>
-
 <br>
 <%@ include file="../inc/bottom.jsp"%>

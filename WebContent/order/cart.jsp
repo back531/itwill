@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.ksool.order.model.CartVO"%>
 <%@page import="com.ksool.order.model.CartService"%>
 <%@page import="java.sql.SQLException"%>
@@ -5,6 +6,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<script>
+	$(function(){
+		$('#del').each(function(i){
+			$(this).click(function(e){
+				if(!confirm('삭제하시겠습니까?')){
+					e.preventDefault();
+					
+				}
+			});
+		});
+		
+		
+	});	
+</script>
 <%
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
@@ -39,6 +54,7 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="cart-detail p-3 p-md-4">
+		<form action="edit.jsp">
 		<table class="table">
 			<thead class="thead-primary">
 				<tr>
@@ -51,6 +67,7 @@
 					<th>&nbsp;</th>
 				</tr>
 			</thead>
+			
 			<tbody>
 				<%if(list==null || list.isEmpty()){ %>
 				<tr>
@@ -65,12 +82,13 @@
 				<tr>
 					<td><%=vo.getC_PNAME() %></td>
 					<td><%=vo.getC_PRICE() %></td>
-					<td>X<%=vo.getC_QTY() %></td>
+					<td><input type="text" value="<%=vo.getC_QTY() %>" name="qty" id="qty"></td>
 
 					<td><%=vo.getC_PRICE()*vo.getC_QTY() %></td>
-					<td><a href="edit.jsp?c_no=<%=vo.getC_NO() %>">
-							<button type="button" class="btn btn-primary">수정</button>
-					</a></td>
+					<td>
+						<button type="submit" class="btn btn-primary">수정</button>
+						<input type="hidden" value=<%=vo.getC_NO()%> name="c_no" name="c_no">
+					</td>
 					<td><a href="delete.jsp?c_no=<%=vo.getC_NO() %>">
 							<button type="button" class="btn btn-primary" id="del">삭제</button>
 					</a></td>
@@ -83,8 +101,9 @@
 				<%}//if %>
 
 			</tbody>
+			
 		</table>
-
+</form>
 		<div class="row justify-content-center">
 			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
 				<div class="cart-total mb-3">
@@ -104,24 +123,12 @@
 					</p>
 				</div>
 				<p class="text-center">
-					<a href="order.jsp" class="btn btn-primary py-3 px-4">결제</a>
+					<a href="order.jsp?sum=<%=sum %>" class="btn btn-primary py-3 px-4">결제</a>
 				</p>
 			</div>
 		</div>
 	</div>
 	</div>
 </section>
-<script>
-	$(function(){
-		$('#del').each(function(i){
-			$(this).click(function(e){
-				if(!confirm('삭제하시겠습니까?')){
-					e.preventDefault();
-					
-				}
-			});
-		});
-	});	
-</script>
 <br>
 <%@ include file="../inc/bottom.jsp"%>

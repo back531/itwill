@@ -10,8 +10,8 @@ public class CartService {
 		cartDao=new CartDAO();
 	}
 	
-	public int updateCart(CartVO vo) throws SQLException {
-		return cartDao.updateCart(vo);
+	public int updateCart(int qty, int no) throws SQLException {
+		return cartDao.updateCart(qty, no);
 	}
 	
 	public List<CartVO> selectAll() throws SQLException{
