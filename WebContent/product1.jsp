@@ -5,73 +5,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
-<%!// 변수 선언
-	Connection conn = null;
-	Statement stmt = null;
-	ResultSet rs = null;
-	String uid = "herb";
-	String pwd = "herb123";
-	String url = "jdbc:oracle:thin:@DESKTOP-49KJKCB:1521:XE";
-	String sql = "select * from PRODUCT";%>
-<%
-		try {
-		// 데이터베이스를 접속하기 위한 드라이버 SW 로드
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		// 데이터베이스에 연결하는 작업 수행
-		conn = DriverManager.getConnection(url, uid, pwd);
-		// 쿼리를 생성gkf 객체 생성
-		stmt = conn.createStatement();
-		// 쿼리 생성
-		rs = stmt.executeQuery(sql);
-	%>
-	<table border="1">
-		<tr>
-			<td>상품번호</td>
-			<td>카테고리 번호</td>
-			<td>상품이름</td>
-			<td>상품가격</td>
-			<td>상품종류</td>
-			<td>상품설명</td>
-			<td>상품재고</td>
-			<td>상품등록일</td>
-			<td>상품상태</td>
-		</tr>
-		<%
-			while (rs.next()) {
-		%>
-		<tr>
-			<td><%=rs.getString("PID")%></td>
-			<td><%=rs.getString("CT_NO")%></td>
-			<td><%=rs.getString("P_NAME")%></td>
-			<td><%=rs.getInt("P_PRICE")%></td>
-			<td><%=rs.getString("P_CT") %></td>
-			<td><%=rs.getString("P_CONTENT") %></td>
-			<td><%=rs.getInt("P_STOCK") %></td>
-			<td><%=rs.getString("P_COLOR") %></td>
-			<td><%=rs.getTimestamp("P_REGDATE") %></td>
-			<td><%=rs.getString("P_STATE") %></td>
-		</tr>
-	<%
-		}
-	} catch (Exception e) {
-		e.printStackTrace();
-	} finally {
-		try {
-			if (rs != null) {
-			rs.close();
-		}
-			if (stmt != null) {
-			stmt.close();
-	}
-		if (conn != null) {
-			conn.close();
-	}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	%>
-</table>
+
 <a id="MOVE_TOP_BTN" href="#">TOP </a>
 	<!-- 전체상품 출력 -->
 	<section class="hero-wrap hero-wrap-2"
