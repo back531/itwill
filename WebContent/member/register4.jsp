@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
+    <%@include file="../inc/top.jsp"%>
+<!DOCTYPE html>
+<html lang="ko">
 <script type="text/javascript">
  $(function(){
 	 $('#wr_submit').click(function(){
@@ -27,7 +28,7 @@
 	     var userid=$('#userid').val();
 	     
 	     open('checkUserid.jsp?userid='+userid,'chk',
-	           'width=350,height=200,left=30,top=30,location=yes,resizable=yes');
+	           'width=400,height=300,left=0,top=0,location=yes,resizable=yes');
 	   
 	    
 	  });
@@ -37,7 +38,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>회원가입 화면</title>
+  <title>회원가입 화면 - Bootstrap</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -95,7 +96,7 @@
             </div>
             <div class="col-md-4 mb-3">
          	<div>&nbsp;</div>
-         	  <input type="button" class="btn btn-outline-secondary" value="중복확인" id="btnChkId" title="새창열림">
+         	  <input type="button" value="중복확인" id="btnChkId" title="새창열림">
               <div class="invalid-feedback">
                	중복확인해주세요.
               </div>
@@ -180,4 +181,6 @@
   </div>
 
 </body>
-
+ 
+</html>
+<%@include file="../inc/bottom.jsp"%>

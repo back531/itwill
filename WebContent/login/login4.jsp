@@ -58,6 +58,7 @@
         <div class="row no-gutters">
           <div class="col-md-5">
             <img src="../images/coc.jpg" alt="login" class="login-card-img" width="400px"  height="350px">
+         	<p></p>
           </div>
           <div class="col-md-7">
             <div class="card-body">

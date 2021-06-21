@@ -29,6 +29,7 @@
 			
 			//[1] 세션에 아이디 저장
 			session.setAttribute("userid", userid);
+			session.setAttribute("pwd", pwd);
 			session.setAttribute("userName", memberVo.getName());
 			
 			//[2] 아이디 저장하기 체크한 경우 쿠키에 저장		
@@ -43,7 +44,7 @@
 			}
 			
 			msg = memberVo.getName() + "님, 로그인되었습니다.";
-			url="../index.jsp";
+			url="/index.jsp";
 		}else if(result==MemberService.PWD_DISAGREE){
 			msg="비밀번호가 일치하지 않습니다.";
 		}else if(result==MemberService.ID_NONE){
