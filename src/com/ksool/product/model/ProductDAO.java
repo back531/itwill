@@ -65,7 +65,6 @@ public class ProductDAO {
 						
 				list.add(vo);
 			}
-
 			return list;
 		}finally {
 			pool.dbClose(rs, ps, conn);

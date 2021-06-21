@@ -66,15 +66,15 @@
 			<%     	
 	          	int num = pageVo.getNum();
 			  	int curPos = pageVo.getCurPos();
-			  	
+			%>
+			<div class="col-md-9">
+				<div class="row">
+			<%	
 	          	for(int i=0; i<pageVo.getPageSize();i++){ 
 	          		if(num<1) break;
 	          		ProductVO dto=list.get(curPos++); //0, 5, 10, 15
 			  		num--;
 			%>
-			
-			<div class="col-md-9">
-				<div class="row">
 					<div class="col-md-4 d-flex">
 						<div class="product ftco-animate">
 							<div class="img d-flex align-items-center justify-content-center"
