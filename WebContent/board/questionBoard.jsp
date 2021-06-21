@@ -62,11 +62,7 @@
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
 <button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='questionBoard_write.jsp'">문의글 작성</button>
-<%	if(keyword!=null && !keyword.isEmpty() ){ %>
-		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
-<%	}else{
-		keyword="";
-	}%>
+
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>
@@ -173,6 +169,11 @@
         <input type="text" name="searchKeyword" title="검색어 입력"
         	value="<%=keyword%>">   
 		<input type="submit" value="검색">
+		<%	if(keyword!=null && !keyword.isEmpty() ){ %>
+		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
+		<%	}else{
+			keyword="";
+		}%>
     </form>
 </div>
 </section>

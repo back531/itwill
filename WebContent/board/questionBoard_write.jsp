@@ -31,8 +31,8 @@
 			<input type="text" class="form-control" placeholder="제목을 입력하세요." id="title" name="title">
 		</div>
 		<div class="form-group">
-			<label for="name">이름</label>
-			<input type="text" class="form-control" placeholder="이름" id="name" name="name">
+			<label for="userid">아이디</label>
+			<input type="text" class="form-control" readonly="readonly"  id="userid" name="userid" value="<%=session.getAttribute("userid")%>">
 		</div>
 	
 		<div class="form-group">
