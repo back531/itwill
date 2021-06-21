@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<%@ include file="../login/loginCheck.jsp"%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
