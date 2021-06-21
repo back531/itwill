@@ -15,19 +15,13 @@ public class Q_BoardVO {
 	private int step; 
 	private int sortNo;
 	private String delFlag;
-	
-	//자료실 추가
-	private String fileName;
-    private long fileSize; 
-    private String originalFileName; 
     
 	public Q_BoardVO() {
 		super();
 	}
 
 	public Q_BoardVO(int no, String name, String title, Timestamp regdate, int readcount,
-			String content, int groupNo, int step, int sortNo, String delFlag, 
-			String fileName, long fileSize, String originalFileName) {
+			String content, int groupNo, int step, int sortNo, String delFlag) {
 		super();
 		this.no = no;
 		this.name = name;
@@ -39,9 +33,6 @@ public class Q_BoardVO {
 		this.step = step;
 		this.sortNo = sortNo;
 		this.delFlag = delFlag;
-		this.fileName = fileName;
-		this.fileSize = fileSize;
-		this.originalFileName = originalFileName;
 	}
 
 	public int getNo() {
@@ -123,41 +114,13 @@ public class Q_BoardVO {
 	public void setDelFlag(String delFlag) {
 		this.delFlag = delFlag;
 	}
-	
-	public String getFileName() {
-		return fileName;
-	}
-
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-
-	public long getFileSize() {
-		return fileSize;
-	}
-
-	public void setFileSize(long fileSize) {
-		this.fileSize = fileSize;
-	}
-
-	public String getOriginalFileName() {
-		return originalFileName;
-	}
-
-	public void setOriginalFileName(String originalFileName) {
-		this.originalFileName = originalFileName;
-	}
 
 	@Override
 	public String toString() {
-		return "ReBoardVO [no=" + no + ", name=" + name + ", title=" + title
-				+ ", regdate=" + regdate + ", readcount=" + readcount + ", content=" + content + ", groupNo=" + groupNo
-				+ ", step=" + step + ", sortNo=" + sortNo + ", delFlag=" + delFlag + ", fileName=" + fileName
-				+ ", fileSize=" + fileSize + ", originalFileName=" + originalFileName
-				+ "]";
+		return "Q_BoardVO [no=" + no + ", name=" + name + ", title=" + title + ", regdate=" + regdate + ", readcount="
+				+ readcount + ", content=" + content + ", groupNo=" + groupNo + ", step=" + step + ", sortNo=" + sortNo
+				+ ", delFlag=" + delFlag + "]";
 	}
+
 	
-	
-	
-		
 }
