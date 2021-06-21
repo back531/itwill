@@ -10,37 +10,32 @@ public class ProductVO {
 	private String P_CT;
 	private String P_CONTENT;
 	private int P_STOCK;
-	private String P_COLOR;
 	private Timestamp P_REGDATE;
 	private String P_STATE;
+	private String Imagemain;
 	
-	
-	
-	@Override
-	public String toString() {
-		return "ProductVO [PID=" + PID + ", CT_NO=" + CT_NO + ", P_NAME=" + P_NAME + ", P_PRICE=" + P_PRICE + ", P_CT="
-				+ P_CT + ", P_CONTENT=" + P_CONTENT + ", P_STOCK=" + P_STOCK + ", P_COLOR=" + P_COLOR + ", P_REGDATE="
-				+ P_REGDATE + ", P_STATE=" + P_STATE + "]";
-	}
-
-
-
-	public ProductVO(String pID, String cT_NO, String p_NAME, int p_PRICE, String p_CT, String p_CONTENT, int p_STOCK,
-			String p_COLOR, Timestamp p_REGDATE, String p_STATE) {
+	public ProductVO() {
 		super();
-		PID = pID;
-		CT_NO = cT_NO;
-		P_NAME = p_NAME;
-		P_PRICE = p_PRICE;
-		P_CT = p_CT;
-		P_CONTENT = p_CONTENT;
-		P_STOCK = p_STOCK;
-		P_COLOR = p_COLOR;
-		P_REGDATE = p_REGDATE;
-		P_STATE = p_STATE;
 	}
 
-
+	
+	
+	public ProductVO(String pID, String cT_NO, String p_NAME, int p_PRICE, String p_CT, String p_CONTENT, int p_STOCK,
+			Timestamp p_REGDATE, String p_STATE, String imagemain) {
+		super();
+		this.PID = pID;
+		this.CT_NO = cT_NO;
+		this.P_NAME = p_NAME;
+		this.P_PRICE = p_PRICE;
+		this.P_CT = p_CT;
+		this.P_CONTENT = p_CONTENT;
+		this.P_STOCK = p_STOCK;
+		this.P_REGDATE = p_REGDATE;
+		this.P_STATE = p_STATE;
+		this.Imagemain = imagemain;
+	}
+		
+	
 
 	public String getPID() {
 		return PID;
@@ -126,18 +121,6 @@ public class ProductVO {
 
 
 
-	public String getP_COLOR() {
-		return P_COLOR;
-	}
-
-
-
-	public void setP_COLOR(String p_COLOR) {
-		P_COLOR = p_COLOR;
-	}
-
-
-
 	public Timestamp getP_REGDATE() {
 		return P_REGDATE;
 	}
@@ -162,9 +145,31 @@ public class ProductVO {
 
 
 
-	public ProductVO() {
-		super();
+	public String getImagemain() {
+		return Imagemain;
 	}
+
+
+
+	public void setImagemain(String imagemain) {
+		Imagemain = imagemain;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "ProductVO [PID=" + PID + ", CT_NO=" + CT_NO + ", P_NAME=" + P_NAME + ", P_PRICE=" + P_PRICE + ", P_CT="
+				+ P_CT + ", P_CONTENT=" + P_CONTENT + ", P_STOCK=" + P_STOCK + ", P_COLOR=" +  ", P_REGDATE="
+				+ P_REGDATE + ", P_STATE=" + P_STATE + ", Imagemain=" + Imagemain + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
