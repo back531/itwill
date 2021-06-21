@@ -156,13 +156,12 @@ public class Q_BoardDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="update q_board set name=?, title=?, content=? where no=?";
+			String sql="update q_board set title=?, content=? where no=?";
 
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, vo.getName());
-			ps.setString(2, vo.getTitle());
-			ps.setString(3, vo.getContent());
-			ps.setInt(4, vo.getNo());
+			ps.setString(1, vo.getTitle());
+			ps.setString(2, vo.getContent());
+			ps.setInt(3, vo.getNo());
 
 			
 			//4 exec
@@ -265,6 +264,36 @@ public class Q_BoardDAO {
 		}
 		
 		return cnt;
+	}
+	
+	public boolean checkPwd(int no, String pwd) throws SQLException {
+		Connection conn=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		
+		try {
+			conn=pool.getConnection();
+			
+			String sql="select pwd from q_board where no=?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, no);
+			
+			rs=ps.executeQuery();
+			
+			boolean bool=false;
+			if(rs.next()) {
+				String dbPwd=rs.getString(1);
+				if(dbPwd.equals(pwd)) {
+					bool=true;
+				}
+			}
+			System.out.println("비밀번호 체크 결과, bool="+bool+", 매개변수 no="
+					+no+", pwd="+pwd);
+			
+			return bool;
+		}finally {
+			pool.dbClose(rs, ps, conn);
+		}
 	}
 }
 

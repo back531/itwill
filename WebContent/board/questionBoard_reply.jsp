@@ -1,7 +1,34 @@
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.ksool.board.model.Q_BoardVO"%>
+<%@page import="com.ksool.board.model.Q_BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
-<%@ include file="../login/loginCheck.jsp"%>
+<%
+	//detail.jsp에서 [답변]클릭하면 get방식으로 이동
+	//=> http://localhost:9090/mystudy/reBoard/reply.jsp?no=2
+	//1
+	String no=request.getParameter("no");
+	if(no==null || no.isEmpty()){ %>
+		<script type="text/javascript">
+			alert('잘못된 url입니다.');
+			location.href="questionBoard.jsp";
+		</script>
+	<%	return;	
+	}
+	
+	//2
+	Q_BoardDAO dao = new Q_BoardDAO();
+	Q_BoardVO vo=null;
+	try{
+		vo=dao.selectByNo(Integer.parseInt(no));
+	}catch(SQLException e){
+		e.printStackTrace();
+	}
+	
+	//3
+	
+%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
@@ -25,11 +52,14 @@
 			    margin-top: 50px;
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
-	<form name="frmWrite" method="post" action="questionBoard_write_ok.jsp">
+	<form name="frmWrite" method="post" action="questionBoard_reply_ok.jsp">
+	<input type="hidden" name="groupNo" value="<%=vo.getGroupNo() %>">
+	<input type="hidden" name="step" value="<%=vo.getStep() %>">
+	<input type="hidden" name="sortNo" value="<%=vo.getSortNo() %>">
 <div class="container">
 		<div class="form-group">
 			<label for="title">제목</label>
-			<input type="text" class="form-control" placeholder="제목을 입력하세요." id="title" name="title">
+			<input type="text" class="form-control" id="title" name="title" value="Re: <%=vo.getTitle()%>"/>
 		</div>
 		<div class="form-group">
 			<label for="userid">아이디</label>

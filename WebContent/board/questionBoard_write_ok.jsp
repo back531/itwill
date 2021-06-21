@@ -22,7 +22,7 @@
 		//1.
 		request.setCharacterEncoding("utf-8");
 		String title=request.getParameter("title");
-		String name=request.getParameter("name");
+		String userid=request.getParameter("userid");
 		String content=request.getParameter("content");
 		
 		//ip 읽어오기
@@ -34,7 +34,7 @@
 		Q_BoardDAO dao = new Q_BoardDAO();
 		Q_BoardVO vo = new Q_BoardVO();
 		vo.setContent(content);
-		vo.setName(name);
+		vo.setName(userid);
 		vo.setTitle(title);
 		try{
 			int cnt=dao.insert_Q_Board(vo);

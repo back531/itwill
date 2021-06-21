@@ -8,51 +8,63 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ksool.db.ConnectionPoolMgr1;
-import com.ksool.db.ConnectionPoolMgr2;
-import com.ksool.order.model.CartVO;
+import com.ksool.db.ConnectionPoolMgr3;
 
 public class ProductDAO {
 	
-	private ConnectionPoolMgr2 pool;
-	
+	private ConnectionPoolMgr3 pool;
+
 	public ProductDAO() {
-		pool=new ConnectionPoolMgr2();
+		pool=ConnectionPoolMgr3.getInstance();
 	}
 	
-	public List<ProductVO> selectAll() throws SQLException{
+	public List<ProductVO> selectAll(String condition, String keyword) 
+			throws SQLException{
+		
 		Connection conn=null;
 		PreparedStatement ps=null;
 		ResultSet rs=null;
-		
-		List<ProductVO> list=new ArrayList<ProductVO>();
+
+		List<ProductVO> list = new ArrayList<ProductVO>();
 		try {
+			//1,2
 			conn=pool.getConnection();
-			
-			String sql="select * from product order by PID";
+
+			//3
+			String sql="select * from product";
+			//검색의 경우
+			if(keyword!=null && !keyword.isEmpty()) {
+				sql+=" where "+ condition +" like '%' || ? || '%'";
+			}
+			sql+=" order by pid desc";
+
 			ps=conn.prepareStatement(sql);
-			
+			if(keyword!=null && !keyword.isEmpty()) {
+				ps.setString(1, keyword);
+			}	
+
+			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				String PID =rs.getString(1);
-				String CT_NO=rs.getString(2);
-				String P_NAME=rs.getString(3);
-				int P_PRICE=rs.getInt(4);
-				String P_CT=rs.getString(5);
-				String P_CONTENT=rs.getString(6);
-				int P_STOCK=rs.getInt(7);
-				String P_COLOR=rs.getString(8);
-				Timestamp P_REGDATE=rs.getTimestamp(9);
-				String P_STATE=rs.getString(10);
+				String pid=rs.getString("pid");
+				String ct_no=rs.getString("ct_no");
+				String p_name=rs.getString("p_name");
+				int p_price=rs.getInt("p_price");
+				String p_ct=rs.getString("p_ct");
+				String p_content=rs.getString("p_content");
+				int p_stock=rs.getInt("p_stock");
+				Timestamp p_regdate=rs.getTimestamp("p_regdate");
+				String p_state=rs.getString("p_state");
+				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, P_COLOR, null, P_STATE);
+				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
+						
 				list.add(vo);
 			}
-			System.out.println("전체 조회 결과 list.size="+list.size());
 			return list;
 		}finally {
-			pool.dbClose(rs, ps, conn);				
+			pool.dbClose(rs, ps, conn);
 		}
 	}
 }

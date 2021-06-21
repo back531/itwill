@@ -1,3 +1,4 @@
+<%@page import="com.mysemi.member.model.MemberVO"%>
 <%@page import="com.ksool.common.Utility"%>
 <%@page import="com.ksool.common.PagingVO"%>
 <%@page import="java.text.SimpleDateFormat"%>
@@ -8,6 +9,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+
+
 <%
 	request.setCharacterEncoding("utf-8");
 	String condition=request.getParameter("searchCondition");
@@ -38,6 +41,11 @@
 	
 	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 %>
+<%	if(keyword!=null && !keyword.isEmpty() ){ %>
+		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
+<%	}else{
+		keyword="";
+	}%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
@@ -61,12 +69,9 @@
 			    margin-top: 50px;
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
+			    
 <button type="button" class="btn btn-outline-primary text-justify" onclick="location.href='questionBoard_write.jsp'">문의글 작성</button>
-<%	if(keyword!=null && !keyword.isEmpty() ){ %>
-		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
-<%	}else{
-		keyword="";
-	}%>
+
 <table class="table table-hover center-block">
     <tr>
       <th scope="col">순번</th>
@@ -173,6 +178,11 @@
         <input type="text" name="searchKeyword" title="검색어 입력"
         	value="<%=keyword%>">   
 		<input type="submit" value="검색">
+		<%	if(keyword!=null && !keyword.isEmpty() ){ %>
+		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
+		<%	}else{
+			keyword="";
+		}%>
     </form>
 </div>
 </section>
