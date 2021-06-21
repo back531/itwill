@@ -86,7 +86,6 @@
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/flaticon.css">
 <script type="text/javascript">
-
 	$(document).ready(function() {
 		var floatPosition = parseInt($("#floatMenu").css('top'));
 
@@ -99,8 +98,8 @@
 			}, 500); 
 
 		}).scroll();
-
 	});
+
 	
     $(function() {
         $(window).scroll(function() {

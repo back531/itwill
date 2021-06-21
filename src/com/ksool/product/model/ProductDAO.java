@@ -8,17 +8,14 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ksool.board.model.Q_BoardVO;
-import com.ksool.db.ConnectionPoolMgr1;
-import com.ksool.db.ConnectionPoolMgr2;
-import com.ksool.order.model.CartVO;
+import com.ksool.db.ConnectionPoolMgr3;
 
 public class ProductDAO {
 	
-	private ConnectionPoolMgr1 pool;
+	private ConnectionPoolMgr3 pool;
 
 	public ProductDAO() {
-		pool=ConnectionPoolMgr1.getInstance();
+		pool=ConnectionPoolMgr3.getInstance();
 	}
 	
 	public List<ProductVO> selectAll(String condition, String keyword) 

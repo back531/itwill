@@ -4,9 +4,12 @@
 <%@page import="java.util.List"%>
 <%@page import="com.ksool.product.model.ProductDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>ㅁ
 <%@ include file="../inc/top.jsp"%>
 <a id="MOVE_TOP_BTN" href="#">TOP </a>
+		
+		<!-- 전체조회 -->
+		
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('<%=request.getContextPath()%>/images/image01.png');"
 	data-stellar-background-ratio="0.5">
@@ -54,7 +57,7 @@
 		if(list !=null && !list.isEmpty()){
 			totalRecord=list.size();
 		}
-		int pageSize=8;  
+		int pageSize=9;  
 		int blockSize=5;  
 	
 	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
@@ -99,39 +102,39 @@
 					</div>
 					
 			<%} %>
-
-					<div class="divPage">
-						<!-- 페이지 번호 추가 -->		
-						<!-- 이전 블럭으로 이동 -->
-						<nav aria-label="...">
-						<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
-						<%if(pageVo.getFirstPage()>1){ %>
-							<li class="page-item"><a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
-						<%}//if %>
-											
-						<!-- [1][2][3][4][5][6][7][8][9][10] -->
-						<%
-							for(int i=pageVo.getFirstPage();i<=pageVo.getLastPage();i++){
-								if(i>pageVo.getTotalPage()) break;
-								
-								if(i == currentPage){%>
-								
-									<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
-								
-								<%}else{ %>
-									<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
-								
-								<%}//if %>	
-						<%}//for %>
+			
+							<!-- 페이지 번호 추가 -->		
+							<!-- 이전 블럭으로 이동 -->
+							<nav aria-label="...">
+							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
+							<%if(pageVo.getFirstPage()>1){ %>
+						      <li class="page-item"><a href="questionBoard.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+						    <%}//if %>
+												
+							<!-- [1][2][3][4][5][6][7][8][9][10] -->
+							<%
+								for(int i=pageVo.getFirstPage();i<=pageVo.getLastPage();i++){
+									if(i>pageVo.getTotalPage()) break;
+									
+									if(i == currentPage){%>
+									
+										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+									
+									<%}else{ %>
+										<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+									
+									<%}//if %>	
+							<%}//for %>
+							
+							<!-- 다음 블럭으로 이동 -->
+							<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
+								<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
+							<%}//if %>
+							</ul>
+							</nav>
+							<!--  페이지 번호 끝 -->
+			
 						
-						<!-- 다음 블럭으로 이동 -->
-						<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
-							<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
-						<%}//if %>
-						</ul>
-						</nav>
-						<!--  페이지 번호 끝 -->
-				</div>
 			</div>
 		</div>
 
@@ -157,6 +160,7 @@
 	<span id="brr"></span>
 	</div>
 	</div>
+	
 </section>
 <br>
 <%@ include file="../inc/bottom.jsp"%>
