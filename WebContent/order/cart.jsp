@@ -3,6 +3,7 @@
 <%@page import="com.ksool.order.model.CartService"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.util.List"%>
+<%@ include file="../login/loginCheck.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
@@ -21,11 +22,12 @@
 	});	
 </script>
 <%
+	String userid=(String)session.getAttribute("userid");
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
 	CartVO vo=null;
 	try{
-		list=cartService.selectAll();
+		list=cartService.selectAll(userid);
 	}catch(SQLException e){
 		e.printStackTrace();
 	}
