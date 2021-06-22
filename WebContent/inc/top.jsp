@@ -239,13 +239,13 @@
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
 							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/product1.jsp">전체상품</a> <a
+								href="<%=request.getContextPath()%>/product/Productlist.jsp">전체상품</a> <a
 								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product2.jsp">전통주</a> <a
+								href="<%=request.getContextPath()%>/product/ProductlistA.jsp">전통주</a> <a
 								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product3.jsp">막걸리</a> <a
+								href="<%=request.getContextPath()%>/product/ProductlistM.jsp">막걸리</a> <a
 								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product4.jsp">증류주</a>
+								href="<%=request.getContextPath()%>/product/ProductlistZ.jsp">증류주</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
