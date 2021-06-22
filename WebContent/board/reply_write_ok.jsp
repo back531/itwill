@@ -37,7 +37,7 @@
 		ReplyVO vo = new ReplyVO();
 		vo.setContent(content);
 		vo.setUserid(userid);
-		vo.setNo(Integer.parseInt(no));
+		vo.setBno(Integer.parseInt(no));
 		try{
 			int cnt=dao.insert_reply(vo);
 			

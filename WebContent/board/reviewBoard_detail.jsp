@@ -9,10 +9,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<style>
+.card:hover{
+    transform: scale(1.05);
+ 	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+ 	
+ 	
+}
+</style>
 <%
-	//list.jsp에서 제목 링크 클릭하면 get방식으로 이동
-//=> http://localhost:9090/mystudy/reBoard/detail.jsp?no=4
-//1
+
 String no = request.getParameter("no");
 
 if (no == null || no.isEmpty()) {
@@ -21,7 +27,6 @@ if (no == null || no.isEmpty()) {
 	alert("잘못된 url입니다.");
 	location.href = "list.jsp";
 </script>
-
 <%
 	return;
 }
@@ -134,7 +139,7 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 			</div>
 		</form>	
 			<br>
-			<form action="reply_write_ok.jsp" method="POST">
+			<form id="replyfrm" action="reply_write_ok.jsp" method="POST">
 			<%int num = pageVo.getNum();
 			  int curPos = pageVo.getCurPos();
 			
@@ -142,7 +147,7 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 				  if(num<1) break;
 						ReplyVO vo2 = list.get(curPos++);
 						num--;%>	
-						<div class="card mb-2">
+						<div class="card mb-2 card-hover">
 						<div class="card-body">
 							<div class="form-inline mb-2">
 								<label for="replyId"><i	class="fa fa-user-circle-o fa-2x"></i></label> 
@@ -154,6 +159,11 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 							<div class="text-center">
 								<p style="text-align: left;"><%=vo2.getContent() %></p>
 							</div>
+							<%if(vo2.getUserid().equals(session.getAttribute("userid"))){ %>
+								<div class="text-center" >
+									<a href="reply_delete_ok.jsp"><i class="fa fa-trash fa-2x"></i></a>
+								</div>
+							<%} %>
 						</div>
 						</div>
 				<%}//for%>
@@ -231,6 +241,16 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 					}
 				}
 			});
+			$('#replyfrm').submit(function() {
+				if ($('#content').val().length < 1) {
+					alert('댓글내용을 입력해주세요.');
+					$('#pwd').focus();
+					event.preventDefault();
+				}
+			});
+			
+			
+			
 		});
 	</script>
 	<form name="frmDelete" method="post" action="reviewBoard_delete_ok.jsp">

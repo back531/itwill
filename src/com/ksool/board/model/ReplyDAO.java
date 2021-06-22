@@ -30,7 +30,7 @@ public class ReplyDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from reply where no=?";
+			String sql="select * from reply where bno=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, no);
 			
@@ -38,13 +38,14 @@ public class ReplyDAO {
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				no=rs.getInt("no");
+				int bno = rs.getInt("bno");
 				String userid=rs.getString("userid");
 				String content=rs.getString("content");
 				Timestamp regdate=rs.getTimestamp("regdate");
 				String delFlag=rs.getString("delflag");
 
 				
-				ReplyVO vo = new ReplyVO(no, userid, content, delFlag, regdate);
+				ReplyVO vo = new ReplyVO(no, bno, userid, content, delFlag, regdate);
 						
 				list.add(vo);
 			}
@@ -55,7 +56,7 @@ public class ReplyDAO {
 		}
 	}
 	
-	public ReplyVO selectByNo(int no) throws SQLException {
+	public ReplyVO selectByNo(int bno) throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 		ResultSet rs=null;
@@ -66,14 +67,14 @@ public class ReplyDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from reply where no=?";
+			String sql="select * from reply where bno=?";
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, no);
+			ps.setInt(1, bno);
 
 			//4
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				vo.setNo(no);
+				vo.setBno(bno);
 
 				String content=rs.getString("content");
 				vo.setContent(content);
@@ -81,7 +82,7 @@ public class ReplyDAO {
 				vo.setDelflag(rs.getString("delflag"));
 			}
 			
-			System.out.println("글상세조회 결과, vo="+vo+", 매개변수 no="+no);
+			System.out.println("글상세조회 결과, vo="+vo+", 매개변수 no="+bno);
 
 			return vo;
 		}finally {
@@ -98,10 +99,10 @@ public class ReplyDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="insert into reply(no, userid, content, regdate)"
-					+ " values(?,?,?,sysdate)";
+			String sql="insert into reply(no, bno, userid, content, regdate)"
+					+ " values(reply_seq.nextval,?,?,?,sysdate)";
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, vo.getNo());
+			ps.setInt(1, vo.getBno());
 			ps.setString(2, vo.getUserid());
 			ps.setString(3, vo.getContent());
 
