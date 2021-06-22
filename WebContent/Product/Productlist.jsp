@@ -4,7 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.ksool.product.model.ProductDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>ㅁ
+	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 <a id="MOVE_TOP_BTN" href="#">TOP </a>
 		
@@ -96,7 +96,7 @@
 							<div class="text text-center">
 									<span class="category"><%=dto.getCT_NO() %></span>
 									<h2><%=dto.getP_NAME() %></h2>
-									<span class="price"><%=dto.getP_PRICE() %></span>
+									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
 						</div>
 					</div>
