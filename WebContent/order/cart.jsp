@@ -54,7 +54,7 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="cart-detail p-3 p-md-4">
-		<form action="edit.jsp">
+		<form>
 		<table class="table">
 			<thead class="thead-primary">
 				<tr>
@@ -85,9 +85,9 @@
 					<td><input type="text" value="<%=vo.getC_QTY() %>" name="qty" id="qty"></td>
 
 					<td><%=vo.getC_PRICE()*vo.getC_QTY() %></td>
-					<td>
-						<button type="submit" class="btn btn-primary">수정</button>
-						<input type="hidden" value=<%=vo.getC_NO()%> name="c_no" name="c_no">
+					<td><a href="edit.jsp?c_no=<%=vo.getC_NO() %>">
+						<button type="submit" class="btn btn-primary">수정</button></a>
+						<input type="hidden" value=<%=vo.getC_NO()%> name="c_no" id="c_no">
 					</td>
 					<td><a href="delete.jsp?c_no=<%=vo.getC_NO() %>">
 							<button type="button" class="btn btn-primary" id="del">삭제</button>

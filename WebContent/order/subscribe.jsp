@@ -1,21 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../images/image01.png');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate mb-5 text-center">
-             <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>구독<i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">구독하기</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="row justify-content-center">
-    <div class="col col-lg-5 col-md-6 mt-5">
-<form>
-	<center>
+<section class="hero-wrap hero-wrap-2"
+	style="background-image: url('../images/image01.png');"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div
+			class="row no-gutters slider-text align-items-end justify-content-center">
+			<div class="col-md-9 ftco-animate mb-5 text-center">
+				<p class="breadcrumbs mb-0">
+					<span class="mr-2"><a href="index.html">Home <i
+							class="fa fa-chevron-right"></i></a></span> <span>주문 <i
+						class="fa fa-chevron-right"></i></span>
+				</p>
+				<h2 class="mb-0 bread">구독</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section">
+
+	<div class="container">
+
+		<div class="cart-detail p-3 p-md-4">
+			<center>
 	<h2>편하게 즐기는 전통주 구독서비스</h2>
 	<section class="ftco-section ftco-no-pb">
 			<div class="row justify-content-center pb-5">
@@ -47,10 +57,39 @@
 	<h3>매달<br>이달의 술과 K-SOOL이 추천하는<br>인생술을 함께 보내드려요</h3><br>
 	
 	
-	<a href="subscribe.jsp" class="btn btn-primary py-3 px-4">구독하기</a>
-	<p><Br>월 19,900원</p>
 	</center>
-</form>
-</div>
-</div>
+
+			<form action="subscribe_ok.jsp">
+				<div class="row justify-content-center">
+					<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+						<div class="cart-total mb-3">
+							<h3>배송지</h3>
+							<p class="d-flex">
+								<span>수령인</span><input type="text" name="name">
+							</p>
+							<p class="d-flex">
+								<span>주소</span><input type="text" name="ad1">
+							</p>
+							<p class="d-flex">
+								<span>상세주소</span><input type="text" name="ad2">
+							</p>
+							<p class="d-flex">
+								<span>연락처</span><input type="text" name="phone">
+							</p>
+							<p class="d-flex">
+								<span>요청사항</span><input type="text" name="require">
+							</p>
+						</div>
+							<button type="submit" class="btn btn-primary">월 19,900원 결제</button>
+
+					</div>
+				</div>
+			</form>
+
+		</div>
+		<!-- .col-md-8 -->
+
+	</div>
+</section>
+<br>
 <%@ include file="../inc/bottom.jsp"%>
