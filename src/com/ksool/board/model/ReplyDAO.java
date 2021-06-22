@@ -88,4 +88,31 @@ public class ReplyDAO {
 			pool.dbClose(rs, ps, conn);
 		}
 	}
+	
+	public int insert_reply(ReplyVO vo) throws SQLException {
+		Connection conn=null;
+		PreparedStatement ps=null;
+
+		try {
+			//1,2 conn
+			conn=pool.getConnection();
+
+			//3 ps
+			String sql="insert into reply(no, userid, content, regdate)"
+					+ " values(?,?,?,sysdate)";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, vo.getNo());
+			ps.setString(2, vo.getUserid());
+			ps.setString(3, vo.getContent());
+
+
+			//4 exec
+			int cnt=ps.executeUpdate();
+			System.out.println("글쓰기 결과, cnt="+cnt+", 매개변수 vo="+vo);
+
+			return cnt;
+		}finally {
+			pool.dbClose(ps, conn);
+		}
+	}
 }
