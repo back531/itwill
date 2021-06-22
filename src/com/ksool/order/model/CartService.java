@@ -14,8 +14,8 @@ public class CartService {
 		return cartDao.updateCart(qty, no);
 	}
 	
-	public List<CartVO> selectAll(String userid) throws SQLException{
-		return cartDao.selectAll(userid);
+	public List<CartVO> selectAll() throws SQLException{
+		return cartDao.selectAll();
 	}
 	
 	public int deleteCart(int c_no) throws SQLException {
