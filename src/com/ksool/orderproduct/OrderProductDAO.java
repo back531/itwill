@@ -13,7 +13,7 @@ public class OrderProductDAO {
 		pool=new ConnectionPoolMgr2();
 	}
 	
-	public int insertOrderProduct(String userid) throws SQLException {
+	public int insertOrderProduct() throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 		
@@ -23,9 +23,8 @@ public class OrderProductDAO {
 			String sql="insert into order_product(col,pid,o_qty, o_price, o_no)"
 					+ " select c.c_no, c.c_pname, c.c_qty, c.c_price, o.o_no"
 					+ " from cart c join order_item o"
-					+ " on c.userid=o.userid where c.userid=?";
+					+ " on c.userid=o.userid";
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, userid);
 			
 			int cnt=ps.executeUpdate();
 			System.out.println("주문상품 입력 cnt="+cnt);
