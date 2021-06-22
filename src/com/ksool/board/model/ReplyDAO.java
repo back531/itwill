@@ -1,5 +1,6 @@
 package com.ksool.board.model;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -115,5 +116,24 @@ public class ReplyDAO {
 		}finally {
 			pool.dbClose(ps, conn);
 		}
+	}
+	
+	public void delete_reply(ReplyVO vo) throws SQLException {
+		Connection conn = null;
+		CallableStatement ps = null;
+
+		try {
+			conn = pool.getConnection();
+			String sql = "delete from reply where no=? and bno=?";
+			ps = conn.prepareCall(sql);
+			ps.setInt(1, vo.getNo());
+			ps.setInt(2, vo.getBno());
+
+			boolean bool = ps.execute();
+			System.out.println("삭제 결과 bool = "+bool+", 매개변수 vo= "+vo);			
+		}finally {
+			pool.dbClose(ps, conn);
+		}
+
 	}
 }

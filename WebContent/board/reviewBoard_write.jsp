@@ -2,6 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 <%@ include file="../login/loginCheck.jsp"%>
+
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ko-KR.js"></script>
+
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">
@@ -46,12 +52,12 @@
 		</div>
 </div>
 	</form>
-<script>
-$('#summernote').summernote({
-	placeholder: "후기 내용을 상세히 입력해주세요",
-	tabsize: 2,
-	height: 400
-});
-</script>
+    <script>
+      $('.summernote').summernote({
+        placeholder: '후기내용을 상세히 적어주세요.',
+        tabsize: 2,
+        height: 400
+      });
+    </script>
 </section>
 <%@ include file="../inc/bottom.jsp"%>
