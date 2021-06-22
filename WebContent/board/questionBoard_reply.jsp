@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
+<%@ include file="../login/loginCheck.jsp"%>
 <%
 	//detail.jsp에서 [답변]클릭하면 get방식으로 이동
 	//=> http://localhost:9090/mystudy/reBoard/reply.jsp?no=2

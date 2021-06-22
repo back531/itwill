@@ -105,7 +105,7 @@
 							<%=Utility.displayRe(vo.getStep()) %>	
 								
 							<!-- 제목이 긴 경우 일부만 보여주기 -->					
-							<a href="countUpdate.jsp?no=<%=vo.getNo() %>">
+							<a href="question_countUpdate.jsp?no=<%=vo.getNo() %>">
 								<%=Utility.cutTitle(vo.getTitle(), 30) %>
 							</a>
 							
