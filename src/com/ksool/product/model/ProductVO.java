@@ -3,7 +3,7 @@ package com.ksool.product.model;
 import java.security.Timestamp;
 
 public class ProductVO {
-	private String PID;
+	private int PID;
 	private String CT_NO;
 	private String P_NAME;
 	private int P_PRICE;
@@ -20,7 +20,7 @@ public class ProductVO {
 
 	
 	
-	public ProductVO(String pID, String cT_NO, String p_NAME, int p_PRICE, String p_CT, String p_CONTENT, int p_STOCK,
+	public ProductVO(int pID, String cT_NO, String p_NAME, int p_PRICE, String p_CT, String p_CONTENT, int p_STOCK,
 			Timestamp p_REGDATE, String p_STATE, String imagemain) {
 		super();
 		this.PID = pID;
@@ -37,13 +37,13 @@ public class ProductVO {
 		
 	
 
-	public String getPID() {
+	public int getPID() {
 		return PID;
 	}
 
 
 
-	public void setPID(String pID) {
+	public void setPID(int pID) {
 		PID = pID;
 	}
 

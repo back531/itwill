@@ -90,7 +90,7 @@
 										<span class="flaticon-shopping-bag"></span></a> 
 										<a href="#" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-heart"></span></a> 
-										<a href="/product/product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
+										<a href="<%=request.getContextPath() %>/Product/product-single.jsp" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-visibility"></span></a>
 									</p>
 								</div>
@@ -146,13 +146,13 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="<%=request.getContextPath() %>/product/ProductlistA.jsp">전통주
+								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">>전통주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product/ProductlistM">막걸리
+								<li><a href="<%=request.getContextPath() %>/Product/ProductlistM.jsp">막걸리
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product/ProductlistZ.jsp">증류주
+								<li><a href="<%=request.getContextPath() %>/Product/ProductlistZ.jsp">증류주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
 							</ul>

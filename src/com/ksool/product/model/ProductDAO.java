@@ -57,7 +57,7 @@ public class ProductDAO {
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(p_stock, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -67,4 +67,48 @@ public class ProductDAO {
 			pool.dbClose(rs, ps, conn);
 		}
 	}
+	
+	public ProductVO selectByPID(int pid) throws SQLException {
+		Connection conn=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+
+		ProductVO vo = new ProductVO();
+		try {
+			//1,2
+			conn=pool.getConnection();
+
+			//3
+			String sql="select * from product where pid=?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, pid);
+
+			//4
+			rs=ps.executeQuery();
+			if(rs.next()) {
+				vo.setPID(pid);
+				vo.setCT_NO(rs.getString("ct_no"));
+				vo.setP_NAME(rs.getString("p_name"));
+				vo.setP_PRICE(rs.getInt("p_price"));
+				vo.setP_CT(rs.getString("p_ct"));
+				
+				String p_content=rs.getString("p_content");
+				vo.setP_CONTENT(p_content);
+				
+				vo.setP_STOCK(rs.getInt("p_stock"));	
+				vo.setP_REGDATE(null);					
+				vo.setP_STATE(rs.getString("p_state"));
+				vo.setImagemain(rs.getString("imagemain"));
+				
+				
+			}
+			
+			System.out.println("상품조회결과, vo="+vo+", 매개변수 pid="+pid);
+
+			return vo;
+		}finally {
+			pool.dbClose(rs, ps, conn);
+		}
+	}
+
 }
