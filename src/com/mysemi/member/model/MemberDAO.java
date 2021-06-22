@@ -193,7 +193,35 @@ public class MemberDAO {
          pool.dbClose(ps, conn);
       }
    }
-   
+
+	/* 관리자 로그인 */
+   public boolean admin_login(String admin_id,String admin_pass){
+	    Connection conn=null;
+	    PreparedStatement ps=null;
+	    ResultSet rs=null;
+	    
+		boolean b = false;
+		try {
+			conn=pool.getConnection();
+			String sql = "select * from admin where admin_id = ? and admin_pass = ?";
+			
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, admin_id);
+			ps.setString(2, admin_pass);
+			rs = ps.executeQuery();
+			b=rs.next();
+		} catch (Exception e) {
+			System.out.println("admin_login err : " + e);
+		} finally {
+			try {
+				if(rs!=null)rs.close();
+				if(ps!=null)ps.close();
+				if(conn!=null)conn.close();
+			} catch (Exception e2) {
+			}
+		}		
+		return b;
+	}
 }
 
 
