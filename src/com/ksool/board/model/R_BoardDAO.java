@@ -192,7 +192,7 @@ public class R_BoardDAO {
 
 		try {
 			conn = pool.getConnection();
-			String sql = "call delete_r_board(?)";
+			String sql = "delete from r_board where no=?";
 			ps = conn.prepareCall(sql);
 			ps.setInt(1, vo.getNo());
 

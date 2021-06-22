@@ -1,5 +1,5 @@
-<%@page import="com.ksool.board.model.Q_BoardVO"%>
-<%@page import="com.ksool.board.model.Q_BoardDAO"%>
+<%@page import="com.ksool.board.model.R_BoardVO"%>
+<%@page import="com.ksool.board.model.R_BoardDAO"%>
 <%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -16,23 +16,20 @@
    request.setCharacterEncoding("utf-8");
 
    String no = request.getParameter("no");
-   String step = request.getParameter("step");
-   String groupNo = request.getParameter("groupNo");
    String pwd = request.getParameter("pwd");
    
-   Q_BoardDAO dao = new Q_BoardDAO();
-   Q_BoardVO vo = new Q_BoardVO();
+   R_BoardDAO dao = new R_BoardDAO();
+   R_BoardVO vo = new R_BoardVO();
    
    vo.setNo(Integer.parseInt(no));
-   vo.setStep(Integer.parseInt(step));
-   vo.setGroupNo(Integer.parseInt(groupNo));
+
    
    try{
 	  if(pwd.equals(session.getAttribute("pwd"))){ 
-	     dao.delete_qboard(vo); %>	      
+	     dao.delete_r_board(vo); %>	      
          <script type="text/javascript">
             alert("삭제가 완료되었습니다.");
-            location.href="questionBoard.jsp";
+            location.href="reviewBoard.jsp";
          </script>
 	  <%}else{ %>
          <script type="text/javascript">

@@ -46,12 +46,12 @@
 		</div>
 </div>
 	</form>
-<script>
-$('#summernote').summernote({
-	placeholder: "후기 내용을 상세히 입력해주세요",
-	tabsize: 2,
-	height: 400
-});
-</script>
+    <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello Bootstrap 4',
+        tabsize: 2,
+        height: 100
+      });
+    </script>
 </section>
 <%@ include file="../inc/bottom.jsp"%>
