@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 public class ReplyVO {
 	private int no;
+	private String userid;
 	private String content;
 	private String delflag;
 	private Timestamp regdate;
@@ -12,9 +13,10 @@ public class ReplyVO {
 		super();
 	}
 
-	public ReplyVO(int no, String content, String delflag, Timestamp regdate) {
+	public ReplyVO(int no, String userid, String content, String delflag, Timestamp regdate) {
 		super();
 		this.no = no;
+		this.userid = userid;
 		this.content = content;
 		this.delflag = delflag;
 		this.regdate = regdate;
@@ -52,10 +54,18 @@ public class ReplyVO {
 		this.regdate = regdate;
 	}
 
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
 	@Override
 	public String toString() {
-		return "ReplyVO [no=" + no + ", content=" + content + ", delflag=" + delflag + ", regdate=" + regdate + "]";
+		return "ReplyVO [no=" + no + ", userid=" + userid + ", content=" + content + ", delflag=" + delflag
+				+ ", regdate=" + regdate + "]";
 	}
-	
-	
+
 }

@@ -17,6 +17,44 @@ public class ReplyDAO {
 		pool=ConnectionPoolMgr1.getInstance();
 	}
 	
+	public List<ReplyVO> selectAll(int no) 
+			throws SQLException{
+		
+		Connection conn=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+
+		List<ReplyVO> list = new ArrayList<ReplyVO>();
+		try {
+			//1,2
+			conn=pool.getConnection();
+
+			//3
+			String sql="select * from reply where no=?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, no);
+			
+			//4
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				no=rs.getInt("no");
+				String userid=rs.getString("userid");
+				String content=rs.getString("content");
+				Timestamp regdate=rs.getTimestamp("regdate");
+				String delFlag=rs.getString("delflag");
+
+				
+				ReplyVO vo = new ReplyVO(no, userid, content, delFlag, regdate);
+						
+				list.add(vo);
+			}
+
+			return list;
+		}finally {
+			pool.dbClose(rs, ps, conn);
+		}
+	}
+	
 	public ReplyVO selectByNo(int no) throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
