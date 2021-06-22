@@ -40,7 +40,7 @@
 	List<ProductVO> list=null;
 	
 	try{
-		list = dao.selectAll(condition, keyword);
+		list = dao.selectAll2(condition, keyword);
 		
 	}catch(SQLException e){
 		e.printStackTrace();
