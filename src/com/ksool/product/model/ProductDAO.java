@@ -47,7 +47,7 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				String pid=rs.getString("pid");
+				int pid=rs.getInt("pid");
 				String ct_no=rs.getString("ct_no");
 				String p_name=rs.getString("p_name");
 				int p_price=rs.getInt("p_price");
@@ -58,7 +58,7 @@ public class ProductDAO {
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(p_stock, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -98,7 +98,7 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				String pid=rs.getString("pid");
+				int pid=rs.getInt("pid");
 				String ct_no=rs.getString("ct_no");
 				String p_name=rs.getString("p_name");
 				int p_price=rs.getInt("p_price");
@@ -109,7 +109,7 @@ public class ProductDAO {
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(p_stock, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -149,7 +149,7 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				String pid=rs.getString("pid");
+				int pid=rs.getInt("pid");
 				String ct_no=rs.getString("ct_no");
 				String p_name=rs.getString("p_name");
 				int p_price=rs.getInt("p_price");
@@ -160,7 +160,7 @@ public class ProductDAO {
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(p_stock, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -201,7 +201,7 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				String pid=rs.getString("pid");
+				int pid=rs.getInt("pid");
 				String ct_no=rs.getString("ct_no");
 				String p_name=rs.getString("p_name");
 				int p_price=rs.getInt("p_price");
@@ -212,7 +212,7 @@ public class ProductDAO {
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(p_stock, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);

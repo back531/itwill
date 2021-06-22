@@ -6,7 +6,6 @@
     
 <%@ include file="../inc/top.jsp" %>
 <%
-	 
 	String pid=request.getParameter("pid");
 	
 	//2.
@@ -55,7 +54,7 @@
 								<a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">판매수</span></a>
 							</p>
 						</div>
-    				<p class="price"><span><%=vo.getP_PRICE() %></span></p>
+    				<p class="price"><span><%=vo.getP_PRICE() %>₩</span></p>
     				
 						</p>
 						<div class="row mt-4">

@@ -98,7 +98,7 @@
 							<div class="text text-center">
 									<span class="category"><%=dto.getCT_NO() %></span>
 									<h2><%=dto.getP_NAME() %></h2>
-									<span class="price"><%=dto.getP_PRICE() %></span>
+									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
 						</div>
 					</div>
@@ -110,7 +110,7 @@
 							<nav aria-label="...">
 							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
 							<%if(pageVo.getFirstPage()>1){ %>
-						      <li class="page-item"><a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+						      <li class="page-item"><a href="ProductlistA.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
 						    <%}//if %>
 												
 							<!-- [1][2][3][4][5][6][7][8][9][10] -->
@@ -123,14 +123,14 @@
 										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
 									
 									<%}else{ %>
-										<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+										<li class="page-item"><a class="page-link" href="ProductlistA.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
 									
 									<%}//if %>	
 							<%}//for %>
 							
 							<!-- 다음 블럭으로 이동 -->
 							<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
-								<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
+								<li class="page-item active"><a class="page-link" href="ProductlistA.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
 							<%}//if %>
 							</ul>
 							</nav>
