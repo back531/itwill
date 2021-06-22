@@ -54,7 +54,7 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="cart-detail p-3 p-md-4">
-		<form action="edit.jsp">
+		
 		<table class="table">
 			<thead class="thead-primary">
 				<tr>
@@ -79,6 +79,7 @@
 				<%for(int i=0;i<list.size();i++){ 
 						  		CartVO vo=list.get(i);
 						  	%>
+				<form action="edit.jsp">
 				<tr>
 					<td><%=vo.getC_PNAME() %></td>
 					<td><%=vo.getC_PRICE() %></td>
@@ -93,7 +94,7 @@
 							<button type="button" class="btn btn-primary" id="del">삭제</button>
 					</a></td>
 				</tr>
-
+				</form>
 				<%
 						  	sum+=vo.getC_PRICE()*vo.getC_QTY();
 							c_no=vo.getC_NO();
@@ -103,7 +104,7 @@
 			</tbody>
 			
 		</table>
-</form>
+
 		<div class="row justify-content-center">
 			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
 				<div class="cart-total mb-3">
