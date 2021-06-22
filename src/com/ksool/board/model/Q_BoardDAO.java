@@ -196,7 +196,7 @@ public class Q_BoardDAO {
 		}
 	}
 
-	public void delete_Q_Board(Q_BoardVO vo) throws SQLException {
+	public void delete_qboard(Q_BoardVO vo) throws SQLException {
 		Connection conn = null;
 		CallableStatement ps = null;
 

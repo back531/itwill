@@ -9,6 +9,7 @@
     pageEncoding="UTF-8"%>
 <%
 	//1
+	request.setCharacterEncoding("utf-8");
 	String userid=(String)session.getAttribute("userid");
 	String o_NAME=request.getParameter("name");
 	String o_ADDR1=request.getParameter("ad1");
@@ -28,12 +29,15 @@
 	
 	OrderProductService service2=new OrderProductService();
 	
+	CartService service3=new CartService();
+	
 	try{
 		int cnt = service.insertOrderItem(vo);
-		int cnt2=service2.insertOrderProduct(userid);
+		int cnt2=service2.insertOrderProduct();
+		int cnt3=service3.deleteCart();
 		
 		//3
-		if(cnt>0 && cnt2>0){ %>
+		if(cnt>0 && cnt2>0 && cnt3>0){ %>
 		<script type="text/javascript">
 			alert('주문 완료');
 			location.href="list.jsp";

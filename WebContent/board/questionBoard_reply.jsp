@@ -5,6 +5,10 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 <%@ include file="../login/loginCheck.jsp"%>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ko-KR.js"></script>
 <%
 	//detail.jsp에서 [답변]클릭하면 get방식으로 이동
 	//=> http://localhost:9090/mystudy/reBoard/reply.jsp?no=2

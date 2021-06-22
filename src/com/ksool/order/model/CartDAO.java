@@ -70,7 +70,7 @@ public class CartDAO {
 		}
 	}
 	
-	public int deleteCart(int c_no) throws SQLException {
+	public int deleteCart() throws SQLException {
 		Connection conn=null;
 		PreparedStatement ps=null;
 		
@@ -79,15 +79,12 @@ public class CartDAO {
 			conn=pool.getConnection();
 			
 			//3 ps
-			String sql="delete from cart"
-					+ " where c_no=?";
+			String sql="delete from cart c where exists(select 1 from order_product o where c.c_no=o.col)";
 			ps=conn.prepareStatement(sql);
-			
-			ps.setInt(1, c_no);
 			
 			//4. exec
 			int cnt=ps.executeUpdate();
-			System.out.println("삭제 결과, cnt="+cnt+", 매개변수 c_no="+c_no);
+			System.out.println("삭제 결과, cnt="+cnt);
 			
 			return cnt;
 		}finally {

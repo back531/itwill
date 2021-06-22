@@ -9,7 +9,7 @@ public class OrderProductService {
 		orderproductDao=new OrderProductDAO();
 	}
 	
-	public int insertOrderProduct(String userid) throws SQLException {
-		return orderproductDao.insertOrderProduct(userid);
+	public int insertOrderProduct() throws SQLException {
+		return orderproductDao.insertOrderProduct();
 	}
 }

@@ -54,7 +54,6 @@ ReplyDAO dao2 = new ReplyDAO();
 List<ReplyVO> list = null;
 
 list = dao2.selectAll(Integer.parseInt(no));
-System.out.println(list.size());
 
 //페이징 처리
 int currentPage=1;  //현재 페이지
@@ -95,8 +94,6 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 <section
 	style="margin-left: 150px; margin-right: 150px; margin-top: 50px; margin-bottom: 50px; font-family: 'Jeju Gothic', serif;">
 	<div class="container">
-		<form action="reply_write_ok.jsp" method="POST">
-
 			<div class="form-group">
 				<label for="title">제목</label> <input readonly="readonly" type="text"
 					class="form-control" value="<%=vo.getTitle()%>" id="title"
@@ -126,8 +123,7 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 					onclick="location.href='reviewBoard.jsp'">목록으로</button>
 				<button type="button" class="btn btn-primary"
 					onclick="location.href='reviewBoard_edit.jsp?no=<%=no%>'">수정하기</button>
-				<button type="reset" class="btn btn-primary" data-toggle="modal"
-					data-target="#myModal">삭제하기</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">삭제하기</button>
 				<%
 					} else {
 				%>
@@ -137,7 +133,6 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 					}
 				%>
 			</div>
-		</form>	
 			<br>
 			<form id="replyfrm" action="reply_write_ok.jsp" method="POST">
 			<%int num = pageVo.getNum();
@@ -149,6 +144,7 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 						num--;%>	
 						<div class="card mb-2 card-hover">
 						<div class="card-body">
+
 							<div class="form-inline mb-2">
 								<label for="replyId"><i	class="fa fa-user-circle-o fa-2x"></i></label> 
 								<p style="margin-bottom: 0px; margin-left: 5px; margin-top: 7px;"><%=vo2.getUserid() %></p>
@@ -161,9 +157,9 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 							</div>
 							<%if(vo2.getUserid().equals(session.getAttribute("userid"))){ %>
 								<div class="text-center" >
-									<a href="reply_delete_ok.jsp"><i class="fa fa-trash fa-2x"></i></a>
+									<button type="button" style="border: none; background: white;" onclick="location.href='reply_delete_ok.jsp?no=<%=vo2.getNo()%>&bno=<%=vo2.getBno()%>&pno=<%=vo.getNo()%>'"><i class="fa fa-trash fa-2x"></i></button>
 								</div>
-							<%} %>
+							<%}//if %>
 						</div>
 						</div>
 				<%}//for%>
@@ -225,34 +221,7 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 			</div>
 		</form>	
 	</div>
-	
 
-
-	<script type="text/javascript">
-		$(function() {
-			$('form[name=frmDelete]').submit(function() {
-				if ($('#pwd').val().length < 1) {
-					alert('비밀번호 입력하세요');
-					$('#pwd').focus();
-					event.preventDefault();
-				} else {
-					if (!confirm('삭제하시겠습니까?')) {
-						event.preventDefault();
-					}
-				}
-			});
-			$('#replyfrm').submit(function() {
-				if ($('#content').val().length < 1) {
-					alert('댓글내용을 입력해주세요.');
-					$('#pwd').focus();
-					event.preventDefault();
-				}
-			});
-			
-			
-			
-		});
-	</script>
 	<form name="frmDelete" method="post" action="reviewBoard_delete_ok.jsp">
 		<input type="hidden" name="no" value="<%=vo.getNo()%>">
 
@@ -268,9 +237,8 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 						</button>
 					</div>
 					<div class="modal-body">
-						<label for="pwd">비밀번호</label> <input type="password"
-							class="form-control" placeholder="비밀번호를 입력하세요." id="pwd"
-							name="pwd" style="font-family: auto;">
+						<label for="pwd">비밀번호</label> 
+						<input type="password" class="form-control" placeholder="비밀번호를 입력하세요." id="pwd" name="pwd" style="font-family: auto;">
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -280,5 +248,31 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 			</div>
 		</div>
 	</form>
+
+		<script type="text/javascript">
+		$(function() {
+			$('form[name=frmDelete]').submit(function() {
+				if ($('.pwd').val().length < 1) {
+					alert('비밀번호 입력하세요');
+					$('.pwd').focus();
+					event.preventDefault();
+				}else{
+					if(!confirm('삭제하시겠습니까?')){
+						event.preventDefault();
+					}
+				}
+			});
+			
+/* 			$('#replyfrm').submit(function() {
+				if ($('#content').val().length < 1) {
+					alert('댓글내용을 입력해주세요.');
+					$('#content').focus();
+					event.preventDefault();
+				}
+			}); */
+
+		});
+	</script>
+	
 </section>
 <%@ include file="../inc/bottom.jsp"%>

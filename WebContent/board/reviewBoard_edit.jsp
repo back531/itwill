@@ -1,6 +1,6 @@
 <%@page import="java.sql.SQLException"%>
-<%@page import="com.ksool.board.model.Q_BoardVO"%>
-<%@page import="com.ksool.board.model.Q_BoardDAO"%>
+<%@page import="com.ksool.board.model.R_BoardVO"%>
+<%@page import="com.ksool.board.model.R_BoardDAO"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,8 +24,8 @@
 	}
 	
 	//2
-	Q_BoardDAO dao = new Q_BoardDAO();
-	Q_BoardVO vo=null;
+	R_BoardDAO dao = new R_BoardDAO();
+	R_BoardVO vo=null;
 	try{
 		vo=dao.selectByNo(Integer.parseInt(no));	
 	}catch(SQLException e){
@@ -52,10 +52,10 @@
 			<div class="col-md-9 ftco-animate mb-5 text-center">
 				<p class="breadcrumbs mb-0">
 					<span class="mr-2"><a href="index.jsp">Home <i
-							class="fa fa-chevron-right"></i></a></span> <span>문의 게시판 <i
+							class="fa fa-chevron-right"></i></a></span> <span>후기 게시판 <i
 						class="fa fa-chevron-right"></i></span>
 				</p>
-				<h2 class="mb-0 bread"><%=no%>번 문의 글 수정</h2>
+				<h2 class="mb-0 bread"><%=no%>번 후기 글 수정</h2>
 			</div>
 		</div>
 	</div>
@@ -66,7 +66,7 @@
 			    margin-bottom: 50px;
 			    font-family: 'Jeju Gothic', serif;">
 <div class="container">
-	<form name="frmEdit" method="post" action="questionBoard_edit_ok.jsp?no=<%=no%>">
+	<form name="frmEdit" method="post" action="reviewBoard_edit_ok.jsp?no=<%=no%>">
 	
 		<div class="form-group">
 			<label for="title">제목</label>
@@ -78,7 +78,7 @@
 		</div>
 	
 		<div class="form-group">
-			<label for="content">문의 내용</label>
+			<label for="content">후기 내용</label>
 			<textarea id="summernote" class="form-control summernote" rows="5" id="content" name="content"><c:out value="${content}" /></textarea>
 		</div>
 		<br>

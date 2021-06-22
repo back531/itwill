@@ -18,7 +18,8 @@ public class CartService {
 		return cartDao.selectAll();
 	}
 	
-	public int deleteCart(int c_no) throws SQLException {
-		return cartDao.deleteCart(c_no);
+	public int deleteCart() throws SQLException {
+		return cartDao.deleteCart();
 	}
+	
 }
