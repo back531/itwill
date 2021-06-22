@@ -8,6 +8,22 @@
 		t_login=true;  //로그인 된 경우
 	}
 %>   
+
+ <%
+   Cookie[] ckArr=request.getCookies();
+   String ck_value="";
+   if(ckArr!=null){
+      for(int i=0;i<ckArr.length;i++){
+         String name=ckArr[i].getName();
+         if(name.equals("ck_userid")){
+            ck_value=ckArr[i].getValue();
+            break;
+         }
+      }//for
+   }
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,6 +101,12 @@
 	href="<%=request.getContextPath()%>/css/magnific-popup.css">
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/flaticon.css">
+   
+   <script src="../js/jquery-3.6.0.min.js"></script>
+   <script src="../js/bootstrap.min.js"></script>
+   
+
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		var floatPosition = parseInt($("#floatMenu").css('top'));
@@ -119,6 +141,22 @@
     });
     
 </script> 
+<Script type="text/javascript">
+   $(function(){
+      $('#login').click(function(){
+               if($('#userid').val().length<1){
+                  alert('아이디 입력하세요');
+                  $('#userid').focus();
+                  event.preventDefault();
+               }else if($('#pwd').val().length<1){
+                   alert('비밀번호를 입력하세요');
+                   $('#pwd').focus();
+                   event.preventDefault();
+               }
+      });
+   });
+</script>
+
 </head>
 <body>
 
@@ -152,8 +190,8 @@
 					<div class="reg">
 						<p class="mb-0">
 				<%if(!t_login){ %>					
-						<a href="<%=request.getContextPath()%>/login/login4.jsp">로그인</a>
-						<a href="<%=request.getContextPath()%>/member/register4.jsp">회원가입</a>  
+						  <a data-toggle="modal" href="#exampleModal">로그인</a>
+						<a data-toggle="modal" href="#regimodal">회원가입</a>  
 					<%}else{ %>
 						<a href="<%=request.getContextPath()%>/login/logout.jsp">로그아웃</a>
 						<a href="<"#">마이 페이지</a>
@@ -238,16 +276,15 @@
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
-							<a class="dropdown-item"
-								href="<%=request.getContextPath()%>/product/Productlist.jsp">전체상품</a> <a
-								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product/ProductlistA.jsp">전통주</a> <a
-								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product/ProductlistM.jsp">막걸리</a> <a
-								class="dropdown-item"
-								href="<%=request.getContextPath()%>/product/ProductlistZ.jsp">증류주</a>
-						</div></li>
-					<li class="nav-item dropdown"><a
+                     <a class="dropdown-item"
+                        href="<%=request.getContextPath()%>/Product/Productlist.jsp">전체상품</a> <a
+                        class="dropdown-item"
+                        href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">전통주</a> <a
+                        class="dropdown-item"
+                        href="<%=request.getContextPath()%>/Product/ProductlistM.jsp">막걸리</a> <a
+                        class="dropdown-item"
+                        href="<%=request.getContextPath()%>/Product/ProductlistZ.jsp">증류주</a>
+                  </div></li>					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="dropdown04"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">게시판</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -260,6 +297,202 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav>			
 	<section>
 		<!-- END nav -->
+		
+		
+	<!-- 로그인 모달시작 -->
+		   <div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: 'Cafe24SsurroundAir';">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="container">
+      <div class="row">
+        <div class="page-header">
+        </div>
+        <div class="box">
+          <div class="login-box well">
+        <form name="frmLogin" method="post" action="<%=request.getContextPath() %>/login/login_ok.jsp">
+            <legend>로그인</legend>
+            <div class="form-group">
+                <label for="userid" >아이디</label>
+                <input name="userid" id="userid" placeholder="UserId" type="text" class="form-control" value="<%=ck_value%>"/>
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input name="pwd" id="pwd"  placeholder="Password" type="password" class="form-control" />
+            </div>
+            <input type="checkbox" name="chkSave" id="chkSave"
+               <%if(ck_value!=null && !ck_value.isEmpty()){ %>
+                  checked="checked"
+               <%} %>
+            >
+         
+         <label for="chkSave">아이디 저장하기</label>
+           <!--  <span class='text-center'><a href="/bbs/index.php?mid=index&act=dispMemberFindAccount" class="text-sm">비밀번호 찾기</a></span> -->
+            <div class="form-group">
+            <a href="<%=request.getContextPath()%>/member/register4.jsp" class="btn btn-default btn-block m-t-md">회원가입</a>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <input type="submit" id="login" name="login" class="btn btn-danger btn-block" value="Login" />
+      </div>
+       </form>
+    </div>
+    
+  </div>
+</div>
+<!-- 모달끝 -->
+
+<!-- 회원가입 모달시작 -->
+<div class="modal fade" id="regimodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: 'Cafe24SsurroundAir';">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">회원가입</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+   <div class="input-form-backgroud row" >
+      <div class="input-form col-md-12 mx-auto">
+   
+        <form class="validation-form" novalidate name="frm1" method="post" action="register4_ok.jsp">
+          <div class="row">
+            <div class="col-md-8 mb-3">
+              <label for="userid">아이디</label>
+              <input type="text" class="form-control" name="userid" id="xuserid" placeholder="" style="ime-mode:inactive">
+              <div class="invalid-feedback">
+                아이디를 입력해주세요.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+         	<div>&nbsp;<br></div>
+         	  <input type="button" value="중복확인" id="btnChkId" class="btn btn-outline-secondary" title="새창열림">
+              <div class="invalid-feedback">
+               	중복확인해주세요.
+              </div>
+            </div>
+          </div>
+          
+                  <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="pwd">비밀번호</label>
+              <input type="password" class="form-control" id="xpwd" name="pwd"  placeholder="" value="" >
+              <div class="invalid-feedback">
+                비밀번호를 입력해주세요.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="pwd2">비밀번호 확인</label>
+              <input type="password" class="form-control" id="xpwd2" name="pwd2" placeholder="" value="" >
+              <div class="invalid-feedback">
+               	비밀번호 중복 확인을 입력해주세요.
+              </div>
+            </div>
+          </div>
+          			
+              <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name">이름</label>
+              <input type="text" class="form-control" id="name"  name="name" placeholder="" value="" >
+              <div class="invalid-feedback">
+               	이름을 입력해주세요.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="hp">전화번호</label>
+              <input type="text" class="form-control" id="hp"  name="hp" placeholder="-빼고 입력해주세요" value="" >
+              <div class="invalid-feedback">
+               	전화번호를 입력해주세요.
+              </div>
+            </div>
+          </div>
+         
+          <div class="mb-3">
+            <label for="email">이메일</label>
+            <input type="email" class="form-control" id="email"  name="email" placeholder="you@example.com" required>
+            <div class="invalid-feedback">
+              이메일을 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">주소</label>
+            <input type="text" class="form-control" id="address"  name="address" placeholder="서울특별시 강남구" required>
+            <div class="invalid-feedback">
+              주소를 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="addressDetail">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
+            <input type="text" class="form-control" id="addressDetail"  name="addressDetail" placeholder="상세주소를 입력해주세요.">
+          </div>
+          
+          <hr class="mb-4">
+          <div >
+            <input type="checkbox"  id="aggrement" required>
+            <label  for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+          </div>
+          <div class="mb-4"></div>
+          <button class="btn btn-danger btn-block"  type="submit" id="wr_submit">join us</button>
+        
+         <input type ="hidden" name="chkId" id="chkId">
+        </form>
+      </div>
+    </div>
+    <footer class="my-3 text-center text-small">
+      <p class="mb-1">&copy; 2021 k-sool</p>
+    </footer>
+  </div>
+    </div>
+  </div>
+      </div>
+
+<!-- 모달끝 -->
+<script type="text/javascript">
+ $(function(){
+	 $('#wr_submit').click(function(){
+         if($('#name').val().length<1){
+            alert('이름을 입력하세요');
+            $('#name').focus();
+            event.preventDefault();
+         }else if($('#xpwd').val().length<1){
+             alert('비밀번호를 입력하세요');
+             $('#xpwd').focus();
+             event.preventDefault();
+          }else if($('#xpwd').val()!=$('#xpwd2').val()){
+             alert('비밀번호가 일치하지 않습니다.');
+             $('#xpwd2').focus();
+             event.preventDefault();        
+          }else if($('#chkId').val()!='Y'){
+              alert('중복확인 필수 입니다.');
+              $('#btnChkId').focus();
+              event.preventDefault();                  
+           }         
+        });
+	 $('#btnChkId').click(function(){
+	     var userid=$('#xuserid').val();
+	     
+	     open('<%=request.getContextPath()%>/member/checkUserid.jsp?userid='+userid,'chk',
+	           'width=350,height=200,left=30,top=30,location=yes,resizable=yes');
+	   
+	    
+	  });
+});
+ </script>
+		

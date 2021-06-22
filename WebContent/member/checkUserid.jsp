@@ -28,10 +28,8 @@
 <head>
 <meta charset="UTF-8">
 <title>checkUserid.jsp</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/mainstyle.css"/>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css"/>
 <style type="text/css">
 
  @font-face{
@@ -47,11 +45,11 @@
  	}
 
 </style>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
    $(function(){
       $('#btUse').click(function(){
-         $(opener.document).find('#userid').val('<%=userid%>');
+         $(opener.document).find('#xuserid').val('<%=userid%>');
          $(opener.document).find('#chkId').val('Y');
          
          self.close();
