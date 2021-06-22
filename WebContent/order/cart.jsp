@@ -22,12 +22,11 @@
 	});	
 </script>
 <%
-	String userid=(String)session.getAttribute("userid");
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
 	CartVO vo=null;
 	try{
-		list=cartService.selectAll(userid);
+		list=cartService.selectAll();
 	}catch(SQLException e){
 		e.printStackTrace();
 	}
