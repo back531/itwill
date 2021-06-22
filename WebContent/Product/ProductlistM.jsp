@@ -4,7 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="com.ksool.product.model.ProductDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>ㅁ
+	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
 
 
@@ -25,7 +25,7 @@
 							class="fa fa-chevron-right"></i></a></span> <span>상품<i
 						class="fa fa-chevron-right"></i></span>
 				</p>
-				<h2 class="mb-0 bread">상&nbsp;품&nbsp;리&nbsp;스&nbsp;트</h2>
+				<h2 class="mb-0 bread">막&nbsp;걸&nbsp;리</h2>
 			</div>
 		</div>
 	</div>
@@ -40,7 +40,7 @@
 	List<ProductVO> list=null;
 	
 	try{
-		list = dao.selectAll(condition, keyword);
+		list = dao.selectAll3(condition, keyword);
 		
 	}catch(SQLException e){
 		e.printStackTrace();
@@ -90,7 +90,7 @@
 										<span class="flaticon-shopping-bag"></span></a> 
 										<a href="#" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-heart"></span></a> 
-										<a href="product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
+										<a href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-visibility"></span></a>
 									</p>
 								</div>
@@ -98,7 +98,7 @@
 							<div class="text text-center">
 									<span class="category"><%=dto.getCT_NO() %></span>
 									<h2><%=dto.getP_NAME() %></h2>
-									<span class="price"><%=dto.getP_PRICE() %></span>
+									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
 						</div>
 					</div>
@@ -110,7 +110,7 @@
 							<nav aria-label="...">
 							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
 							<%if(pageVo.getFirstPage()>1){ %>
-						      <li class="page-item"><a href="questionBoard.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+						      <li class="page-item"><a href="ProductlistM.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
 						    <%}//if %>
 												
 							<!-- [1][2][3][4][5][6][7][8][9][10] -->
@@ -123,14 +123,14 @@
 										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
 									
 									<%}else{ %>
-										<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+										<li class="page-item"><a class="page-link" href="ProductlistM.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
 									
 									<%}//if %>	
 							<%}//for %>
 							
 							<!-- 다음 블럭으로 이동 -->
 							<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
-								<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
+								<li class="page-item active"><a class="page-link" href="ProductlistM.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
 							<%}//if %>
 							</ul>
 							</nav>
@@ -146,13 +146,13 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="<%=request.getContextPath() %>/product2.jsp">전통주
+								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">>전통주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product3.jsp">막걸리
+								<li><a href="<%=request.getContextPath() %>/Product/ProductlistM.jsp">막걸리
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product4.jsp">증류주
+								<li><a href="<%=request.getContextPath() %>/Product/ProductlistZ.jsp">증류주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
 							</ul>

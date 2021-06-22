@@ -12,4 +12,8 @@ public class OrderItemService {
 	public int insertOrderItem(OrderItemVO vo) throws SQLException {
 		return orderitemDao.insertOrderItem(vo);
 	}
+	
+	public int insertSubscribe(OrderItemVO vo) throws SQLException {
+		return orderitemDao.insertSubscribe(vo);
+	}
 }

@@ -38,7 +38,7 @@ public class CartDAO {
 		}
 	}
 	
-	public List<CartVO> selectAll() throws SQLException{
+	public List<CartVO> selectAll(String userid) throws SQLException{
 		Connection conn=null;
 		PreparedStatement ps=null;
 		ResultSet rs=null;
@@ -47,19 +47,19 @@ public class CartDAO {
 		try {
 			conn=pool.getConnection();
 			
-			String sql="select * from cart order by c_no";
+			String sql="select c.* from cart c join memb m on c.userid=m.userid";
 			ps=conn.prepareStatement(sql);
+			ps.setString(1, userid);
 			
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				int c_no=rs.getInt(1);
-				String m_id2=rs.getString(2);
-				String c_pname=rs.getString(3);
-				int c_qty=rs.getInt(4);
-				int c_price=rs.getInt(5);
-				String pid=rs.getString(6);
+				String c_pname=rs.getString(2);
+				int c_qty=rs.getInt(3);
+				int c_price=rs.getInt(4);
+				String pid=rs.getString(5);
 				
-				CartVO vo=new CartVO(c_no, m_id2, c_pname, c_qty, c_price, pid);
+				CartVO vo=new CartVO(c_no, userid, c_pname, c_qty, c_price, pid);
 				
 				list.add(vo);
 			}

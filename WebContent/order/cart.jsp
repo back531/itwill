@@ -3,6 +3,7 @@
 <%@page import="com.ksool.order.model.CartService"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.util.List"%>
+<%@ include file="../login/loginCheck.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../inc/top.jsp"%>
@@ -21,10 +22,12 @@
 	});	
 </script>
 <%
+	String userid=(String)session.getAttribute("userid");
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
+	CartVO vo=null;
 	try{
-		list=cartService.selectAll();
+		list=cartService.selectAll(userid);
 	}catch(SQLException e){
 		e.printStackTrace();
 	}
@@ -77,7 +80,7 @@
 						  	
 						  %>
 				<%for(int i=0;i<list.size();i++){ 
-						  		CartVO vo=list.get(i);
+						  		vo=list.get(i);
 						  	%>
 				<form action="edit.jsp">
 				<tr>
@@ -88,7 +91,7 @@
 					<td><%=vo.getC_PRICE()*vo.getC_QTY() %></td>
 					<td>
 						<button type="submit" class="btn btn-primary">수정</button>
-						<input type="hidden" value=<%=vo.getC_NO()%> name="c_no" name="c_no">
+						<input type="hidden" value="<%=vo.getC_NO() %>" id="c_no" name="c_no">
 					</td>
 					<td><a href="delete.jsp?c_no=<%=vo.getC_NO() %>">
 							<button type="button" class="btn btn-primary" id="del">삭제</button>
