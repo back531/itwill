@@ -23,6 +23,7 @@
 <%
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
+	CartVO vo=null;
 	try{
 		list=cartService.selectAll();
 	}catch(SQLException e){
@@ -54,7 +55,7 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="cart-detail p-3 p-md-4">
-		<form>
+		
 		<table class="table">
 			<thead class="thead-primary">
 				<tr>
@@ -77,23 +78,24 @@
 						  	
 						  %>
 				<%for(int i=0;i<list.size();i++){ 
-						  		CartVO vo=list.get(i);
+						  		vo=list.get(i);
 						  	%>
+				<form action="edit.jsp">
 				<tr>
 					<td><%=vo.getC_PNAME() %></td>
 					<td><%=vo.getC_PRICE() %></td>
 					<td><input type="text" value="<%=vo.getC_QTY() %>" name="qty" id="qty"></td>
 
 					<td><%=vo.getC_PRICE()*vo.getC_QTY() %></td>
-					<td><a href="edit.jsp?c_no=<%=vo.getC_NO() %>">
-						<button type="submit" class="btn btn-primary">수정</button></a>
-						<input type="hidden" value=<%=vo.getC_NO()%> name="c_no" id="c_no">
+					<td>
+						<button type="submit" class="btn btn-primary">수정</button>
+						<input type="hidden" value="<%=vo.getC_NO() %>" id="c_no" name="c_no">
 					</td>
 					<td><a href="delete.jsp?c_no=<%=vo.getC_NO() %>">
 							<button type="button" class="btn btn-primary" id="del">삭제</button>
 					</a></td>
 				</tr>
-
+				</form>
 				<%
 						  	sum+=vo.getC_PRICE()*vo.getC_QTY();
 							c_no=vo.getC_NO();
@@ -103,7 +105,7 @@
 			</tbody>
 			
 		</table>
-</form>
+
 		<div class="row justify-content-center">
 			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
 				<div class="cart-total mb-3">
