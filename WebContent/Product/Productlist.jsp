@@ -88,7 +88,7 @@
 										<span class="flaticon-shopping-bag"></span></a> 
 										<a href="#" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-heart"></span></a> 
-										<a href="product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
+										<a href="/product/product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-visibility"></span></a>
 									</p>
 								</div>

@@ -24,7 +24,7 @@
 		e.printStackTrace();
 	}
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	//페이징 처리
 	int currentPage=1;  //현재 페이지
 	
@@ -37,7 +37,7 @@
 		totalRecord=list.size();
 	}
 	int pageSize=5;  //한 페이지에 보여줄 레코드 수, 5
-	int blockSize=10;  //한 블럭에 보여줄 페이지 수, 10
+	int blockSize=5;  //한 블럭에 보여줄 페이지 수, 10
 	
 	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 %>
@@ -158,7 +158,10 @@
 
 <div class="divSearch text-center">
    	<form name="frmSearch" method="post" action='questionBoard.jsp'>
-        <select name="searchCondition">
+        <select name="searchCondition" class="form-select-lg mb-1" style="
+    padding-top: 3px;
+    padding-bottom: 4px;
+">
             <option value="title" 
             	<% if("title".equals(condition)){%>
             		selected="selected"

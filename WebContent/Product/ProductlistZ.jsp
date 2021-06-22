@@ -25,7 +25,7 @@
 							class="fa fa-chevron-right"></i></a></span> <span>상품<i
 						class="fa fa-chevron-right"></i></span>
 				</p>
-				<h2 class="mb-0 bread">상&nbsp;품&nbsp;리&nbsp;스&nbsp;트</h2>
+				<h2 class="mb-0 bread">증&nbsp;류&nbsp;주</h2>
 			</div>
 		</div>
 	</div>
@@ -90,7 +90,7 @@
 										<span class="flaticon-shopping-bag"></span></a> 
 										<a href="#" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-heart"></span></a> 
-										<a href="product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
+										<a href="/product/product-single.jsp?no=<%=dto.getPID() %>" class="d-flex align-items-center justify-content-center">
 										<span class="flaticon-visibility"></span></a>
 									</p>
 								</div>
@@ -110,7 +110,7 @@
 							<nav aria-label="...">
 							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
 							<%if(pageVo.getFirstPage()>1){ %>
-						      <li class="page-item"><a href="questionBoard.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+						      <li class="page-item"><a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
 						    <%}//if %>
 												
 							<!-- [1][2][3][4][5][6][7][8][9][10] -->
@@ -146,13 +146,13 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="<%=request.getContextPath() %>/product2.jsp">전통주
+								<li><a href="<%=request.getContextPath() %>/product/ProductlistA.jsp">전통주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product3.jsp">막걸리
+								<li><a href="<%=request.getContextPath() %>/product/ProductlistM">막걸리
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
-								<li><a href="<%=request.getContextPath() %>/product4.jsp">증류주
+								<li><a href="<%=request.getContextPath() %>/product/ProductlistZ.jsp">증류주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
 							</ul>
