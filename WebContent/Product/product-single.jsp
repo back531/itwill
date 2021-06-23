@@ -37,7 +37,7 @@
     				<a href="<%=request.getContextPath()%>/images/<%=vo.getImagemain()%>" class="image-popup prod-img-bg"><img src="<%=request.getContextPath()%>/images/<%=vo.getImagemain()%>" class="img-fluid" alt="Colorlib Template" style="width: 500px; "></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-    				<h3><%=vo.getNAME() %></h3>
+    				<h3><%=vo.getP_NAME() %></h3>
     				<div class="rating d-flex">
 							<p class="text-left mr-4">
 								<a href="#" class="mr-2">5.0</a>
@@ -54,7 +54,7 @@
 								<a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">판매수</span></a>
 							</p>
 						</div>
-    				<p class="price"><span><%=vo.getPRICE() %>₩</span></p>
+    				<p class="price"><span><%=vo.getP_PRICE() %>₩</span></p>
     				
 						</p>
 						<div class="row mt-4">
@@ -73,7 +73,7 @@
 	          	</div>
 	          	<div class="w-100"></div>
 	          	<div class="col-md-12">
-	          		<p style="color: #000;"><%=vo.getSTOCK()%></p>
+	          		<p style="color: #000;"><%=vo.getP_STOCK()%></p>
 	          	</div>
           	</div>
           	<p><a href="<%=request.getContextPath()%>/order/cart.jsp" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="<%=request.getContextPath()%>/order/order.jsp" class="btn btn-primary py-3 px-5">구매</a></p>
@@ -97,8 +97,8 @@
 
               <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
               	<div class="p-4">
-	              	<h3 class="mb-4"><%=vo.getNAME() %></h3>
-	              	<p><%=vo.getCONTENT() %></p>
+	              	<h3 class="mb-4"><%=vo.getP_NAME() %></h3>
+	              	<p><%=vo.getP_CONTENT() %></p>
               	</div>
               </div>             
               </div>

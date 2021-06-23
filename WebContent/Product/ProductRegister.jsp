@@ -62,49 +62,49 @@
 			<div class="form-group row">
 				<label class="col-sm-2">카테고리 번호</label>
 				<div class="com-sm-3">
-					<input type="text" id="NO" name="NO" class="form-control">
+					<input type="text" id="CT_NO" name="CT_NO" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 이름</label>
 				<div class="com-sm-3">
-					<input type="text" id="NAME" name="NAME" class="form-control">
+					<input type="text" id="P_NAME" name="P_NAME" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 가격</label>
 				<div class="com-sm-3">
-					<input type="text" id="PRICE" name="PRICE" class="form-control">
+					<input type="text" id="P_PRICE" name="P_PRICE" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 종류</label>
 				<div class="com-sm-3">
-					<input type="text" id="CT" name="CT" class="form-control">
+					<input type="text" id="P_CT" name="P_CT" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 설명</label>
 				<div class="com-sm-3">
-					<textarea id="CONTENT" name="CONTENT" class="form-control" rows="12" cols="40"></textarea>
+					<textarea id="P_CONTENT" name="P_CONTENT" class="form-control" rows="12" cols="40"></textarea>
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 재고</label>
 				<div class="com-sm-3">
-					<input type="text" id="STOCK" name="STOCK" class="form-control">
+					<input type="text" id="P_STOCK" name="P_STOCK" class="form-control">
 				</div>
 			</div>
 		
 			<div class="form-group row">
 				<label class="col-sm-2">상품 이미지</label>
 				<div>
-					<input type="file" name="Imagemain" class="form-control">
+					<input type="file" id="upfile" name="upfile" class="form-control">
 				</div>
 			</div>
 				

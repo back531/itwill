@@ -26,18 +26,20 @@ public class ProductDAO {
 		try {
 			//1,2 conn
 			conn=pool.getConnection();
-
+			
+			conn.setAutoCommit(true);
+			
 			//3 ps
-			String sql="insert into PRODUCT(PID, NO, NAME, PRICE, CT, CONTENT, STOCK, REGDATE, STATE, Imagemain)"
+			String sql="insert into PRODUCT(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, P_REGDATE, P_STATE, Imagemain)"
 					+ "values (PRODUCT_seq.nextval, '', '', '', '',"
 					+ "'', '', '', '', '');";
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, vo.getNO());
-			ps.setString(2, vo.getNAME());
-			ps.setInt(3, vo.getPRICE());
-			ps.setString(4, vo.getCT());
-			ps.setString(5, vo.getCONTENT());
-			ps.setInt(6, vo.getSTOCK());
+			ps.setString(1, vo.getCT_NO());
+			ps.setString(2, vo.getP_NAME());
+			ps.setInt(3, vo.getP_PRICE());
+			ps.setString(4, vo.getCT_NO());
+			ps.setString(5, vo.getP_CONTENT());
+			ps.setInt(6, vo.getP_STOCK());
 			ps.setString(7, vo.getImagemain());
 
 
@@ -63,7 +65,7 @@ public class ProductDAO {
 		try {
 			//1,2
 			conn=pool.getConnection();
-
+			conn.setAutoCommit(true);
 			//3
 			String sql="select * from product";
 			//검색의 경우
@@ -80,18 +82,18 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				int pid=rs.getInt("pid");
-				String no=rs.getString("no");
-				String name=rs.getString("name");
-				int price=rs.getInt("price");
-				String ct=rs.getString("ct");
-				String content=rs.getString("content");
-				int p_stock=rs.getInt("p_stock");
-				Timestamp p_regdate=rs.getTimestamp("p_regdate");
-				String p_state=rs.getString("p_state");
+				int PID=rs.getInt("PID");
+				String CT_NO=rs.getString("CT_NO");
+				String P_NAME=rs.getString("P_NAME");
+				int P_PRICE=rs.getInt("P_PRICE");
+				String P_CT=rs.getString("P_CT");
+				String P_CONTENT=rs.getString("P_CONTENT");
+				int P_STOCK=rs.getInt("P_STOCK");
+				Timestamp P_REGDATE=rs.getTimestamp("P_REGDATE");
+				String P_STATE=rs.getString("P_STATE");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, null, P_STATE, Imagemain);
 				
 						
 				list.add(vo);
@@ -114,7 +116,7 @@ public class ProductDAO {
 		try {
 			//1,2
 			conn=pool.getConnection();
-
+			conn.setAutoCommit(true);
 			//3
 			String sql="select * from product where NO=2";
 			//검색의 경우
@@ -131,18 +133,18 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				int pid=rs.getInt("pid");
-				String no=rs.getString("no");
-				String name=rs.getString("name");
-				int price=rs.getInt("price");
-				String ct=rs.getString("ct");
-				String content=rs.getString("content");
-				int p_stock=rs.getInt("p_stock");
-				Timestamp p_regdate=rs.getTimestamp("p_regdate");
-				String p_state=rs.getString("p_state");
+				int PID=rs.getInt("PID");
+				String CT_NO=rs.getString("CT_NO");
+				String P_NAME=rs.getString("P_NAME");
+				int P_PRICE=rs.getInt("P_PRICE");
+				String P_CT=rs.getString("P_CT");
+				String P_CONTENT=rs.getString("P_CONTENT");
+				int P_STOCK=rs.getInt("P_STOCK");
+				Timestamp P_REGDATE=rs.getTimestamp("P_REGDATE");
+				String P_STATE=rs.getString("P_STATE");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, null, P_STATE, Imagemain);
 				
 						
 				list.add(vo);
@@ -165,7 +167,7 @@ public class ProductDAO {
 		try {
 			//1,2
 			conn=pool.getConnection();
-
+			conn.setAutoCommit(true);
 			//3
 			String sql="select * from product where NO=3";
 			//검색의 경우
@@ -182,18 +184,18 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				int pid=rs.getInt("pid");
-				String no=rs.getString("no");
-				String name=rs.getString("name");
-				int price=rs.getInt("price");
-				String ct=rs.getString("ct");
-				String content=rs.getString("content");
-				int p_stock=rs.getInt("p_stock");
-				Timestamp p_regdate=rs.getTimestamp("p_regdate");
-				String p_state=rs.getString("p_state");
+				int PID=rs.getInt("PID");
+				String CT_NO=rs.getString("CT_NO");
+				String P_NAME=rs.getString("P_NAME");
+				int P_PRICE=rs.getInt("P_PRICE");
+				String P_CT=rs.getString("P_CT");
+				String P_CONTENT=rs.getString("P_CONTENT");
+				int P_STOCK=rs.getInt("P_STOCK");
+				Timestamp P_REGDATE=rs.getTimestamp("P_REGDATE");
+				String P_STATE=rs.getString("P_STATE");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, null, P_STATE, Imagemain);
 				
 						
 				list.add(vo);
@@ -217,7 +219,7 @@ public class ProductDAO {
 		try {
 			//1,2
 			conn=pool.getConnection();
-
+			conn.setAutoCommit(true);
 			//3
 			String sql="select * from product where NO=4";
 			//검색의 경우
@@ -234,19 +236,18 @@ public class ProductDAO {
 			//4
 			rs=ps.executeQuery();
 			while(rs.next()) {
-				int pid=rs.getInt("pid");
-				String no=rs.getString("no");
-				String name=rs.getString("name");
-				int price=rs.getInt("price");
-				String ct=rs.getString("ct");
-				String content=rs.getString("content");
-				int p_stock=rs.getInt("p_stock");
-				Timestamp p_regdate=rs.getTimestamp("p_regdate");
-				String p_state=rs.getString("p_state");
+				int PID=rs.getInt("PID");
+				String CT_NO=rs.getString("CT_NO");
+				String P_NAME=rs.getString("P_NAME");
+				int P_PRICE=rs.getInt("P_PRICE");
+				String P_CT=rs.getString("P_CT");
+				String P_CONTENT=rs.getString("P_CONTENT");
+				int P_STOCK=rs.getInt("P_STOCK");
+				Timestamp P_REGDATE=rs.getTimestamp("P_REGDATE");
+				String P_STATE=rs.getString("P_STATE");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
-				
+				ProductVO vo = new ProductVO(PID, CT_NO, P_NAME, P_PRICE, P_CT, P_CONTENT, P_STOCK, null, P_STATE, Imagemain);				
 						
 				list.add(vo);
 			}
@@ -265,7 +266,7 @@ public class ProductDAO {
 		try {
 			//1,2
 			conn=pool.getConnection();
-
+			conn.setAutoCommit(true);
 			//3
 			String sql="select * from product where pid=?";
 			ps=conn.prepareStatement(sql);
@@ -275,17 +276,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			if(rs.next()) {
 				vo.setPID(pid);
-				vo.setNO(rs.getString("no"));
-				vo.setNAME(rs.getString("name"));
-				vo.setPRICE(rs.getInt("price"));
-				vo.setCT(rs.getString("ct"));
+				vo.setCT_NO(rs.getString("CT_NO"));
+				vo.setP_NAME(rs.getString("P_NAME"));
+				vo.setP_PRICE(rs.getInt("P_PRICE"));
+				vo.setP_CT(rs.getString("P_CT"));
 				
 				String content=rs.getString("content");
-				vo.setCONTENT(content);
+				vo.setP_CONTENT(content);
 				
-				vo.setSTOCK(rs.getInt("p_stock"));	
-				vo.setREGDATE(null);					
-				vo.setSTATE(rs.getString("p_state"));
+				vo.setP_STOCK(rs.getInt("p_stock"));	
+				vo.setP_REGDATE(null);					
+				vo.setP_STATE(rs.getString("p_state"));
 				vo.setImagemain(rs.getString("imagemain"));
 				
 				

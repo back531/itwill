@@ -4,37 +4,35 @@ import java.security.Timestamp;
 
 public class ProductVO {
 	private int PID;
-	private String NO;
-	private String NAME;
-	private int PRICE;
-	private String CT;
-	private String CONTENT;
-	private int STOCK;
-	private Timestamp REGDATE;
-	private String STATE;
+	private String CT_NO;
+	private String P_NAME;
+	private int P_PRICE;
+	private String P_CT;
+	private String P_CONTENT;
+	private int P_STOCK;
+	private Timestamp P_REGDATE;
+	private String P_STATE;
 	private String Imagemain;
 	
 	public ProductVO() {
 		super();
 	}
 
-	public ProductVO(int pID, String nO, String nAME, int pRICE, String cT, String cONTENT, int sTOCK,
-			Timestamp rEGDATE, String sTATE, String imagemain) {
+	public ProductVO(int pID, String cT_NO, String p_NAME, int p_PRICE, String p_CT, String p_CONTENT, int p_STOCK,
+			Timestamp p_REGDATE, String p_STATE, String imagemain) {
 		super();
 		PID = pID;
-		NO = nO;
-		NAME = nAME;
-		PRICE = pRICE;
-		CT = cT;
-		CONTENT = cONTENT;
-		STOCK = sTOCK;
-		REGDATE = rEGDATE;
-		STATE = sTATE;
+		CT_NO = cT_NO;
+		P_NAME = p_NAME;
+		P_PRICE = p_PRICE;
+		P_CT = p_CT;
+		P_CONTENT = p_CONTENT;
+		P_STOCK = p_STOCK;
+		P_REGDATE = p_REGDATE;
+		P_STATE = p_STATE;
 		Imagemain = imagemain;
 	}
 
-	
-	
 	public int getPID() {
 		return PID;
 	}
@@ -43,68 +41,68 @@ public class ProductVO {
 		PID = pID;
 	}
 
-	public String getNO() {
-		return NO;
+	public String getCT_NO() {
+		return CT_NO;
 	}
 
-	public void setNO(String nO) {
-		NO = nO;
+	public void setCT_NO(String cT_NO) {
+		CT_NO = cT_NO;
 	}
 
-	public String getNAME() {
-		return NAME;
+	public String getP_NAME() {
+		return P_NAME;
 	}
 
-	public void setNAME(String nAME) {
-		NAME = nAME;
+	public void setP_NAME(String p_NAME) {
+		P_NAME = p_NAME;
 	}
 
-	public int getPRICE() {
-		return PRICE;
+	public int getP_PRICE() {
+		return P_PRICE;
 	}
 
-	public void setPRICE(int pRICE) {
-		PRICE = pRICE;
+	public void setP_PRICE(int p_PRICE) {
+		P_PRICE = p_PRICE;
 	}
 
-	public String getCT() {
-		return CT;
+	public String getP_CT() {
+		return P_CT;
 	}
 
-	public void setCT(String cT) {
-		CT = cT;
+	public void setP_CT(String p_CT) {
+		P_CT = p_CT;
 	}
 
-	public String getCONTENT() {
-		return CONTENT;
+	public String getP_CONTENT() {
+		return P_CONTENT;
 	}
 
-	public void setCONTENT(String cONTENT) {
-		CONTENT = cONTENT;
+	public void setP_CONTENT(String p_CONTENT) {
+		P_CONTENT = p_CONTENT;
 	}
 
-	public int getSTOCK() {
-		return STOCK;
+	public int getP_STOCK() {
+		return P_STOCK;
 	}
 
-	public void setSTOCK(int sTOCK) {
-		STOCK = sTOCK;
+	public void setP_STOCK(int p_STOCK) {
+		P_STOCK = p_STOCK;
 	}
 
-	public Timestamp getREGDATE() {
-		return REGDATE;
+	public Timestamp getP_REGDATE() {
+		return P_REGDATE;
 	}
 
-	public void setREGDATE(Timestamp rEGDATE) {
-		REGDATE = rEGDATE;
+	public void setP_REGDATE(Timestamp p_REGDATE) {
+		P_REGDATE = p_REGDATE;
 	}
 
-	public String getSTATE() {
-		return STATE;
+	public String getP_STATE() {
+		return P_STATE;
 	}
 
-	public void setSTATE(String sTATE) {
-		STATE = sTATE;
+	public void setP_STATE(String p_STATE) {
+		P_STATE = p_STATE;
 	}
 
 	public String getImagemain() {
@@ -117,9 +115,9 @@ public class ProductVO {
 
 	@Override
 	public String toString() {
-		return "ProductVO [PID=" + PID + ", NO=" + NO + ", NAME=" + NAME + ", PRICE=" + PRICE + ", CT=" + CT
-				+ ", CONTENT=" + CONTENT + ", STOCK=" + STOCK + ", REGDATE=" + REGDATE + ", STATE=" + STATE
-				+ ", Imagemain=" + Imagemain + "]";
+		return "ProductVO [PID=" + PID + ", CT_NO=" + CT_NO + ", P_NAME=" + P_NAME + ", P_PRICE=" + P_PRICE + ", P_CT="
+				+ P_CT + ", P_CONTENT=" + P_CONTENT + ", P_STOCK=" + P_STOCK + ", P_REGDATE=" + P_REGDATE + ", P_STATE="
+				+ P_STATE + ", Imagemain=" + Imagemain + "]";
 	}
 
 	

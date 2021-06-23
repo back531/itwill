@@ -94,9 +94,9 @@
 								</div>
 							</div>
 							<div class="text text-center">
-									<span class="category"><%=dto.getNO() %></span>
-									<h2><%=dto.getNAME() %></h2>
-									<span class="price"><%=dto.getPRICE() %>₩</span>
+									<span class="category"><%=dto.getCT_NO() %></span>
+									<h2><%=dto.getP_NAME() %></h2>
+									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
 						</div>
 					</div>
