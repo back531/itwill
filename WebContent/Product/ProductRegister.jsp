@@ -6,10 +6,11 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <script type="text/javascript" src="./resources/js/validation.js"></script>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(function(){
 		$('.btList').click(function(){
-			location.href="<%=request.getContextPath()%>/Product/Productlist.jsp";
+			location.href="Productlist.jsp";
 		});
 		
 		$('form[name=newProduct]').submit(function(){

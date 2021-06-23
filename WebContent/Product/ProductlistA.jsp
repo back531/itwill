@@ -96,7 +96,7 @@
 								</div>
 							</div>
 							<div class="text text-center">
-									<span class="category"><%=dto.getCT_NO() %></span>
+									<span class="category"><%=dto.getP_CT() %></span>
 									<h2><%=dto.getP_NAME() %></h2>
 									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
@@ -146,7 +146,7 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">>전통주
+								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">전통주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
 								<li><a href="<%=request.getContextPath() %>/Product/ProductlistM.jsp">막걸리

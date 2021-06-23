@@ -62,6 +62,7 @@
 	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 
 %>
+
 <section class="ftco-section">
 	<div class="container">
 		<div class="row">
@@ -80,7 +81,7 @@
 					<div class="col-md-4 d-flex">
 						<div class="product ftco-animate">
 							<div class="img d-flex align-items-center justify-content-center"
-								style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+								style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain() %>);">
 								<div class="desc">
 									<p class="meta-prod d-flex">
 										<a href="#" class="d-flex align-items-center justify-content-center">
@@ -93,7 +94,7 @@
 								</div>
 							</div>
 							<div class="text text-center">
-									<span class="category"><%=dto.getCT_NO() %></span>
+									<span class="category"><%=dto.getP_CT() %></span>
 									<h2><%=dto.getP_NAME() %></h2>
 									<span class="price"><%=dto.getP_PRICE() %>₩</span>
 							</div>
@@ -101,16 +102,15 @@
 					</div>
 					
 			<%} %>
-			
+	
+					<div class="divPage">
 							<!-- 페이지 번호 추가 -->		
 							<!-- 이전 블럭으로 이동 -->
 							<nav aria-label="...">
 							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
 							<%if(pageVo.getFirstPage()>1){ %>
-						      <li class="page-item">
-						      <a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">
-						      <span class="page-link">이전으로</span></a></li>
-						    <%}//if %>
+								<li class="page-item"><a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+							<%}//if %>
 												
 							<!-- [1][2][3][4][5][6][7][8][9][10] -->
 							<%
@@ -119,22 +119,22 @@
 									
 									if(i == currentPage){%>
 									
-										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
 									
 									<%}else{ %>
-										<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+										<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><%=i %></a></li>
 									
 									<%}//if %>	
 							<%}//for %>
 							
 							<!-- 다음 블럭으로 이동 -->
 							<%if(pageVo.getLastPage() < pageVo.getTotalPage()){ %>
-								<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
+								<li class="page-item"><a class="page-link" href="Productlist.jsp?currentPage=<%=pageVo.getLastPage()+1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">다음으로</a></li>
 							<%}//if %>
 							</ul>
 							</nav>
 							<!--  페이지 번호 끝 -->
-			
+						</div>
 						
 			</div>
 		</div>
@@ -145,7 +145,7 @@
 						<div class="categories">
 							<h3>Product Types</h3>
 							<ul class="p-0">
-								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">>전통주
+								<li><a href="<%=request.getContextPath()%>/Product/ProductlistA.jsp">전통주
 										<span class="fa fa-chevron-right"></span>
 								</a></li>
 								<li><a href="<%=request.getContextPath() %>/Product/ProductlistM.jsp">막걸리
@@ -160,8 +160,7 @@
 				</div>
 	<span id="brr"></span>
 	</div>
-	</div>
-	
+</div>
 </section>
 <br>
 <%@ include file="../inc/bottom.jsp"%>

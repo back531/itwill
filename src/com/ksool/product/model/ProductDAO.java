@@ -118,7 +118,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 			conn.setAutoCommit(true);
 			//3
-			String sql="select * from product where NO=2";
+			String sql="select * from product where CT_NO=2";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -169,7 +169,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 			conn.setAutoCommit(true);
 			//3
-			String sql="select * from product where NO=3";
+			String sql="select * from product where CT_NO=3";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -221,7 +221,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 			conn.setAutoCommit(true);
 			//3
-			String sql="select * from product where NO=4";
+			String sql="select * from product where CT_NO=4";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -268,14 +268,14 @@ public class ProductDAO {
 			conn=pool.getConnection();
 			conn.setAutoCommit(true);
 			//3
-			String sql="select * from product where pid=?";
+			String sql="select * from product where PID=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, pid);
 
 			//4
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				vo.setPID(pid);
+				vo.setPID(rs.getInt("pid"));
 				vo.setCT_NO(rs.getString("CT_NO"));
 				vo.setP_NAME(rs.getString("P_NAME"));
 				vo.setP_PRICE(rs.getInt("P_PRICE"));

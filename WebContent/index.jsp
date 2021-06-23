@@ -119,7 +119,7 @@
 			<% 
 	          	for(int i=0; i<pageVo.getPageSize();i++){ 
 	          		if(num<1) break;
-	          		ProductVO dto=list.get(curPos++); //0, 5, 10, 15
+	          		ProductVO dto=list.get(curPos++); 
 			  		num--;
 			%>
 			<div
@@ -178,6 +178,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
@@ -226,6 +227,7 @@
 					</div>
 				</div>
 			</div>
+	
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
@@ -250,7 +252,7 @@
 					</div>
 				</div>
 			</div>
-
+	
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
@@ -275,6 +277,7 @@
 					</div>
 				</div>
 			</div>
+	
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
@@ -299,6 +302,7 @@
 					</div>
 				</div>
 			</div>
+	
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
@@ -323,6 +327,7 @@
 					</div>
 				</div>
 			</div>
+		
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
