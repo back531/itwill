@@ -20,7 +20,7 @@
 			location.href="questionBoard.jsp";
 		</script>
 	<%	return;	
-	}
+	} 
 	
 	//2
 	Q_BoardDAO dao = new Q_BoardDAO();

@@ -22,7 +22,7 @@
    R_BoardVO vo = new R_BoardVO();
    
    vo.setNo(Integer.parseInt(no));
-
+ 
    
    try{
 	  if(pwd.equals(session.getAttribute("pwd"))){ 

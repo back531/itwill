@@ -20,7 +20,7 @@
 			location.href="list.jsp";
 		</script>
 		
-	<%	return ;
+	<%	return ; 
 	}
 	
 	//2

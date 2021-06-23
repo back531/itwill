@@ -17,7 +17,7 @@
 	String keyword=request.getParameter("searchKeyword");
 	
 	R_BoardDAO dao = new R_BoardDAO();
-	List<R_BoardVO> list=null;
+	List<R_BoardVO> list=null; 
 	try{
 		list=dao.selectAll(condition, keyword);
 	}catch(SQLException e){

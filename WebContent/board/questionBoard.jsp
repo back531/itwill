@@ -41,11 +41,6 @@
 	
 	PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 %>
-<%	if(keyword!=null && !keyword.isEmpty() ){ %>
-		<p>검색어 : <%=keyword %>, <%=list.size() %>건 검색되었습니다.</p>
-<%	}else{
-		keyword="";
-	}%>
 <section class="hero-wrap hero-wrap-2"
 	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
 	data-stellar-background-ratio="0.5">

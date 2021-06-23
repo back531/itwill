@@ -21,7 +21,7 @@
 	String step=request.getParameter("step");
 	String sortNo=request.getParameter("sortNo");
 		
-	//2
+	//2 
 	Q_BoardDAO dao = new Q_BoardDAO();
 	Q_BoardVO vo = new Q_BoardVO();
 	vo.setContent(content);

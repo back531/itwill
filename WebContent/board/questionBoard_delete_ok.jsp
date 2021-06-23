@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ 
 <%
    //delete.jsp 에서 post 방식으로 서브밋
    request.setCharacterEncoding("utf-8");

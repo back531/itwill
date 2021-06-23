@@ -23,7 +23,7 @@
 	<%	return;
 	}
 	
-	//2
+	//2 
 	R_BoardDAO dao = new R_BoardDAO();
 	
 	try{

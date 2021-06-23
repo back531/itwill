@@ -17,7 +17,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<% 
 		//write.jsp에서 post방식으로 서브밋
 		//1.
 		request.setCharacterEncoding("utf-8");

@@ -13,7 +13,7 @@ NoticeDAO dao = new NoticeDAO();
 List<NoticeVO> list=null;
 
 try{
-	list=dao.selectAll();
+	list=dao.selectAll(); 
 }catch(SQLException e){
 	e.printStackTrace();
 }

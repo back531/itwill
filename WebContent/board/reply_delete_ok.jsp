@@ -19,7 +19,7 @@
    String no = request.getParameter("no");
    String bno = request.getParameter("bno");
    String pno = request.getParameter("pno");
-		   
+		    
    ReplyDAO dao = new ReplyDAO();
    ReplyVO vo = new ReplyVO();
    

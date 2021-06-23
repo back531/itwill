@@ -17,7 +17,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+</head> 
 <body>
 	<%
 		//write.jsp에서 post방식으로 서브밋
