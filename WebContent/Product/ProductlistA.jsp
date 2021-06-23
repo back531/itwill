@@ -120,7 +120,7 @@
 									
 									if(i == currentPage){%>
 									
-										<li class="page-item active"><a class="page-link" href="Productlist.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
+										<li class="page-item active"><a class="page-link" href="ProductlistA.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>
 									
 									<%}else{ %>
 										<li class="page-item"><a class="page-link" href="ProductlistA.jsp?currentPage=<%=i%>&searchCondition=<%=condition%>"><%=i %></a></li>

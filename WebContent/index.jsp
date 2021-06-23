@@ -163,7 +163,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single2.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
@@ -190,7 +190,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single3.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
@@ -214,7 +214,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single4.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
@@ -239,7 +239,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single5.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
@@ -264,7 +264,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single6.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
@@ -289,7 +289,7 @@
 									class="flaticon-shopping-bag"></span></a> <a href="#"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-heart"></span></a> <a
-									href="<%=request.getContextPath() %>/Product/product-single.jsp?pid=<%=dto.getPID() %>"
+									href="<%=request.getContextPath() %>/Product/product-single6.jsp"
 									class="d-flex align-items-center justify-content-center"><span
 									class="flaticon-visibility"></span></a>
 							</p>
