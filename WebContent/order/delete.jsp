@@ -17,7 +17,7 @@
 	//2
 	CartService cartService=new CartService();
 	try{
-		int cnt = cartService.deleteCart(Integer.parseInt(c_no));
+		int cnt = cartService.deleteC(Integer.parseInt(c_no));
 		
 		//3
 		response.sendRedirect("cart.jsp");

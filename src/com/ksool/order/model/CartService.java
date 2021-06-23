@@ -14,12 +14,16 @@ public class CartService {
 		return cartDao.updateCart(qty, no);
 	}
 	
-	public List<CartVO> selectAll() throws SQLException{
-		return cartDao.selectAll();
+	public List<CartVO> selectAll(String userid) throws SQLException{
+		return cartDao.selectAll(userid);
 	}
 	
 	public int deleteCart() throws SQLException {
 		return cartDao.deleteCart();
+	}
+	
+	public int deleteC(int c_no) throws SQLException {
+		return cartDao.deleteC(c_no);
 	}
 	
 }

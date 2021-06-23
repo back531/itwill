@@ -25,8 +25,9 @@
 	CartService cartService=new CartService();
 	List<CartVO> list=null;
 	CartVO vo=null;
+	String userid=(String)session.getAttribute("userid");
 	try{
-		list=cartService.selectAll();
+		list=cartService.selectAll(userid);
 	}catch(SQLException e){
 		e.printStackTrace();
 	}
