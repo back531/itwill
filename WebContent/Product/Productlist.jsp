@@ -134,11 +134,8 @@
 							</ul>
 							</nav>
 							<!--  페이지 번호 끝 -->
-<<<<<<< HEAD
-=======
 						</div>
 						
->>>>>>> branch 'master' of https://github.com/back531/itwill.git
 			</div>
 		</div>
 
