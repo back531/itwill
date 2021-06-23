@@ -6,10 +6,11 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 <script type="text/javascript" src="./resources/js/validation.js"></script>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	$(function(){
 		$('.btList').click(function(){
-			location.href="<%=request.getContextPath()%>/Product/Productlist.jsp";
+			location.href="Productlist.jsp";
 		});
 		
 		$('form[name=newProduct]').submit(function(){
@@ -25,15 +26,30 @@
 	});
 </script>
 <title>상품 등록</title>
-</head>
-<body>
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">
-				상품 등록
-			</h1>
+
+<section class="hero-wrap hero-wrap-2"
+	style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div
+			class="row no-gutters slider-text align-items-end justify-content-center">
+			<div class="col-md-9 ftco-animate mb-5 text-center">
+				<p class="breadcrumbs mb-0">
+					<span class="mr-2"><a href="index.jsp">Home <i
+							class="fa fa-chevron-right"></i></a></span> <span>상품 <i
+						class="fa fa-chevron-right"></i></span>
+				</p>
+				<h2 class="mb-0 bread">상품 등록</h2>
+			</div>
 		</div>
 	</div>
+</section>
+<section style="margin-left: 150px;
+			    margin-right: 150px;
+			    margin-top: 50px;
+			    margin-bottom: 50px;
+			    font-family: 'Jeju Gothic', serif;">
 	
 	<div class="container">
 		<div>
@@ -45,59 +61,51 @@
 		
 			
 			<div class="form-group row">
-				<label class="col-sm-2">상품 목록</label>
+				<label class="col-sm-2">카테고리 번호</label>
 				<div class="com-sm-3">
-					<input type="text" id="productId" name="productId" class="form-control">
+					<input type="text" id="CT_NO" name="CT_NO" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
 				<label class="col-sm-2">상품 이름</label>
 				<div class="com-sm-3">
-					<input type="text" id="name" name="name" class="form-control">
+					<input type="text" id="P_NAME" name="P_NAME" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
-				<label class="col-sm-2">가격</label>
+				<label class="col-sm-2">상품 가격</label>
 				<div class="com-sm-3">
-					<input type="text" id="unitPrice" name="unitPrice" class="form-control">
+					<input type="text" id="P_PRICE" name="P_PRICE" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
-				<label class="col-sm-2">상세 내용</label>
-				<div class="com-sm-5">
-					<textarea name="description" cols="50" rows="2" class="form-control"></textarea>
-				</div>
-			</div>
-			
-			<div class="form-group row">
-				<label class="col-sm-2">제조사</label>
+				<label class="col-sm-2">상품 종류</label>
 				<div class="com-sm-3">
-					<input type="text" name="manufacturer" class="form-control">
+					<input type="text" id="P_CT" name="P_CT" class="form-control">
 				</div>
 			</div>
 			
 			<div class="form-group row">
-				<label class="col-sm-2">분류</label>
+				<label class="col-sm-2">상품 설명</label>
 				<div class="com-sm-3">
-					<input type="text" name="category" class="form-control">
+					<textarea id="P_CONTENT" name="P_CONTENT" class="form-control" rows="12" cols="40"></textarea>
 				</div>
 			</div>
 			
 			<div class="form-group row">
-				<label class="col-sm-2">재고 수</label>
+				<label class="col-sm-2">상품 재고</label>
 				<div class="com-sm-3">
-					<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
+					<input type="text" id="P_STOCK" name="P_STOCK" class="form-control">
 				</div>
 			</div>
-			
-			
+		
 			<div class="form-group row">
 				<label class="col-sm-2">상품 이미지</label>
 				<div>
-					<input type="file" name="productImage" class="form-control">
+					<input type="file" id="upfile" name="upfile" class="form-control">
 				</div>
 			</div>
 				

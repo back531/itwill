@@ -11,14 +11,15 @@
 	//2.
 	ProductDAO dao = new ProductDAO();
 	ProductVO vo=null;
-	try{
-		vo=dao.selectByPID(Integer.parseInt(pid));
-	}catch(SQLException e){
-		e.printStackTrace();
+		try{
+			vo=dao.selectByPID(Integer.parseInt(pid));
+			
+		}catch(SQLException e){
+			e.printStackTrace();
 	}
 
 %> 
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('<%=request.getContextPath()%>/images/image01.png');" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('<%=request.getContextPath() %>/images/image01.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -34,7 +35,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="<%=request.getContextPath()%>/images/<%=vo.getImagemain()%>" class="image-popup prod-img-bg"><img src="<%=request.getContextPath()%>/images/<%=vo.getImagemain()%>" class="img-fluid" alt="Colorlib Template" style="width: 500px; "></a>
+    				<a href="<%=request.getContextPath() %>/images/<%=vo.getImagemain() %>" class="image-popup prod-img-bg"><img src="<%=request.getContextPath()%>/images/<%=vo.getImagemain() %>" class="img-fluid" alt="Colorlib Template" style="width: 500px; "></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3><%=vo.getP_NAME() %></h3>
@@ -73,10 +74,10 @@
 	          	</div>
 	          	<div class="w-100"></div>
 	          	<div class="col-md-12">
-	          		<p style="color: #000;"><%=vo.getP_STOCK()%></p>
+	          		<p style="color: #000;"><%=vo.getP_STOCK() %></p>
 	          	</div>
           	</div>
-          	<p><a href="<%=request.getContextPath()%>/order/cart.jsp" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="<%=request.getContextPath()%>/order/order.jsp" class="btn btn-primary py-3 px-5">구매</a></p>
+          	<p><a href="<%=request.getContextPath() %>/order/cart.jsp" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="<%=request.getContextPath()%>/order/order.jsp" class="btn btn-primary py-3 px-5">구매</a></p>
     			</div>
     		</div>
 
