@@ -6,6 +6,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="inc/top.jsp"%>
+
 <div class="hero-wrap"
 	style="background-image: url('images/image01.png');"
 	data-stellar-background-ratio="0.5">
@@ -114,7 +115,8 @@
 			<%     	
 	          	int num = pageVo.getNum();
 			  	int curPos = pageVo.getCurPos();
-		
+			%>
+			<% 
 	          	for(int i=0; i<pageVo.getPageSize();i++){ 
 	          		if(num<1) break;
 	          		ProductVO dto=list.get(curPos++); //0, 5, 10, 15
@@ -135,14 +137,15 @@
 						제품들과 차별화되는 생쌀발효법으로 술을 빚으며, 원료의 품질도 타협하지 않아 프리미엄 탁주의 대명사로
 						자리매김하였습니다.</p>
 				</div>
-
 			</div>
 		</div>
 	</div>
+
 </section>
 
 <section class="ftco-section">
 	<div class="container">
+			
 		<div class="row justify-content-center pb-5">
 			<div class="col-md-7 heading-section text-center">
 				<h2 style="font-family: 'Cafe24SsurroundAir';">전체 상품</h2>
@@ -150,7 +153,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -170,13 +173,13 @@
 						<span class="sale">세일중</span> <span class="category"><%=dto.getCT_NO() %></span>
 						<h2><%=dto.getP_NAME() %></h2>
 						<p class="mb-0">
-							<span class="price price-sale">51500₩</span> <span class="price"><%=dto.getP_PRICE() %>₩</span>
+							<span class="price price-sale">21500₩</span> <span class="price"><%=dto.getP_PRICE() %>₩</span>
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -200,7 +203,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class= "product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -224,7 +227,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -249,7 +252,7 @@
 			</div>
 
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -273,7 +276,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -297,7 +300,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -321,7 +324,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
-				<div class="product ">
+				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
 						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
 						<div class="desc">
@@ -345,7 +348,10 @@
 				</div>
 			</div>
 		</div>
+		
 		<%} %>
+		
+		
 		
 		<div class="row justify-content-center">
 			<div class="col-md-4">

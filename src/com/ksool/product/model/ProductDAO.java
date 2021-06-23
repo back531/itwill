@@ -117,7 +117,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=1";
+			String sql="select * from product where CT_NO=2";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -168,7 +168,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=2";
+			String sql="select * from product where CT_NO=3";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -220,7 +220,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=3";
+			String sql="select * from product where CT_NO=4";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
