@@ -288,8 +288,8 @@
                         href="<%=request.getContextPath()%>/Product/ProductlistZ.jsp">증류주</a>
                         <%if(admin.equals(session.getAttribute("userid"))){ %>
                         <a
-	                        class="dropdown-item"
-	                        href="<%=request.getContextPath()%>/Product/ProductRegister.jsp">상품등록</a>
+                           class="dropdown-item"
+                           href="<%=request.getContextPath()%>/Product/ProductRegister.jsp">상품등록</a>
                         <%} %>
                   </div></li>               <li class="nav-item dropdown"><a
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
@@ -346,7 +346,7 @@
          <label for="chkSave">아이디 저장하기</label>
            <!--  <span class='text-center'><a href="/bbs/index.php?mid=index&act=dispMemberFindAccount" class="text-sm">비밀번호 찾기</a></span> -->
             <div class="form-group">
-            <a href="<%=request.getContextPath()%>/member/register4.jsp" class="btn btn-default btn-block m-t-md">회원가입</a>
+            <a data-toggle="modal" href="#regimodal" class="btn btn-default btn-block m-t-md">회원가입</a>
             </div>
        
           </div>
