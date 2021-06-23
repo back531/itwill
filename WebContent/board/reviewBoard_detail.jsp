@@ -263,13 +263,13 @@ PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 				}
 			});
 			
-/* 			$('#replyfrm').submit(function() {
+			$('#replyfrm').submit(function() {
 				if ($('#content').val().length < 1) {
 					alert('댓글내용을 입력해주세요.');
 					$('#content').focus();
 					event.preventDefault();
 				}
-			}); */
+			}); 
 
 		});
 	</script>

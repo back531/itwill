@@ -5,7 +5,8 @@ import java.util.Date;
 public class Utility {
 	public static final String UPLOAD_PATH="upload";
 	public static final String TEST_UPLOAD_PATH
-	="C:\\Users\\User\\Desktop\\개발 프로그램\\JSP_Workspace\\semi-5\\WebContent\\upload";
+	="C:\\Users\\User\\Desktop\\개발 프로그램\\JSP_Workspace\\semi-5\\WebContent\\board\\notice_image";
+	
 	
 	
 	public static String displayRe(int step) {
