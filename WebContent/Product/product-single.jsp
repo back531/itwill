@@ -74,7 +74,7 @@
 	          	</div>
 	          	<div class="w-100"></div>
 	          	<div class="col-md-12">
-	          		<p style="color: #000;"><%=vo.getP_STOCK() %></p>
+	          		<p style="color: #000;">재고 : <%=vo.getP_STOCK() %>개</p>
 	          	</div>
           	</div>
           	<p><a href="<%=request.getContextPath() %>/order/cart.jsp" class="btn btn-primary py-3 px-5 mr-2">장바구니</a><a href="<%=request.getContextPath()%>/order/order.jsp" class="btn btn-primary py-3 px-5">구매</a></p>
