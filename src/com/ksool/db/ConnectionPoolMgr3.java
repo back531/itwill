@@ -25,7 +25,7 @@ public class ConnectionPoolMgr3 {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			System.out.println("드라이버 로딩 성공!");
-			url="jdbc:oracle:thin:@DESKTOP-49KJKCB:1521:xe";	
+			url="jdbc:oracle:thin:@DESKTOP-81FTIH6:1521:xe";	
 			user="semi"; 	
 			pwd="semi123";
 			

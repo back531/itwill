@@ -7,6 +7,8 @@
    if(t_userid!=null && !t_userid.isEmpty()){ //세션에 값이 있으면
       t_login=true;  //로그인 된 경우
    }
+   
+   String admin = "admin";
 %>   
 
  <%
@@ -284,6 +286,11 @@
                         href="<%=request.getContextPath()%>/Product/ProductlistM.jsp">막걸리</a> <a
                         class="dropdown-item"
                         href="<%=request.getContextPath()%>/Product/ProductlistZ.jsp">증류주</a>
+                        <%if(admin.equals(session.getAttribute("userid"))){ %>
+                        <a
+	                        class="dropdown-item"
+	                        href="<%=request.getContextPath()%>/Product/ProducRegister.jsp">상품등록</a>
+                        <%} %>
                   </div></li>               <li class="nav-item dropdown"><a
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">게시판</a>
