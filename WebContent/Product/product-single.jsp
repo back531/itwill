@@ -11,11 +11,11 @@
 	//2.
 	ProductDAO dao = new ProductDAO();
 	ProductVO vo=null;
-	try{
-		vo=dao.selectByPID(Integer.parseInt(pid));
-		
-	}catch(SQLException e){
-		e.printStackTrace();
+		try{
+			vo=dao.selectByPID(Integer.parseInt(pid));
+			
+		}catch(SQLException e){
+			e.printStackTrace();
 	}
 
 %> 

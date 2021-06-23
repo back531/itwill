@@ -268,26 +268,28 @@ public class ProductDAO {
 			conn=pool.getConnection();
 			conn.setAutoCommit(true);
 			//3
-			String sql="select * from product where PID=?";
+			String sql="select * from product where pid=?";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, pid);
 
 			//4
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				vo.setPID(rs.getInt("pid"));
+				
+				vo.setPID(pid);
+				
 				vo.setCT_NO(rs.getString("CT_NO"));
 				vo.setP_NAME(rs.getString("P_NAME"));
 				vo.setP_PRICE(rs.getInt("P_PRICE"));
 				vo.setP_CT(rs.getString("P_CT"));
 				
-				String content=rs.getString("content");
+				String content=rs.getString("P_CONTENT");
 				vo.setP_CONTENT(content);
 				
-				vo.setP_STOCK(rs.getInt("p_stock"));	
+				vo.setP_STOCK(rs.getInt("P_STOCK"));	
 				vo.setP_REGDATE(null);					
-				vo.setP_STATE(rs.getString("p_state"));
-				vo.setImagemain(rs.getString("imagemain"));
+				vo.setP_STATE(rs.getString("P_STATE"));
+				vo.setImagemain(rs.getString("Imagemain"));
 				
 				
 			}
