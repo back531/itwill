@@ -18,6 +18,40 @@ public class ProductDAO {
 		pool=ConnectionPoolMgr3.getInstance();
 	}
 	
+	/* 상품등록 */
+	public int insert_Product(ProductVO vo) throws SQLException {
+		Connection conn=null;
+		PreparedStatement ps=null;
+
+		try {
+			//1,2 conn
+			conn=pool.getConnection();
+
+			//3 ps
+			String sql="insert into PRODUCT(PID, CT_NO, P_NAME, P_PRICE, P_CT,P_CONTENT, P_STOCK, P_STATE, Imagemain)"
+					+ "values (PRODUCT_seq.nextval, '', '', '', '',"
+					+ "'', '', '', '')";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, vo.getCT_NO());
+			ps.setString(2, vo.getP_NAME());
+			ps.setInt(3, vo.getP_PRICE());
+			ps.setString(4, vo.getP_CT());
+			ps.setString(5, vo.getP_CONTENT());
+			ps.setInt(6, vo.getP_STOCK());
+			ps.setString(8, vo.getP_STATE());
+			ps.setString(9, vo.getImagemain());
+
+
+			//4 exec
+			int cnt=ps.executeUpdate();
+			System.out.println("등록결과, cnt="+cnt+", 매개변수 vo="+vo);
+
+			return cnt;
+		}finally {
+			pool.dbClose(ps, conn);
+		}
+	}
+	
 	/* 모든상품 조회 */
 	public List<ProductVO> selectAll(String condition, String keyword) 
 			throws SQLException{
