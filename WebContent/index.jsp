@@ -124,7 +124,7 @@
 			%>
 			<div
 				class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
-				style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);"></div>
+				style="background-image: url(<%=request.getContextPath() %>/images/product-13.jpg);"></div>
 			<div class="col-md-6 wrap-about pl-md-5 py-5">
 				<div class="heading-section">
 					<h2 class="mb-4">배혜정도가 담금나라 3.6L</h2>
@@ -155,7 +155,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-14.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -170,10 +170,10 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="sale">세일중</span> <span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
+						<span class="sale">세일중</span> <span class="category">전통주</span>
+						<h2>양반안동소주</h2>
 						<p class="mb-0">
-							<span class="price price-sale">21500₩</span> <span class="price"><%=dto.getP_PRICE() %>₩</span>
+							<span class="price price-sale">5500₩</span> <span class="price">1500₩</span>
 						</p>
 					</div>
 				</div>
@@ -182,7 +182,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-16.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -197,16 +197,16 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="seller">베스트셀러</span> <span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="seller">베스트셀러</span> <span class="category">전통주</span>
+						<h2>전주 모주</h2>
+						<span class="price">1700₩</span>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 d-flex">
 				<div class= "product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-23.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -221,9 +221,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="new">신상품</span> <span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="new">신상품</span> <span class="category">증류주</span>
+						<h2>두레앙</h2>
+						<span class="price">2500₩</span>
 					</div>
 				</div>
 			</div>
@@ -231,7 +231,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-36.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -246,9 +246,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="category">막걸리</span>
+						<h2>우도 땅콩 막걸리</h2>
+						<span class="price">1800₩</span>
 					</div>
 				</div>
 			</div>
@@ -256,7 +256,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-43.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -271,9 +271,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="category">막걸리</span>
+						<h2>백련 생막걸리</h2>
+						<span class="price">1900₩</span>
 					</div>
 				</div>
 			</div>
@@ -281,7 +281,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-15.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -296,9 +296,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="category">전통주</span>
+						<h2>이도 담금주</h2>
+						<span class="price">3500₩</span>
 					</div>
 				</div>
 			</div>
@@ -306,7 +306,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-33.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -321,9 +321,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="category">증류주</span>
+						<h2>추사백</h2>
+						<span class="price">2700₩</span>
 					</div>
 				</div>
 			</div>
@@ -331,7 +331,7 @@
 			<div class="col-md-3 d-flex">
 				<div class="product">
 					<div class="img d-flex align-items-center justify-content-center"
-						style="background-image: url(<%=request.getContextPath() %>/images/<%=dto.getImagemain()%>);">
+						style="background-image: url(<%=request.getContextPath() %>/images/product-47.jpg);">
 						<div class="desc">
 							<p class="meta-prod d-flex">
 								<a href="#"
@@ -346,9 +346,9 @@
 						</div>
 					</div>
 					<div class="text text-center">
-						<span class="category"><%=dto.getCT_NO() %></span>
-						<h2><%=dto.getP_NAME() %></h2>
-						<span class="price"><%=dto.getP_PRICE() %>₩</span>
+						<span class="category">증류주</span>
+						<h2>꽃빛담은</h2>
+						<span class="price">3700₩</span>
 					</div>
 				</div>
 			</div>
