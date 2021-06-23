@@ -1,8 +1,7 @@
-<%@page import="java.sql.SQLException"%>
 <%@page import="com.mysemi.member.model.MemberService"%>
+<%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+    pageEncoding="UTF-8"%>  
 <%@ include file="../login/loginCheck.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -19,15 +18,15 @@
 <%
 request.setCharacterEncoding("utf-8"); 
 	
-String pwd=request.getParameter("pwd");
-String name=request.getParameter("name");
-String address=request.getParameter("address");
-String addressDetail=request.getParameter("addressDetail");
-String hp=request.getParameter("hp");
-String email=request.getParameter("email");
+String pwd=request.getParameter("pwwd");
+String address=request.getParameter("addrress");
+String addressDetail=request.getParameter("addrressDetail");
+String hp=request.getParameter("hpp");
+String email=request.getParameter("emmail");
 // 세션
 
 String userid=(String)session.getAttribute("userid");
+String name=(String)session.getAttribute("userName");
 
 vo.setAddress(address);
 vo.setAddressDetail(addressDetail);
