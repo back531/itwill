@@ -28,18 +28,17 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3 ps
-			String sql="insert into PRODUCT(PID, CT_NO, P_NAME, P_PRICE, P_CT,P_CONTENT, P_STOCK, P_STATE, Imagemain)"
+			String sql="insert into PRODUCT(PID, NO, NAME, PRICE, CT, CONTENT, STOCK, REGDATE, STATE, Imagemain)"
 					+ "values (PRODUCT_seq.nextval, '', '', '', '',"
-					+ "'', '', '', '')";
+					+ "'', '', '', '', '');";
 			ps=conn.prepareStatement(sql);
-			ps.setString(1, vo.getCT_NO());
-			ps.setString(2, vo.getP_NAME());
-			ps.setInt(3, vo.getP_PRICE());
-			ps.setString(4, vo.getP_CT());
-			ps.setString(5, vo.getP_CONTENT());
-			ps.setInt(6, vo.getP_STOCK());
-			ps.setString(8, vo.getP_STATE());
-			ps.setString(9, vo.getImagemain());
+			ps.setString(1, vo.getNO());
+			ps.setString(2, vo.getNAME());
+			ps.setInt(3, vo.getPRICE());
+			ps.setString(4, vo.getCT());
+			ps.setString(5, vo.getCONTENT());
+			ps.setInt(6, vo.getSTOCK());
+			ps.setString(7, vo.getImagemain());
 
 
 			//4 exec
@@ -82,17 +81,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				int pid=rs.getInt("pid");
-				String ct_no=rs.getString("ct_no");
-				String p_name=rs.getString("p_name");
-				int p_price=rs.getInt("p_price");
-				String p_ct=rs.getString("p_ct");
-				String p_content=rs.getString("p_content");
+				String no=rs.getString("no");
+				String name=rs.getString("name");
+				int price=rs.getInt("price");
+				String ct=rs.getString("ct");
+				String content=rs.getString("content");
 				int p_stock=rs.getInt("p_stock");
 				Timestamp p_regdate=rs.getTimestamp("p_regdate");
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -117,7 +116,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=2";
+			String sql="select * from product where NO=2";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -133,17 +132,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				int pid=rs.getInt("pid");
-				String ct_no=rs.getString("ct_no");
-				String p_name=rs.getString("p_name");
-				int p_price=rs.getInt("p_price");
-				String p_ct=rs.getString("p_ct");
-				String p_content=rs.getString("p_content");
+				String no=rs.getString("no");
+				String name=rs.getString("name");
+				int price=rs.getInt("price");
+				String ct=rs.getString("ct");
+				String content=rs.getString("content");
 				int p_stock=rs.getInt("p_stock");
 				Timestamp p_regdate=rs.getTimestamp("p_regdate");
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -168,7 +167,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=3";
+			String sql="select * from product where NO=3";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -184,17 +183,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				int pid=rs.getInt("pid");
-				String ct_no=rs.getString("ct_no");
-				String p_name=rs.getString("p_name");
-				int p_price=rs.getInt("p_price");
-				String p_ct=rs.getString("p_ct");
-				String p_content=rs.getString("p_content");
+				String no=rs.getString("no");
+				String name=rs.getString("name");
+				int price=rs.getInt("price");
+				String ct=rs.getString("ct");
+				String content=rs.getString("content");
 				int p_stock=rs.getInt("p_stock");
 				Timestamp p_regdate=rs.getTimestamp("p_regdate");
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -220,7 +219,7 @@ public class ProductDAO {
 			conn=pool.getConnection();
 
 			//3
-			String sql="select * from product where CT_NO=4";
+			String sql="select * from product where NO=4";
 			//검색의 경우
 			if(keyword!=null && !keyword.isEmpty()) {
 				sql+=" where "+ condition +" like '%' || ? || '%'";
@@ -236,17 +235,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			while(rs.next()) {
 				int pid=rs.getInt("pid");
-				String ct_no=rs.getString("ct_no");
-				String p_name=rs.getString("p_name");
-				int p_price=rs.getInt("p_price");
-				String p_ct=rs.getString("p_ct");
-				String p_content=rs.getString("p_content");
+				String no=rs.getString("no");
+				String name=rs.getString("name");
+				int price=rs.getInt("price");
+				String ct=rs.getString("ct");
+				String content=rs.getString("content");
 				int p_stock=rs.getInt("p_stock");
 				Timestamp p_regdate=rs.getTimestamp("p_regdate");
 				String p_state=rs.getString("p_state");
 				String Imagemain=rs.getString("Imagemain");
 				
-				ProductVO vo = new ProductVO(pid, ct_no, p_name, p_price, p_ct, p_content, p_stock, null, p_state, Imagemain);
+				ProductVO vo = new ProductVO(pid, no, name, price, ct, content, p_stock, null, p_state, Imagemain);
 				
 						
 				list.add(vo);
@@ -276,17 +275,17 @@ public class ProductDAO {
 			rs=ps.executeQuery();
 			if(rs.next()) {
 				vo.setPID(pid);
-				vo.setCT_NO(rs.getString("ct_no"));
-				vo.setP_NAME(rs.getString("p_name"));
-				vo.setP_PRICE(rs.getInt("p_price"));
-				vo.setP_CT(rs.getString("p_ct"));
+				vo.setNO(rs.getString("no"));
+				vo.setNAME(rs.getString("name"));
+				vo.setPRICE(rs.getInt("price"));
+				vo.setCT(rs.getString("ct"));
 				
-				String p_content=rs.getString("p_content");
-				vo.setP_CONTENT(p_content);
+				String content=rs.getString("content");
+				vo.setCONTENT(content);
 				
-				vo.setP_STOCK(rs.getInt("p_stock"));	
-				vo.setP_REGDATE(null);					
-				vo.setP_STATE(rs.getString("p_state"));
+				vo.setSTOCK(rs.getInt("p_stock"));	
+				vo.setREGDATE(null);					
+				vo.setSTATE(rs.getString("p_state"));
 				vo.setImagemain(rs.getString("imagemain"));
 				
 				

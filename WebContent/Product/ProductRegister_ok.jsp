@@ -13,31 +13,47 @@
 </head>
 <body>
 	<%
-		//pdWrite.jsp에서 post방식으로 서브밋
+		
 		//1. 요청 파라미터 읽어오기
 		//post - 요청 파라미터에 대한 한글 인코딩 처리
-		request.setCharacterEncoding("utf-8");
-	
-		
-		
-		String pdName=request.getParameter("pdName");
+		request.setCharacterEncoding("utf-8");	
+		String no=request.getParameter("no");
+		String name=request.getParameter("name");
 		String price=request.getParameter("price");
+		String content=request.getParameter("content");
+		String stock=request.getParameter("stock");
+		String getImagemain=request.getParameter("getImagemain");
+		
+		String ip=request.getRemoteAddr();
+		String ip2=request.getRemoteHost();
+		System.out.println("ip="+ip+", ip2="+ip2);
 	
 		//2. db작업
-		ProductDAO pdDao = new ProductDAO();
+		ProductDAO dao = new ProductDAO();		
+		ProductVO vo = new ProductVO(); 
 		
-		ProductVO dto = new ProductVO(); 
-		dto.
+		vo.setImagemain(getImagemain);
+		
+
 		try{
-			int cnt=pdDao.insertPd(dto);
+			int cnt=dao.insert_Product(vo);
 			
-			//3. 결과 처리
-			response.sendRedirect("pdList.jsp");
+			//3.
+			if(cnt>0){ %>
+				<script type="text/javascript">
+					alert('상품등록 되었습니다.');
+					location.href="Productlist.jsp";
+				</script>				
+			<%}else{%>
+				<script type="text/javascript">
+					alert('상품등록 실패');
+					history.back();
+				</script>				
+			<%}
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		
-		
+	
 	%>
 </body>
 </html>
