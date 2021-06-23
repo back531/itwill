@@ -34,7 +34,7 @@ int blockSize=5;  //한 블럭에 보여줄 페이지 수, 10
 PagingVO pageVo = new PagingVO(currentPage, totalRecord, pageSize, blockSize);
 
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 E요일", Locale.KOREAN);
-String admin = "admin";
+String admin_id = "admin";
 %>
     <section class="hero-wrap hero-wrap-2" style="background-image: url('../images/image01.png'); font-family: 'Jeju Gothic', serif;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -97,7 +97,7 @@ String admin = "admin";
 	    </div>
       </div>
 	      <div class="text-center">
-      <%if(admin.equals(session.getAttribute("userid"))){ %>
+      <%if(admin_id.equals(session.getAttribute("userid"))){ %>
 	     	 <a href="Notice_write.jsp" >공지글 작성</a>      
 	  <%} %>
 		  </div>
