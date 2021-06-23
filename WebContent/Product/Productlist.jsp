@@ -34,7 +34,6 @@
 	String keyword=request.getParameter("searchKeyword");
 	
 	ProductDAO dao = new ProductDAO();
-
 	List<ProductVO> list=null;
 	
 	try{
@@ -108,7 +107,9 @@
 							<nav aria-label="...">
 							<ul class="pagination" style="justify-content: center; font-family: 'Jeju Gothic', serif;" >
 							<%if(pageVo.getFirstPage()>1){ %>
-						      <li class="page-item"><a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>"><span class="page-link">이전으로</span></a></li>
+						      <li class="page-item">
+						      <a href="Productlist.jsp?currentPage=<%=pageVo.getFirstPage()-1%>&searchCondition=<%=condition%>&searchKeyword=<%=keyword%>">
+						      <span class="page-link">이전으로</span></a></li>
 						    <%}//if %>
 												
 							<!-- [1][2][3][4][5][6][7][8][9][10] -->

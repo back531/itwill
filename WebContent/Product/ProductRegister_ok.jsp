@@ -22,7 +22,7 @@
 		String upPath=Utility2.UPLOAD_PATH;
 		String saveDir = application.getRealPath(upPath);
 		saveDir = config.getServletContext().getRealPath(upPath);
-		saveDir = Utility.TEST_UPLOAD_PATH;
+		saveDir = Utility2.TEST_UPLOAD_PATH;
 		int maxSize=5*1024*1024;
 		
 		try{
@@ -69,7 +69,7 @@
 		if(cnt>0){ %>
 			<script type="text/javascript">
 				alert('상품등록 되었습니다.');
-				location.href="list.jsp";
+				location.href="Productlist.jsp";
 			</script>				
 		<%}else{%>
 			<script type="text/javascript">
