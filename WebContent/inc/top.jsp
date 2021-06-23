@@ -289,7 +289,7 @@
                         <%if(admin.equals(session.getAttribute("userid"))){ %>
                         <a
 	                        class="dropdown-item"
-	                        href="<%=request.getContextPath()%>/Product/ProducRegister.jsp">상품등록</a>
+	                        href="<%=request.getContextPath()%>/Product/ProductRegister.jsp">상품등록</a>
                         <%} %>
                   </div></li>               <li class="nav-item dropdown"><a
                   class="nav-link dropdown-toggle" href="#" id="dropdown04"
